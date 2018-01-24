@@ -1,2 +1,2 @@
 # Yup'ik machine translation
-CS224n final project
+CS224n and CS230 final projects
