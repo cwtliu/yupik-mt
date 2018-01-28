@@ -1,7 +1,6 @@
 # Parser for Yup'ik -> English PDF dictionary
 #
-# Usage : python parse_dict.py filename
-# filename is the PDF filename (without .pdf extension)
+# Usage : python parse_dict.py filename.pdf
 # Requires PDFMiner python module and its pdf2txt.py tool.
 #
 # Used with Yup'ik Eskimo Dictionary, 2nd edition. Jacobson, Steven A. 2012
@@ -11,19 +10,16 @@
 from bs4 import BeautifulSoup
 import re
 import sys, os
+from utils import writeListToFile
 
 # Open PDF file
-filename = sys.argv[1]
+if len(sys.argv) < 2:
+    print "Usage : python parse_postbases.py filename.pdf"
+filename = os.path.splitext(sys.argv[1])[0]
 os.system("pdf2txt.py -t xml %s.pdf > %s.xml" % (filename, filename))
 f = open('%s.xml' % filename, 'r')
 
 soup = BeautifulSoup(f, 'lxml')
-
-def writeListToFile(list, filename):
-    f = open(filename, 'a')
-    for x in list:
-        f.write(x.encode('utf-8') + os.linesep)
-    f.close()
 
 nouns = []
 verbs = []
