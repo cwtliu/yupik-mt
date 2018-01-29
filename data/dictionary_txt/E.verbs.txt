@@ -1,7 +1,8 @@
 ecur-
 ega-
-[e]ceg-ceg-
-[e]ceq[e]cer-
+[e]ceg-
+ceg-
+[e]cer-
 ceq/cer-
 [e]cgar-
 cegg’ar-
@@ -14,7 +15,7 @@ egavyag-
 egciri-
 ege-
 egelrute-
-egilra egilra-
+egilra-
 egilraur-
 eginga-
 eglenge-
@@ -40,7 +41,8 @@ ekli-
 eklike-
 eklinarqe-
 ekliyug-
-ek’r(ar)- ekrar-
+ek’r(ar)-
+ekrar-
 ekua-
 ekuma-
 ekur-
@@ -117,13 +119,15 @@ ellate-
 ellatu-
 ellecpag-
 elleg-
-[e]llerrar(aq*)[e]llerrar(ar)-
+[e]llerrar(ar)-
 elli-
 ellii-
-ellikaraqellikarar-
+ellikarar-
 ellimer-
 ellir-
-elliritke-elliritqe-elliriqe-
+elliritke-
+elliritqe-
+elliriqe-
 elliur-
 ellmar-
 ellmig-
@@ -145,7 +149,7 @@ elluugte-
 ellu’urtaar-
 ellu’urte-
 ellve-
-elnguqelngur-
+elngur-
 elpeg-
 elpegir-
 elpegite-
@@ -172,7 +176,8 @@ ema-
 emair-
 emaite-
 eme-
-[e]mer- emer-
+[e]mer-
+emer-
 emiate-
 emiqar-
 emir-
@@ -194,9 +199,9 @@ enevvli-
 engevvli-
 engig-
 engiuringe-
-engkite-
 [e]nglar-
-englar-englaarar-
+englar-
+englaarar-
 englarnarqe-
 [e]ngllugtur-
 [e]nglur-
@@ -230,7 +235,6 @@ enqar-
 enrir-
 enrite-
 ente-
-entu-
 entuyug-
 enu-
 enuma-
@@ -251,7 +255,8 @@ eprite-
 epsalngu-
 epsalngunarqe-
 ep’ura-
-ep’urtur-ep’urtua-
+ep’urtur-
+ep’urtua-
 epurtua-
 eqe-
 eqessnga-
@@ -260,7 +265,8 @@ eqi-
 eqiite-
 eqir-
 eqiur-
-eqmallugeqmayug-
+eqmallug-
+eqmayug-
 eqnarivakar-
 eqnarqe-
 eqnayug-
@@ -271,6 +277,7 @@ equg-
 equgtar-
 eq’uyagute-
 eq’urte-
+eq’uyug-
 eq’ve-
 ere-
 erenqurte-
@@ -293,7 +300,6 @@ errsuatyivlag-
 errute-
 erte-
 ertu-
-erur-
 erute-
 erve-
 ervig-
@@ -306,11 +312,15 @@ eskavte-
 eskuular-
 eskuulur-
 essaar-
-esseg-[e]sseg-
-esser-[e]sser-
-essgar-[e]ssgar-
+esseg-
+[e]sseg-
+esser-
+[e]sser-
+essgar-
+[e]ssgar-
 essmiar-
-essngur-[e]ssngur-
+essngur-
+[e]ssngur-
 essug-
 essugi-
 essuir-
@@ -324,7 +334,6 @@ etgalqite-
 etgalqitar-
 etgate-
 etruir-
-et’u-
 et’ve-
 eva-
 evama-
@@ -340,6 +349,6 @@ everte-
 evikegte-
 evu-
 eyag-
-eyaneqeyar-
+eyar-
 eyir-
 eyur-

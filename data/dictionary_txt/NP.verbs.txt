@@ -4,7 +4,7 @@ naacuqe-
 naanguar-
 naaqe-
 naave-
-nacaqnacar-
+nacar-
 nacarrlugteqe-
 nacessnga-
 nacete-
@@ -79,7 +79,7 @@ naner-
 nanercir-
 nanerpag-
 nangamcug-
-nangcaqnangcar-
+nangcar-
 nangci-
 nange-
 nanger-
@@ -106,7 +106,7 @@ nanite-
 nanrar-
 nante-
 nanurte-
-napanapa-
+napa-
 napackar-
 napar-
 napatar-
@@ -126,7 +126,7 @@ narrlukite-
 narrlutu-
 narug-
 narukaute-
-narulkaqnarulkar-
+narulkar-
 narullgute-
 narulkute-
 narulpag-
@@ -179,12 +179,12 @@ naverte-
 navgur-
 nav’pag-
 navpag-
-navraq navrar-
+navrar-
 navr(ar)-
 navrite-
 navriuteke-
 navte-
-nayangaqnayangar-
+nayangar-
 nayug-
 nayumiaqe-
 nayumiqa-
@@ -196,9 +196,8 @@ negarcur-
 negassur-
 negcig-
 negir-
-negituqaqnegituqar-
+negituqar-
 negler-
-negtaar-
 negte-
 negur-
 nekake-
@@ -219,7 +218,7 @@ nel’ar-
 neler-
 nelepag-
 nel’i-
-nelnguqnelngur-
+nelngur-
 nelte-
 nemaa-
 nemer-
@@ -272,7 +271,6 @@ nepugte-
 nepute-
 neq’ake-
 neq’aniur-
-neq’ar-
 neq’ari-
 neqilegte-
 neqkiur-
@@ -324,17 +322,17 @@ nevlugte-
 nevqerte-
 ngangamciqe-
 ngel’allag-
-ngelaite-(ngelaun . . . )
+ngelaite-(ngelaun...)
 ngel’aqe-
 ngelauteke-
-ngel’aq ngel’ar-
+ngel’ar-
 ngel’eke-
 ngelkarte-
 ngelke-
 ngell’ugtur-
 ngel’ur-
 ngel’urte-
-ngev’aengev’e-
+ngev’e-
 ngevvli-
 ngillar-
 niamar-
@@ -352,7 +350,7 @@ niite-
 niitellngu-
 niitniite-
 niitnirqe-
-nillaq  nillar-
+nillar-
 nin’genqegcar-
 niniite-
 nipe-
@@ -365,7 +363,7 @@ niurrsig-
 nuagte-
 nuagarte-
 nualiur-
-nuaqceqnuaqcer-
+nuaqcer-
 nuarte-
 nucug-
 nucuute-
@@ -396,12 +394,14 @@ nulirte-
 nulirtur-
 nulirturciimacir-
 nulte-
-nulur-nuluur-nulur(ar)-
-nulurar-
 nulur-
+nuluur-
+nulur(ar)-
+nulurar-
 nunair-
 nunakegte-
-nunaki-nunakili-
+nunaki-
+nunakili-
 nunakir-
 nunalgar-
 nunallite-
@@ -413,7 +413,7 @@ nunate-
 nungir-
 nungingqa-
 nungirte-
-nungunungu-
+nungu-
 nungute-
 nuni-
 nuniate-
@@ -434,7 +434,6 @@ nuqte-
 nurnaite-
 nurnar-
 nurte-
-nurute-
 nutar-
 nutarte-
 nutarau-
@@ -442,7 +441,7 @@ nuteg-
 nutengvag-
 nut’ga-
 nutlag-
-nutngaqnutngar-
+nutngar-
 nutnger-
 nutpag-
 nuu-
@@ -470,7 +469,9 @@ paalaryaaqe-
 paallag-
 paame-
 paanger-
-paankar-paankaar-painkar-
+paankar-
+paankaar-
+painkar-
 paarte-
 paarvag-
 paayaar-
@@ -525,7 +526,7 @@ pamrig-
 pamru-
 pamy-
 pamyerte-
-panaqpanar-
+panar-
 pangaleg-
 pangalga-
 pangalpag-
@@ -541,14 +542,15 @@ paqumi-
 paqumike-
 paquminarqe-
 paqumiyug-
-paquussiig-paquussaag-
+paquussiig-
+paquussaag-
 paralqar-
 papsike-
 papsinarqe-
 papsitaar-
 paq-
 paqna-
-paraluqparalur-
+paralur-
 parte-
 pascir-
 pasgerte-
@@ -559,18 +561,19 @@ paste-
 patag-
 patagtur-
 patakaute-
-pataqpatar-
+patar-
 pateg-
 patemcug-
-pateqpater-
-pateryirci-pateryagci-
+pater-
+pateryirci-
+pateryagci-
 patguur-
 patgute-
 patkar-
 patqar-
 patsaqar-
-patu-patu
-paug-pauk
+patu-
+paug-
 pauke-
 paume-
 paunger-
@@ -630,12 +633,14 @@ pengke-
 pengiga’rte-
 pengitag-
 peqlirte-
-peqlicir- peqlicar-
-pequmikpequmig-
+peqlicir-
+peqlicar-
+pequmig-
 pequmpag-
 pere-
 perete-
-perleqciir(ar)-perlercii-
+perleqciir(ar)-
+perlercii-
 perr’ite-
 perr-
 perrir-
@@ -647,22 +652,24 @@ pet-
 petar-
 petengte-
 petgar-
-petgerrii- (petgerii- ?)
-pet’nge-petenge-
+petgerrii-(petgerii-?)
+pet’nge-
+petenge-
 petug-
 petugtur-
 peturte-
 petuutaarute-
-peyug-peyua-
+peyug-
+peyua-
 peyukacir-
-pipi-
-piaqur-
-piaskaqpiaskar-
-piataqpiatar-
+pi-
+piaskar-
+piatar-
 picalke-
 picalngu-
 picaqe-
-picari-picanglli-
+picari-
+picanglli-
 picetaar-
 picetaarute-
 picilir-
@@ -684,12 +691,13 @@ picurlagcetaar-
 picurlag-
 picurlitqe-
 picuvlag-
-piicak piicag-
+piicag-
 piicar-
 piiciur-
 piilviite-
 piinir-
-piirag-piiragcete-
+piirag-
+piiragcete-
 piiragcar-
 piirig-
 piirri-
@@ -757,10 +765,11 @@ pirtepag-
 pissaar-
 pissanqegg-
 pissaqe-
-pissuar- (piyuar- ?)
+pissuar-(piyuar-?)
 pissur-
 pita-
-pitalqegte-pitacqegte-
+pitalqegte-
+pitacqegte-
 pitaqe-
 pitar-
 pitari-
@@ -771,9 +780,9 @@ pitateke-
 pite-
 pit’e-
 pitegte-
-pitek piteg-
-piteke-  pitke-
-piter-
+piteg-
+piteke-
+pitke-piter-
 pitsaqe-
 pitgaqu-
 pitgar-
@@ -803,7 +812,7 @@ pucuur-
 puge-
 pugler-
 puglerte-
-pugsuaq pugte-
+pugte-
 pugta-
 pugterte-
 pugug-
@@ -837,15 +846,13 @@ puqelvag-
 puqiate-
 puqig-
 puqlanir-
-purriur- (puriur- ?)
-purtua-
-purtuar-
+purriur-(puriur-?)
 purug-
 purugar-
 pusnga-
 put’e-
 putegte-
-putu-putu
+putu-
 putulkia-
 putukite-
 putukumyuar(ar)-
@@ -864,7 +871,9 @@ puusar-
 puvair-
 puve-
 puvute-
-puya-puyalerte-puyallerte-
+puya-
+puyalerte-
+puyallerte-
 puyiar-
 puyiar(ar)-
 puyir-

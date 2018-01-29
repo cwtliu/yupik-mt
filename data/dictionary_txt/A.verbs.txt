@@ -7,15 +7,14 @@ aalemtaalar-
 aaleqciir-
 aalruigte-
 aalukuyar-
-aaluuyaaqaaluuyaar-
-aamaqaamar-
+aaluuyaar-
+aamar-
 aangulugtuute-
 aangur-
 aanir-
 aamarte-
 aaqassaar-
 aaqatar(ar)-
-aaqe-
 aar-
 aara-
 aarcillag-
@@ -27,7 +26,7 @@ aarpag-
 aartar-
 aassaqe-
 aassektacungir-
-aassektaq  aassektar-
+aassektar-
 aatangqa-
 aatar-
 aatarte-
@@ -77,7 +76,7 @@ agiirte-
 ag’inertu-
 ag’ir-
 agkenge-
-agleqagler-
+agler-
 aglug-
 agluir-
 agluma-
@@ -131,7 +130,7 @@ akaurte-
 akeqnerrlugte-
 akercir-
 akerkari-
-akervak akervag-
+akervag-
 aki-
 akicar-
 akicir-
@@ -175,7 +174,7 @@ aksar-
 akqe-
 aksagtaar-
 aksaqar-
-akuliprunakuliprute-
+akuliprute-
 akultu-
 akulugci-
 akuna-
@@ -228,7 +227,7 @@ alegyagute-
 alemqar-
 alerqua-
 alerqur-
-algacakalgacag-
+algacag-
 algassar-
 ali-
 alia-
@@ -244,7 +243,6 @@ alingcetaar-
 alingcirar-
 alingcirar(ar)-
 alingcitaar-
-alinge-
 alingenguartur-
 alingiltaar-
 alingite-
@@ -256,7 +254,6 @@ alkar-
 alke-
 al’ke-
 allakauke-
-allakauki-
 allaki-
 allanite-
 allaniur-
@@ -305,7 +302,6 @@ amelvag-
 amelpag-
 amiir-
 aminari-
-aminariqe-
 aminkite-
 amir-
 amiracetaar(ar)-
@@ -313,12 +309,11 @@ amirli-
 amirlir-
 amirtu-
 amite-
-amlleqamller-
+amller-
 amllenru-
 amlleri-
 amllerr-
-amllerta-
-amlliq amllir-
+amllir-
 ampiir-
 amqar-
 amru-
@@ -341,7 +336,7 @@ anap’ag-
 anaqauner-
 anaqsartur-
 anaqsug-
-anaraqanara-
+anara-
 anarciigate-
 anarninarqe-
 anau-
@@ -382,14 +377,13 @@ ange-
 angenqussuar(ar)-
 angenruyug-
 anger-
-angertur-
 angi-
 angiar-
 angimurte-
 an’gir-
 angite-
 angivkar-
-angiyaqangiyar-
+angiyar-
 angla-
 anglake-
 anglanaite-
@@ -401,11 +395,11 @@ angllur-
 angllurcete-
 angniite-
 angniiterpag-
-angniqangnir-
+angnir-
 angpar-
 angpangqa-
 angparte-
-angqaqangqar-
+angqar-
 angqirte-
 angqute-
 angta-
@@ -421,7 +415,7 @@ angute-
 angutngurte-
 angvarqur-
 anguur-
-anguyakanguyag-
+anguyag-
 angvangqa-
 angvar-
 angvarte-
@@ -434,7 +428,7 @@ anirtaar-
 anirte-
 anirtua-
 anirtur-
-aniuaniu-
+aniu-
 aniullugte-
 anlii-
 anllite-
@@ -466,7 +460,7 @@ anura-
 anuraqe-
 anurvag-
 anute-
-anutiiqanutiir-
+anutiir-
 anyaqturte-
 anyarar(ar)-
 anyuqe-
@@ -484,11 +478,10 @@ apertuute-
 apertuate-
 apervikua-
 apete-
-apiataqapiatar-
+apiatar-
 apiterte-
 ap’nge-
 apqara-
-apqaur-
 apsir-
 apte-
 apur-
@@ -552,7 +545,7 @@ arenqig-
 arenqiirtur-
 arenqike-
 ari-
-arillaarilla-
+arilla-
 arinar-
 aripa-
 aripaciteke-
@@ -565,7 +558,6 @@ arivlurte-
 arivniate-
 arivte-
 arliarte-
-arnamirte-
 arniqe-
 arniur-
 arrliur-
@@ -578,7 +570,7 @@ artur-
 arturyagute-
 aru-
 arucetaar-
-arulaq arula-
+arula-
 arulaci-
 arulair-
 arulamirte-
@@ -600,7 +592,7 @@ asemqar-
 asemte-
 as’ercir-
 asgir-
-asguq asgur-
+asgur-
 asgura-
 asgurake-
 asmarte-
@@ -667,18 +659,19 @@ aterpagte-
 atertaar-
 aterte-
 atgite-
-atkukatkug-
-atmag-atmak
+atkug-
+atmag-
 atrar-
 atr(ar)-
 atsiyar-
-atuq atur-
+atur-
 au-
-ag’arite-
+a¥g’arite-
 augqe-
-agtaqe-
-agtarnarqe-
-agtaryug-
+a¥gtar-
+a¥gtaqe-
+a¥gtarnarqe-
+a¥gtaryug-
 augtur-
 augurte-
 aulir-
@@ -706,7 +699,7 @@ avaur-
 avaurilke-
 avaurtar-
 avayig-
-aveg- avek
+aveg-
 avegteqe-
 avegvingqerr-
 avenqiag-
@@ -715,26 +708,26 @@ avgute-
 aviqiarcete-
 aviqite-
 avir-
-avira-(agira-)
-avirake- (agirake-)
-aviranarqe- (agiranarqe-)
-avirayug-(agirayug-)
-aviraute(agiraute-)
+avira-(a¥gira-)
+avirake-(a¥girake-)
+aviranarqe-(a¥giranarqe-)
+avirayug-(a¥girayug-)
+aviraute-(a¥giraute-)
 avirli-
 avirlullag-
 avirlur-
 avirlurte-
-avirpag -
-avisnga- (agisnga-)
-avite-(agite-)
+avirpag-
+avisnga-(a¥gisnga-)
+avite-(a¥gite-)
 aviu-
 aviulrar-
-aviukaqaviukar-
+aviukar-
 aviukarte-
 aviukarqe-
 aviurnarqe-
 aviute-
-agiute-
+a¥giute-
 avler-
 avlengqa-
 avlerte-
@@ -762,7 +755,6 @@ ayagyugar-
 ayakar-
 ayakpag-
 ayaktar-
-ayakut’e-
 ayalegte-
 ayalua-
 ayaluqerte-
@@ -794,11 +786,11 @@ ayrurtur-
 ayu-
 ayugturute-
 ayunrir-
-ayuqaeayuqe-
+ayuqe-
 ayuqekute-
 ayuqenrite-
 ayuqute-
-ay’utaq ay’utar-
+ay’utar-
 ayvair-
 ayvaite-
 ayuqlir-

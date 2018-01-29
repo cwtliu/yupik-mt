@@ -2,7 +2,6 @@ saanili-
 saaniili-
 saarralarninarqe-
 saarralir-
-saginga-
 sagte-
 sainar-
 sanqegg-
@@ -12,19 +11,18 @@ sarrsa-
 savat’ag-
 savte-
 seg-
-segg’anqegg-
-segganqegg-
 segg’ar-
 seleg-
 seng’ur-
-seq ser-
+ser-
 serr’ir-
 serrsallag-
 siissir-
-skuular-skuulur-
-stulussaqstulussar-
+skuular-
+skuulur-
+stulussar-
 sug-
-sugaqsugar-
+sugar-
 sugg’agte-
 sugkite-
 sugtu-
@@ -35,7 +33,8 @@ suuliar-
 suvrir-
 suy’uqerte-
 suyute-
-ta-tas-
+ta-
+tas-
 taa-
 taamleg-
 taamlegcete-
@@ -44,7 +43,7 @@ taamlegi-
 taanganrirciigate-
 taangatu-
 taangiqe-
-taaqassaaqtaaqassaar-
+taaqassaar-
 taarri-
 taarte-
 taave-
@@ -67,7 +66,7 @@ taitnauraar-
 taivkar-
 takaayi-
 takaite-
--
+-takaneq
 takar-
 takaqe-
 takarnaite-
@@ -92,7 +91,7 @@ takuyar-
 takusar-
 takviate-
 takvigtu-
-takviktakvig-
+takvig-
 tala-
 tali-
 talir-
@@ -103,14 +102,14 @@ tallegte-
 tallimiri-
 tallur-
 talmag-
-taluute-
-talu talu-talur-
+talu-
+talur-
 talurte-
 talugte-
-tamacei-
+tamaceńi-
 tamak’acagar-
 tamak’ackagar-
-tamak’akackagar-
+tamak’akackagar-tamana
 tamalkur-
 tamar-
 tamarmirte-
@@ -121,7 +120,8 @@ tamu-
 tamua-
 tamuali-
 tamukassaar-
-tane-tanegte-
+tane-
+tanegte-
 taneg-
 tanemkur-
 tang-
@@ -131,7 +131,7 @@ tangcuke-
 tangaliute-
 tangemcuke-
 tangenqigcinarqe-
-tangercetaaqtangercetaar-
+tangercetaar-
 tangercete-
 tan’gercete-
 tan’geri-
@@ -142,7 +142,7 @@ tangerrnau-
 tangertaagute-
 tangevkar-
 tangke-
-tangluqtanglur-
+tanglur-
 tanglurar(ar)-
 tangnerrar-
 tangniite-
@@ -182,7 +182,7 @@ taq’i-
 taqiir-
 taqikcar-
 taqinar-
-taqmaktaqmag-
+taqmag-
 taqmigte-
 taqsuarir-
 taqsuqair-
@@ -190,7 +190,7 @@ taqsuqaircar-
 taqsuqe-
 taqte-
 taquite-
-taquqtaqur-
+taqur-
 tararte-
 tarenrair-
 tarenrir-
@@ -201,13 +201,15 @@ taringe-
 tarirte-
 tarr-
 tarranqegg-
-tarrarte-tarrirte-tarrate-
+tarrarte-
+tarrirte-
+tarrate-
 tarrite-
 tarriarte-
 taruurte-
+tarvar-
 tarvag-
 taryir-
-tas-
 tass’igyugciur-
 tass’uqe-
 tass’ur-
@@ -220,9 +222,10 @@ tatame-
 tatki-
 taungu-
 tautunrir-
-tava-i taga-i
+tava-i
+ta¥ga-i
 tua-i
-tavcitavci-
+tavci-
 tave-
 tavcillag-
 tavigte-
@@ -273,13 +276,15 @@ temia-
 tem’irte-
 tem’i-
 temli-
-temyig-temyi-temyigi-
-tengalraqtengalrar-
+temyig-
+temyi-
+temyigi-
+tengalrar-
 tengaur-
 tenge-
 tengelpag-
 tengelvag-
-tengluktenglug-
+tenglug-
 tengru-
 tengruke-
 tengte-
@@ -298,7 +303,7 @@ tepluar-
 tepsarqe-
 teptu-
 tepumirtur-
-teq’aqteq’ar-
+teq’ar-
 teriir-
 terikarte-
 terikeggiate-
@@ -307,7 +312,7 @@ terrigte-
 terrigyug-
 teryeri-
 tetenge-
-tetengte- tetenge-
+tetengte-
 tevaar-
 teve-
 tevegtu-
@@ -326,7 +331,8 @@ tuallituar-
 tuamta-llu
 tuatequa-
 tuatna-
-tuave-  tuavte-
+tuave-
+tuavte-
 tuc’ete-
 tugaur-
 tuger-
@@ -381,7 +387,7 @@ tunerkite-
 tun’ernarqe-
 tunertu-
 tungair-
-tungaite-(tungaun . . . )
+tungaite-(tungaun...)
 tungcirtur-
 tungi-
 tungite-
@@ -402,17 +408,17 @@ tunupirte-
 tunute-
 tupag-
 tupagyaaqe-
-tupautaqtupautar-
+tupautar-
 tupeg-
 tupeke-
 tupgiate-
 tupig-
-tupiq    tupir-
+tupir-
 tupirtaarute-
 tupke-
-tuqluqtuqlur-
+tuqlur-
 tuqniar-
-tuqutuqu-
+tuqu-
 tuqui-
 tuquma-
 tuqunarqe-
@@ -426,7 +432,7 @@ tusnganqaar-
 tuss’aqerte-
 tussite-
 tut’e-
-tutektuteg-
+tuteg-
 tut’esteke-
 tutmar-
 tutviqe-
@@ -465,8 +471,8 @@ gasqite-
 gayar-
 gayite-
 uge-
-ging’agit’e-
-ugi’irte-
+git’e-
+ga...ugi’irte-
 uginga-
 ugirte-
 ugiyaqar-
@@ -484,7 +490,8 @@ uigtur-
 uinge-
 uirler-
 uirrani-
-uirre-uir-
+uirre-
+uir-
 uita-
 uitate-
 uite-
@@ -498,7 +505,7 @@ uivagcir-
 uive-
 uivenqegg-
 uivtanqegg-
-uivtaaquivtaar-
+uivtaar-
 uivur-
 uivutar-
 uiyamte-
@@ -519,16 +526,17 @@ ukli-
 uklir-
 uk’lir-
 uksi-
-uksii-uksui-
+uksii-
+uksui-
 uksiiyar-
 uksuiyar-
-uksuaq* uksuar-
-uksuquksur-
+uksuar-
+uksur-
 uku-
 ukurrite-
 ukveke-
 ukveqe-
-ukvequkver-
+ukver-
 ukveraite-
 ukvernarcar-
 ukvernarqe-
@@ -539,14 +547,13 @@ ulapeqe-
 ulapsagte-
 ule-
 uleve-
-ulevlaqulevlar-
+ulevlar-
 ulevte-
 uligui-
-ulikulig-
+ulig-
 ullag-
 ullaute-
 ulligte-
-ullinga-
 ullirte-
 ull’ute-
 ulmirte-
@@ -554,11 +561,12 @@ ulpeg-
 ulpegte-
 ulpete-
 ulpiarte-
-ulruk ulrur-
+ulrur-
 ulte-
 uluar-
 uluara-
-uluckegcir-uluc’ukcir-
+uluckegcir-
+uluc’ukcir-
 ulug-
 ulugglug-
 ulugglugte-
@@ -577,7 +585,8 @@ uluvirte-
 uluvlite-
 ulve-
 um-
-umci-umcigi-umcigci
+umci-
+umcigi-
 umcig-
 umciginga-
 umiqsig-
@@ -585,15 +594,13 @@ umlluaqar-
 umllekar-
 umruksuar-
 ume-
-umek  umeg-
+umeg-
 umgi-
 umguci-
 umi-
 umiqer-
 umsuarrulaar-
-umsuarteqe-
-umsugarteqe-
-umta umte-
+umte-
 umyuacuar-
 umyuallgutke-
 umyuanga’rte-
@@ -634,7 +641,7 @@ unatar-
 unavag-
 unayaqe-
 unegte-
-unermig-unermiar
+unermig-
 unga-
 ungaggli-
 ungair-
@@ -657,7 +664,7 @@ unguir-
 ungulerqur-
 ungullugte-
 ungumrar-
-unguvaunguva-
+unguva-
 unguvarrar-
 unguvatarar-
 uni-
@@ -667,12 +674,12 @@ unite-
 uniurte-
 unuaqute-
 unugi-
-unukunug-
+unug-
 upag-
 upete-
 upinga-
 uplerquute-
-up’nerkaqup’nerkar-
+up’nerkar-
 up’nerki-
 up’nerkiyar-
 up’nge-
@@ -683,16 +690,17 @@ uqamailtassiir-
 uqamaltassiir-
 uqamailtassiar-
 uqamaltassiar-
-uqamair-
 uqamairi-
 uqamaite-
 uqenqar-
 uqer-
 uqi-
 uqicetaar-
-uqiggeli-uqigli-
+uqiggeli-
+uqigli-
 uqiggete-
-uqaggete-uqgete-
+uqaggete-
+uqgete-
 uqila-
 uqilngu-
 uqiqite-
@@ -726,7 +734,7 @@ urenkenrite-
 urnir-
 urniur-
 urre-
-urr’i- (ur’i- ?)
+urr’i-(ur’i-?)
 urte-
 urug-
 urugcir-
@@ -738,13 +746,13 @@ usguniqe-
 usgute-
 uskurar-
 uskurari-
-uspeq  usper-
+usper-
 ussar-
 uss’arte-
 usserqe-
 ussug-
 ussukcaute-
-ussungiq ussungir-
+ussungir-
 uste-
 usviilkayag-
 usviilqi-
@@ -782,7 +790,8 @@ uuleg-
 uulegte-
 uulenge-
 uulganarqe-
-uulgatar(ar)-uulegyatar(ar)-
+uulgatar(ar)-
+uulegyatar(ar)-
 uumi-
 uumike-
 uuminarqe-
@@ -817,7 +826,6 @@ uvqercug-
 uvruar(ar)-
 uyakite-
 uyangte-
-uyaqe-
 uyaqukiirar-
 uyatu-
 uyerqe-
@@ -833,7 +841,7 @@ uyungssuar-
 uyuruar-
 vegtar-
 verte-
-wa-
+wangkuta.wa-
 wagg’uq-qaa
 wang’u-
 wani-wa

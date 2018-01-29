@@ -19,10 +19,8 @@ iglairte-
 igmar-
 igte-
 iguma-
-iguqigur-
 igur-
 igurrluar-
-igute-
 igutu-
 igvar-
 igyuar(ar)-
@@ -58,7 +56,7 @@ ikamtar-
 ikanga-
 ikaspag-
 ikayua-
-ikayuq ikayur-
+ikayur-
 ikasur-
 ikayuute-
 ikgar-
@@ -86,7 +84,7 @@ ikusvag-
 ikuyvag-
 ikuygur-
 ikwegte-
-ilaaq  ilaar-
+ilaar-
 ilaciqtar-
 ilacir-
 ilag-
@@ -107,7 +105,8 @@ ilangci-
 ilangciar(ar)-
 ilaniite-
 ilanirqe-
-ilar-ilarqute-
+ilar-
+ilarqute-
 ilarqutair-
 ilasqite-
 ilaute-
@@ -150,7 +149,7 @@ imaryange-
 imasri-
 ime-
 imeg-
-imeggluk imegglug-
+imegglug-
 imir-
 imirite-
 imkur-
@@ -179,13 +178,13 @@ inerqua-
 inerqur-
 inerqurciryar-
 ing’ar-
-ingciqingcir-
+ingcir-
 ingcur-
 inglite-
 inglu-
 ingluar-
 inglukegte-
-inglupiaq inglupiar-
+inglupiar-
 inglutruarte-
 ingnatar-
 ingqi-
@@ -209,17 +208,16 @@ ipinga-
 ipte-
 ipug-
 iq-
-iqaqiqa-
+iqa-
 iqair-
 iqallii-
 iqemkar-
 iqemler-
 iqertar-
 iqlegte-
-iqluiqlu-
+iqlu-
 iqlungar-
 iqluqu-
-iqlutuu-
 iqmig-
 iqre-
 iqsag-
@@ -231,7 +229,7 @@ iqup’ag-
 iquv’ag-
 iqupki-
 iqute-
-iqvaqiqvar-
+iqvar-
 iqviqe-
 ira-
 irake-
@@ -239,13 +237,14 @@ iranarqe-
 irayug-
 iralir-
 iraluiraute-
-iralvak iralvag-
+iralvag-
 ircaqruallag-
 ircug-
 ircunga-
 irel-
 irelgite-
-ireltar-ireltu-
+ireltar-
+ireltu-
 iria-
 irir-
 irirte-
@@ -255,7 +254,7 @@ irleke-
 irliqe-
 irlurnite-
 irni-
-irnicuaqirnicuar-
+irnicuar-
 irniqu-
 irr’ike-
 irseg-
@@ -293,7 +292,7 @@ itriraute-
 itrug-
 itrute-
 itugenqegte-
-itukitug-
+itug-
 ituke-
 itume-
 itumnga-
@@ -309,4 +308,5 @@ ivrar-
 ivua-
 iyri-
 ivrir-
-ivsir- ivyir-
+ivsir-
+ivyir-

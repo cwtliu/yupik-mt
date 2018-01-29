@@ -34,7 +34,6 @@ cailkakuar-
 cakaar-
 cakaitur-
 cakanir-
-cakarnir-
 cakarniirute-
 cakarniite-
 cakegtake-
@@ -48,7 +47,7 @@ caknaa-
 cakner-
 caknernarqe-
 cakte-
-cakucuk cakucug-
+cakucug-
 cakug-
 cakukegte-
 cakuug-
@@ -63,10 +62,9 @@ callarci-
 callarte-
 callemkar-
 calligte-
-callmak # callmag-
+callmag-
 callug-
 calrite-
-caltuqite-
 caltur-
 calugte-
 cama-
@@ -81,7 +79,7 @@ canake-
 caneggete-
 canegtar-
 canegte-
-can’egte -
+can’egte-
 canga-
 cangalke-
 cangalliur-
@@ -109,15 +107,14 @@ canqaurte-
 canrilvag-
 canrite-
 can’u-
-capaecape-
+cape-
 caperr-
 caperqe-
 caperrnaite-
 caperrnarqe-
 caperrsug-
 capir-
-caprite-
-capucapu-
+capu-
 capur-
 capurau-
 capurci-
@@ -131,12 +128,11 @@ caqicugte-
 caqirte-
 caqtaar-
 caqte-
-caqucaqu-
+caqu-
 caqunguar-
 caqvir-
 caqvirte-
 carayar-
-carca-
 carevpag-
 cariar-
 carir-
@@ -183,7 +179,6 @@ cayugglugte-
 cayugnaite-
 cayugtuute-
 cayumlerte-
-cayumlirte-
 cayurte-
 ceg-
 cegar-
@@ -200,24 +195,23 @@ cellate-
 celleg-
 celli-
 cellur-
-cenekceneg-
-ceng’uqceng’ur-
+ceneg-
+ceng’ur-
 cengqe-
-cei-
-ceingqa-
+ceńi-
+ceńingqa-
 cenirnir-
-ceirtaar-
-ceirte-
+ceńirtaar-
+ceńirte-
 cenirte-
 cenke-
 cepqer-
-ceq cer-
+cer-
 ceqcerte-
 ceqvallertar-
-cer-
 cetegglug-
 cetengqite-
-ceteqceter-
+ceter-
 cetgate-
 cetu-
 cetugmig-
@@ -229,7 +223,7 @@ cialiur-
 ciamci-
 ciame-
 cii-
-ciikaqciikar-
+ciikar-
 ciikara-
 ciilerte-
 ciinllugguar-
@@ -259,7 +253,7 @@ ciknataite-
 ciknatar-
 ciktaar-
 cikte-
-cikuq ciku-
+ciku-
 cikulraar-
 cikulrii-
 cikutagci-
@@ -277,8 +271,8 @@ cillur-
 cilte-
 cilur-
 cima-
-cimiqcimir-
-cineg-cinek
+cimir-
+cineg-
 cingar-
 cin’gar-
 cingartur-
@@ -294,7 +288,6 @@ cingpaci-
 cingqar-
 cingqaqu-
 cingqe-
-cingqeri-
 cingqur-
 cingqutui-
 cinguur-
@@ -319,7 +312,7 @@ ciqpag-
 ciqtagte-
 ciqume-
 ciqumte-
-ciqumqe -
+ciqumqe-
 ciqvallerte-
 ciri-
 cirimci-
@@ -329,14 +322,14 @@ cirlake-
 cirliqe-
 cirlite-
 cirmiute-
-ciruciru-
+ciru-
 ciruirci-
 cirukutaksuar(ar)-
 cirurtar-
 ciryaarute-
 ciryairute-
 citeg-
-citeqciter-
+citer-
 cit’gallag-
 citu-
 ciuciqe-
@@ -363,7 +356,6 @@ civatugte-
 cive-
 civigte-
 civqar-
-civte-
 civtu-
 civug-
 civugte-
@@ -425,7 +417,6 @@ cungiallag-
 cungite-
 cungu-
 cupcir-
-cupaecupe-
 cupe-
 cupegte-
 cup’gallag-
@@ -440,13 +431,12 @@ cupuma-
 cupumake-
 cupumanaite-
 cupumanarqe-
-cupumayagute-
 cupumayug-
 cupungnig-
 cupute-
 cuqerte-
-cuqete- cuqte-
-cuqia-
+cuqete-
+cuqte-cuqia-
 cuqir-
 cuqingqa-
 cuqirte-
@@ -456,15 +446,17 @@ cuqlurte-
 cuqte-
 cuqulaate-
 cur-
-curar-curaqerte-
+ecur-
+curacetuya(g)aq*
+curar-
+curaqerte-
 curtur-
-curuk curug-
+curug-
 curukar-
 curvir-
 cuugi-
 cuukcaute-
 cuukiicunguar-
-cuyatur-
 cuyu-
 cuyute-
 cuyuumiite-

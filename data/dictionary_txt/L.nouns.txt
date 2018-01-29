@@ -1,8 +1,4 @@
-L
-l
 el.
-s
-
 ‘luuskaaq
 luuskaaq
 laamiq
@@ -11,12 +7,15 @@ laampaaq
 Laapaaq
 Laavlaaq
 laatanaq
-laavkaaqlaavkaq
+laavkaaq
+laavkaq
 laavkiurta
 laavkiiyurta
 laavkiyurta
-lagilugpiaqlagilugpak
-lagipiaqlagirpak
+lagilugpiaq
+lagilugpak
+lagipiaq
+lagirpak
 lagiq
 lagturyaqleq
 lagyaneq
@@ -52,7 +51,6 @@ levlevleraq
 levlugtaq
 levlugtaaq
 Liivlek
-lintaq
 llerr’ar(aq*)
 llumarraq
 lugluqussaaq

@@ -1,4 +1,3 @@
-qa-
 qaa-
 qaalruar-
 qaalu-
@@ -22,7 +21,6 @@ qacegtu-
 qacervag-
 qaci-
 qacig-
-qacigikanir-
 qacigli-
 qacignaite-
 qacignarqe-
@@ -42,7 +40,8 @@ qacute-
 qacuvallag-
 qagateke-
 qagatengqerr-
-qager-qagerte-
+qager-
+qagerte-
 qag’erte-
 qagpag-
 qag’pag-
@@ -54,9 +53,10 @@ qailir-
 qailiur-
 qaillukuar-
 qailluqtaar-
-qailqerte-qailluqerte-
-qairvak qairvag-
-qaitaqqaitar-
+qailqerte-
+qailluqerte-
+qairvag-
+qaitar-
 qaite-
 qaitu-
 qaivar-
@@ -96,18 +96,18 @@ qallange-
 qallarvag-
 qallate-
 qallaute-
-qalleqqaller-
+qaller-
 qall’i-
 qalliqe-
-qalluar- (qaluar- ?)
+qalluar-(qaluar-?)
 qalmar-
-qalqapakqalqapag-
+qalqapag-
 qalria-
 qalriateke-
 qalriqsaar(ar)-
 qalrir-
 qalriur-
-qaluqalu-
+qalu-
 qalugte-
 qalugya-
 qalur(ar)-
@@ -123,19 +123,19 @@ qame-
 qamiqulngu-
 qamite-
 qamqiarte-
-qamuqqamur-
-qamurar-qamuri-
+qamur-
+qamurar-
+qamuri-
 qamurrar-
 qamurrir-
 qanaa-
 qaneksuar-
-qaneksugte-
 qanemci-
 qanemyuugar-
 qanemcike-
 qaneplugte-
 qanepsug-
-qaneqqaner-
+qaner-
 qanercetaar-
 qanercetaaruma-
 qanerciigate-
@@ -156,7 +156,7 @@ qaniqe-
 qanir-
 qanirtur-
 qanli-
-qannguaq qannguar-
+qannguar-
 qanpag-
 qanqataite-
 qanqumciar(ar)-
@@ -190,7 +190,7 @@ qaqurtuute-
 qara-
 qari-
 qariteke-
-qarriimar-(qariimar- ?)
+qarriimar-(qariimar-?)
 qarte-
 qarute-
 qas-
@@ -215,25 +215,26 @@ qategmiaqar-
 qategpagate-
 qatekcugte-
 qater-
-qat’gagglugte- qat’garrlugte-
+qat’gagglugte-
+qat’garrlugte-
 qat’galngu-
 qatguur-
 qatli-
 qatngite-
 qatpag-
 qat’ri-
-qatugaqqatugar-
+qatugar-
 qaucirte-
-qagyaqar-
+qa¥gyaqar-
 qaunqe-
-qauq qaur-
+qaur-
 qaurtar-
 qavamli-
 qavangcar-
 qavangurtur-
 qavap’ag-
 qavaqar-
-qavaq #qavar-
+qavar-
 qavara-
 qavarni-
 qavarniir-
@@ -264,22 +265,23 @@ qecgaur-
 qecigkite-
 qecigtu-
 qecip’ag-
-qeciqqecir-
+qecir-
 qeciqar-
 qecirniir-
 qeckar-
-qec’nge-qecngerte-
+qec’nge-
+qecngerte-
 qecug-
 qecugmig-
 qecuqite-
 qecuur-
-qelaqela-
 qela-
 qelatu-
 qelemte-
 qelengte-
 qelerte-
-qelke-qel’ke-
+qelke-
+qel’ke-
 qelaake-
 qelali-
 qelanernarqe-
@@ -312,7 +314,7 @@ qemqaciyar-
 qemrar-
 qena-
 qenaa-
-qearqe-
+qeńarqe-
 qener-
 qenerte-
 qengarar-
@@ -343,7 +345,8 @@ qerrata-
 qerratarte-
 qerre-
 qerrecqercete-
-qerrellrute-qerrelqute-
+qerrellrute-
+qerrelqute-
 qerretrar-
 qerrike-
 qerringa-
@@ -355,7 +358,7 @@ qerrler-
 qerrsi-
 qerrsig-
 qerru-
-qerrua- (qerua-?)
+qerrua-(qerua-?)
 qerruarte-
 qerrunqegg-
 qerrur-
@@ -399,7 +402,8 @@ qevleqtaar-
 qevlercete-
 qevleri-
 qevlerte-
-qevli-qevlia-
+qevli-
+qevlia-
 qevte-
 qeya-
 qia-
@@ -438,13 +442,13 @@ qimunqe-
 qinangnir-
 qinerte-
 qingaqe-
-qingaq qingar-
 qingar-
 qingarnarqe-
 qingarniur-
 qingaryug-
 qingir-
-qingirte-qinike-
+qingirte-
+qinike-
 qinqar-
 qinquur-
 qinquussaag-
@@ -464,7 +468,7 @@ qipuma-
 qiqia-
 qiqli-
 qiri-
-qirruarte- (qiruarte ?)
+qirruarte-(qiruarte?)
 qissengqa-
 qisserte-
 qissinga-
@@ -492,13 +496,13 @@ qivruke-
 quacerte-
 qualqamyi-
 quannga-
-quartaquarta-
+quarta-
 quasqiarte-
 quasqite-
-qucak qucag-
+qucag-
 qucavliqe-
 qucavvlag-
-qucgutaqqucgutar-
+qucgutar-
 qucuvike-
 qugar-
 qugcuaqer-
@@ -529,16 +533,18 @@ qul’ar-
 quliri-
 qulite-
 qullsur-
-qul’ssur-qulyug-
+qul’ssur-
+qulyug-
 qulmurte-
 qulruarte-
 qulugte-
 qulungllugte-
-qulvaqqulvar-
+qulvar-
 qumaqite-
 qumcir-
 qume-
-qumig-qumiar-
+qumig-
+qumiar-
 quminge-
 qumiqite-
 qumli-
@@ -550,13 +556,13 @@ qunavte-
 qungag-
 qungagyug-
 qungate-
-qungcuqqungcur-
+qungcur-
 qungcungqa-
 qungcurte-
 qungelra-
 qungi-
 qunginga-
-qungite-qungi-
+qungite-
 qunglullag-
 qungte-
 qunguturi-
@@ -574,11 +580,10 @@ qunu-
 qunuite-
 qunuke-
 qununarqe-
-qunutungar-
 qunuyug-
 qupe-
 qup’arte-
-qup’luqqup’lu-
+qup’lu-
 qupngur-
 qupur-
 qur-
@@ -594,7 +599,7 @@ qurrenkaulug-
 qurrlur-
 qurtu-
 qus’alugarte-
-quseqquser-
+quser-
 qusngiliur-
 quspag-
 qussig-
@@ -623,7 +628,7 @@ quunir-
 quunite-
 quurruyag-
 quurute-
-quuyurpak quuyurpag-
+quuyurpag-
 quuyurrar(ar)-
 quve-
 quuskegcir-
@@ -634,7 +639,7 @@ quuyur-
 quuyurni-
 quvqetaaqar-
 quya-
-quyeqquyer-
+quyer-
 quyig-
 quyanarqe-
 quyavike-
@@ -648,5 +653,5 @@ quyvag-
 quyvagnarqe-
 quyvagyug-
 quyvake-
-rriitar-
+errriitar-
 rruur-

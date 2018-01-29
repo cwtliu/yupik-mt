@@ -1,6 +1,6 @@
 kaag-
 kaaleg-
-kaal’taaqkaaltaar-
+kaaltaar-
 kaal’taar-
 kaame-
 kacete-
@@ -20,7 +20,8 @@ kakeggluir-
 kakgar-
 kaki-
 kakialanar-
-kakilacag-kakilacagar-
+kakilacag-
+kakilacagar-
 kakilragte-
 kakimqigte-
 kakingerte-
@@ -28,7 +29,8 @@ kakite-
 kakiungqite-
 kakivkar-
 kak’li-
-kalackiir-kalackar-
+kalackiir-
+kalackar-
 kaleg-
 kalevte-
 kalevyug-
@@ -56,7 +58,6 @@ kalvag-
 kalvaguar-
 kalve-
 kama-
-kamake-
 kamanaircar-
 kameg-
 kameksag-
@@ -79,7 +80,7 @@ kanari-
 kanarte-
 kanauma-
 kanaute-
-kaneqkaner-
+kaner-
 kanevcir-
 kanevlarte-
 kangar-
@@ -102,7 +103,7 @@ kanngurte-
 kanve-
 kape-
 kapegcug-
-kapegcugnakapegcugnarpiit-lli
+kapegcugnarpiit-lli
 kapegcugniur-
 kapegliqe-
 kapgite-
@@ -127,7 +128,8 @@ kasnguyuke-
 kasngunarqe-
 kasnguyug-
 kass’amirte-
-kass’akci-kass’ilugte-
+kass’akci-
+kass’ilugte-
 kass’arte-
 kassig-
 kass’ig-
@@ -145,11 +147,11 @@ katngite-
 katur-
 kau-
 kaug-
-kag’ag-
+ka¥g’ag-
 kaugpangcar-
 kaugtuar-
 kaugtur-
-kak’ar-
+ka¥k’ar-
 kaullrir-
 kaute-
 kautur-
@@ -174,7 +176,7 @@ kaynguke-
 kaynguyuke-
 kayngunarqe-
 kaynguyug-
-kayu kayu-
+kayu-
 kayuite-
 kayukite-
 kayumigte-
@@ -182,13 +184,13 @@ kayunge-
 kayuri-
 kecete-
 keggag-
-keggag-keggagcete-
+keggagcete-
 keggalerte-
 keggaucir-
 kegge-
 keggerpag-
 keggeve-
-kegginaquqkegginaqur-
+kegginaqur-
 kegginiqe-
 keggirciur-
 kegglar-
@@ -204,10 +206,9 @@ kegpag-
 kekingerte-
 kekingqutar-
 kekiungqitar-
-kela’askaqkela’askar-
+kela’askar-
 keleg-
 kelgur-
-kelig-
 kelipi-
 kelir-
 keliurci-
@@ -216,12 +217,11 @@ kell’arte-
 kellute-
 keltailngar-
 kelte-
-kelucaqkelucar-
+kelucar-
 kelullir-
-kelussaqkelussar-
-keluvaqkeluvaraqkeluvar-
-keluvarar-
+kelussar-
 keluvar-
+keluvarar-
 kelve-
 kemgarar(ar)-
 kemgir-
@@ -246,10 +246,9 @@ kenegnarqe-
 kenegnira-
 kenegte-
 kenegyagute-
-kenegyug-
 keneke-
 kenercete-
-kenerpallak kenerpallag-
+kenerpallag-
 kenerrliur-
 kenerte-
 kenevkar-
@@ -258,10 +257,11 @@ keni-
 kenir-
 kenirmiar-
 kenirmig-
-kenirmiaqe-kenirmike-
+kenirmiaqe-
+kenirmike-
 keniruar-
-kenka kenke-
-kenlukenlu-
+kenke-
+kenlu-
 kenluqsagte-
 kenngallag-
 kennge-
@@ -282,7 +282,8 @@ kepqe-
 kepte-
 kepyute-
 ker-
-ker’arkerar-
+ker’ar-
+kerar-
 kerkite-
 kertu-
 kesir-
@@ -292,7 +293,7 @@ ketmurte-
 ketsig-
 ketvar-
 ketviute-
-kevek keveg-
+keveg-
 kevegtur-
 kevgi-
 kevgiruar-
@@ -300,10 +301,10 @@ kevgiur-
 kevir-
 kevkar-
 kevkarte-
-keyir*-keyirrar*-
+keyir*-
+keyirrar*-
 kiag-
 kiagi-
-kiakkiag-
 kiar-
 kiara-
 kiarcuirute-
@@ -322,7 +323,8 @@ kiimir-
 kiimurrsug-
 kiimerrsug-
 kiingerte-
-kiingraar(ar)-kiinraar(ar)-
+kiingraar(ar)-
+kiinraar(ar)-
 kiipir-
 kiipingqa-
 kiipirte-
@@ -334,7 +336,7 @@ kiirpag-
 kiirrar-
 kiirrelvag-
 kiirtevkar-
-kiiryug-kiirsug
+kiiryug-
 kiite-
 kiiya-
 kilir-
@@ -384,7 +386,6 @@ kitugte-
 kitur-
 kiu-
 kiumra-
-kiutaarute-
 kive-
 kiveg-
 kivkar-
@@ -399,7 +400,8 @@ kuc’uqerte-
 kucurni-
 kuimar-
 kuime-
-kuingir-kuinir-
+kuingir-
+kuinir-
 kuir-
 kuirar-
 kukeg-
@@ -419,7 +421,7 @@ kukumsir-
 kukunguqsarte-
 kukvaguar-
 kullugte-
-kuluk’uunaqkuluk’uunar-
+kuluk’uunar-
 kuma-
 kumakir-
 kumange-
@@ -429,11 +431,13 @@ kumegnarqe-
 kumegtar-
 kumegyug-
 kumguar-
-kumkaili-kumkair-
+kumkaili-
+kumkair-
 kumkar-
 kumkucugniir-
 kumlacir-
-kumlaqer-kumliqerte-
+kumlaqer-
+kumliqerte-
 kumlaqua-
 kumlate-
 kupte-
@@ -444,7 +448,8 @@ kusguke-
 kusguqe-
 kusgunarqe-
 kusgurnarqe-
-kusgu-kusgur-
+kusgu-
+kusgur-
 kusgutar-
 kusgurtar-
 kusguyug-
@@ -454,7 +459,7 @@ kuucir-
 kuugte-
 kuuguuyar-
 kuunqerte-
-kuuvviaqkuuvviar-
+kuuvviar-
 kuuvvii-
 kuve-
 kuvugenkegte-

@@ -5,7 +5,7 @@ maa-irpak
 maatekaar-
 maatekiir-
 maatekiir(ar)-
-macaqmacar-
+macar-
 maci-
 macir(ar)-
 macari-
@@ -20,7 +20,6 @@ maknginar-
 makta-
 makte-
 maku-
-makugte-
 makurarte-
 mak’urte-
 malig-
@@ -45,7 +44,7 @@ mallussur-
 mallute-
 mallunge-
 malngugte-
-malrimalri-
+malri-
 malruigte-
 malruingu-
 malruingurte-
@@ -63,7 +62,7 @@ mamkite-
 mamqe-
 mamtu-
 manamaar-
-manaqmanar-
+manar-
 mang-
 mangag-
 mangelpag-
@@ -71,8 +70,6 @@ mangirrar-
 mangirre-
 mangiryag-
 manglleg-
-mangyuarir-
-mangyuar(ar)-
 mani-
 maniar-
 maniate-
@@ -154,10 +151,10 @@ megamliur-
 mege-
 megute-
 mekegte-
-melek meleg-
+meleg-
 melgir-
 mel’ir-
-mellaqmellar-
+mellar-
 melqulegcur-
 melu-
 melug-
@@ -172,7 +169,7 @@ mente-
 menuite-
 meqcir-
 meqe-
-meqiq meqir-
+meqir-
 meqsartur-
 meqsug-
 meqtar-
@@ -206,9 +203,6 @@ metenglliaqer-
 metu-
 mianig-
 mianigte-
-mianiite-
-mianiate-
-mianinrite-
 mianike-
 mig-
 migkite-
@@ -232,16 +226,16 @@ milqagte-
 milqar-
 miluqu-
 miluute-
-minaqminar-
+minar-
 mineg-
 mingqe-
 mingqii-
-minguk mingug-
+mingug-
 minir-
 minkar-
 mirecpag-
 mirespag-
-miryaqmiryar-
+miryar-
 miryalngu-
 mis-
 miscir-

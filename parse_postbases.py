@@ -45,10 +45,11 @@ for textline in soup.find_all("textline"):
                 break
     if take:
         for text in textline.find_all("text"):
-            if re.search("Bold", text['font']) and not re.search("{", text.string):
-                s += text.string
-            else:
-                break
+            if 'font' in text.attrs:
+                if re.search("Bold", text['font']) and not re.search("{", text.string):
+                    s += text.string
+                else:
+                    break
         # Remove digits
         s = ''.join([i for i in s if not i.isdigit()])        
         if len(s):

@@ -1,4 +1,3 @@
-A
 aagciuk
 aaggaq
 aaggaqtaaq
@@ -12,6 +11,8 @@ aalemyaaq
 aaliqiliaq
 aalukuyaq
 aaluugiq
+aaluuyaaq
+aamaq
 aamarcuun
 aamarrsuun
 aangruyak
@@ -27,9 +28,8 @@ aanaspuuk
 aang
 aangaaq
 aangaayuk
-aangayucuar(aq *)
+aangayucuar(aq*)
 aangiikvak
-‘
 aan’gilaq
 aankilaq
 aapaq
@@ -48,7 +48,6 @@ aarraaliq
 aarraangiiq
 aarraangiir(aq*)
 aarraangiq
-
 aarrangyaraq
 aarraq
 aarrar
@@ -56,6 +55,7 @@ aarun
 aaryug
 aasgaaq
 aassaqun
+aassektaq
 aata
 aataak
 aat’aak
@@ -71,7 +71,8 @@ aavangtak
 aavangtaaq
 aavangtalkucuk
 aavaq
-aavcaaqaavcaar
+aavcaaq
+aavcaar
 aavussaq
 aayalngunaq
 aayalnguyaraq
@@ -83,7 +84,8 @@ acak
 acakikika
 acakikik
 acaluq
-acalurnaqacaluruaq
+acalurnaq
+acaluruaq
 ac’aq
 Ac’eciyaraq
 aceturun
@@ -128,8 +130,7 @@ agayiinraq*
 agayu
 agayulirta
 agayumaciq
-agayumalria
-agayumanrilnguq *
+agayumanrilnguq*
 agayun
 Agayun
 Agayuneq
@@ -158,6 +159,7 @@ aglenrar(aq*)
 aglenraralria
 aglenrraq*
 aglenrrar(aq*)
+agleq
 agluirun
 aglukaq
 aglumaneq
@@ -231,7 +233,8 @@ aiygaaq
 ak’a
 akaa
 akacakayak
-akagarcailkunakagarcailkutaq
+akagarcailkun
+akagarcailkutaq
 akagcuun
 akagenqellria
 akagtaq
@@ -266,6 +269,7 @@ akeqnerrlugun
 akeqniaq
 akeqniarvik
 akerta
+akervak
 aki
 akiilnguq*
 Akiaq
@@ -278,7 +282,6 @@ akiliun
 akiliurta
 akiliurvik
 akimiaq*
-akimiarunritar(aq*)
 akimitagaq
 akin
 akinguaq
@@ -294,7 +297,6 @@ akitnaq
 akitutaciq
 akiuk
 akiun
-akiviutaq
 aklanquq
 aklanqurrun
 aklegaq
@@ -310,7 +312,8 @@ akmagartaq
 akma(ni)
 akmaliarallr(aq*)
 akngikutak
-akngiqakngir
+akngiq
+akngir
 akngirqun
 akngirnailitaq
 aku
@@ -348,7 +351,9 @@ akuyun
 akwarpak
 akwaugaq
 akwaugarpak
-al’a al’aqalaalaq
+al’a
+al’aq
+alaalaq
 alaciq
 alagnaq
 alagnarqe
@@ -356,7 +361,6 @@ alagyug
 alailun
 alairyuaralria
 alak’aa
-alakiitaaq
 alangru
 alangruq
 alangruu
@@ -372,7 +376,6 @@ alarneq
 alar’ussaq
 alarun
 alassaq
-alatiq
 alavvilaq
 alciq
 alek
@@ -383,6 +386,7 @@ alerquuciurtet
 alerquun
 Alerquutet
 alevlaq
+algacak
 algarcaraq
 algiq
 aliiman
@@ -403,7 +407,8 @@ alkuaq
 alku
 alla
 allakaq
-allakarallakarte
+allakar
+allakarte
 allakariyagaq
 allakaukiyaraq
 allakuciq
@@ -433,7 +438,6 @@ alliqsaq
 alliqupak
 alliraq
 allirtet
-allneq
 allngignaq
 allngiguaq
 allngik
@@ -477,7 +481,8 @@ alunaq
 alularta
 alungae
 alungun
-alungutaya(g)aq*alunguksuar
+alungutaya(g)aq*
+alunguksuar
 alungyar(aq*)
 alungyaq
 aluqan
@@ -536,7 +541,7 @@ amiraq
 amiragglugaq
 amirkaq
 amirlu
-amirluqamirlu
+amirluq
 amirluar(aq*)
 amirrluk
 amiruaq
@@ -545,6 +550,7 @@ Ami’ulikaq
 amiutekaq
 amiutaq
 amlek
+amlleq
 amllenrulria
 amllequmtaq
 amllerikaniryaraq
@@ -553,7 +559,8 @@ amllerutaq
 amllertaciq
 amlliq
 amna
-amngaqamngar
+amngaq
+amngar
 amnginaq
 ampi
 amraq
@@ -575,8 +582,10 @@ anagtassiigun
 anainessaaq
 anaiq
 anangnaqucista
-anaqanar
+anaq
+anar
 anaqupak
+anaraq
 anarcetaaq
 An’arciiq
 anarcuun
@@ -637,6 +646,7 @@ angiinaq
 an’gilaq
 angilurneq
 an’giun
+angiyaq
 anglicar
 anglicaraq
 anglicarta
@@ -646,7 +656,11 @@ angllurayuli
 anglluuciq
 anglluun
 anglutugaq
-angqacukuaqangqacunguaqangqayagaq
+angniq
+angqacukuaq
+angqacunguaq
+angqayagaq
+angqaq
 angqessnguaq
 angqissnguaq
 angqin
@@ -660,7 +674,8 @@ angruyarneq
 angsaq
 angtaciq
 angtuaq
-anguangu’u
+angu
+angu’u
 anguarun
 anguarussaq
 anguarutnguaq
@@ -669,7 +684,6 @@ anguciuqsailnguq*
 angukaaq
 angukaq
 angukaraq
-angukara’urluq*
 angulluaq
 angullugaq
 angulluguaq
@@ -690,6 +704,7 @@ angvaneq
 angvanuq
 anguturluq
 angutvak
+anguyak
 anguyagcuun
 anguyagta
 angusagta
@@ -697,10 +712,10 @@ anguyararaun
 angvarun
 angvassurliq
 angyapiaq
-angyaqangyar
+angyaq
+angyar
 angyalek
 angyaqatak
-angyarrluk
 angyayagaq*
 angyayuk
 anianessaaq
@@ -722,6 +737,7 @@ anirturta
 anirturista
 anirtuun
 anirturin
+aniu
 aniuk
 aniurta
 anlleq
@@ -746,9 +762,10 @@ anu
 anuk
 Anucimallrat
 anuqae
-anuqataq (?)
+anuqataq(?)
 anuqessuun
 anuqetuliar(aq*)
+anutiiq
 anuurluq*
 anuureluq*
 anuuruluq*
@@ -760,9 +777,6 @@ Anvik
 Anyaraq
 anyuk
 anyurnarqe
-apa
-ap’a
-apaq
 apaguaq
 apakcuk
 apakussutaq
@@ -781,6 +795,7 @@ apaurluq
 apertuatesta
 apertuacista
 aperyaraq
+apiataq
 ap’nerrlugun
 apqara’arcuun
 apqaurciryaraq
@@ -864,6 +879,7 @@ arenqiartekaq
 arenqiirturtet
 arenvak
 ariuq
+arilla
 arilluk
 arin
 arinaciraq
@@ -900,14 +916,15 @@ arrsak
 arrsagaq
 arucetaaq
 arula
+arulaq
 arulaircissuun
 arulaituli
 arulamirun
 arulan
 arulaun
-arulaq
 arularaq
-arulayaraqarulaliyaraq
+arulayaraq
+arulaliyaraq
 arumaarrluk
 arumaarrluaq
 arumalria
@@ -933,7 +950,7 @@ Asaacarsaq
 asaaqin
 asaaquq
 as’arcaraq
-as’arcea(aq*)
+as’arceńa(aq*)
 Asaucaryaq
 Asaucarsaq
 asaun
@@ -944,6 +961,7 @@ asgiq
 asgircuun
 asguilitaq
 asgulirneq
+asguq
 asguranairtet
 asguranarqe
 asguraq
@@ -983,8 +1001,6 @@ ata’a
 ataam
 ataata
 atailnguq*
-ataki
-atak
 ataku
 atakuq
 atakuar(aq*)
@@ -1016,7 +1032,7 @@ atauciq
 atauciqerrnaq
 ataucirqumek
 ataucitun
-atawaatawa
+atawa
 atawaqaun
 at’ayagglugaq
 ateknguin
@@ -1024,16 +1040,19 @@ atekuk
 atellgun
 ateq
 atertaar(aq*)
-atgiaqatgiiyaq
+atgiaq
+atgiiyaq
 atiknguin
 atkallaq
 atkiksaaq
 atkucuar(aq*)
+atkuk
 atkuliggiiq
 atkupiaq
 atliq*
 atliliyaraq
 atlirneq
+atmak
 atmagcuun
 atmaliq
 Atmaulluaq
@@ -1060,14 +1079,16 @@ aturcetaaq
 aturrlugaq*
 atunem
 atungaq
+atuq
 atusaaq
 atuun
 atvaliq
-ag’ar
-ag’arissuun
-ag’ariyaraq
+a¥g’ar
+a¥g’arissuun
+a¥g’ariyaraq
 augglir
-Agkumiut
+A¥gkumiut
+a¥gna
 augna
 augtaar(aq*)
 augtuar(aq*)
@@ -1092,7 +1113,7 @@ avaliugarkaunrilnguq*
 avamiqaq
 avan
 avangcaq
-ava(ni)(aga(ni))
+ava(ni)(a¥ga(ni))
 avankuq
 avaq
 avaqutaq
@@ -1100,18 +1121,20 @@ avaqutarkartaq
 avaryug
 avataq
 avatarpak
-avatae (agatae)
-avatmun (agatmun)
+avatae(a¥gatae)
+avatmun(a¥gatmun)
 avayacilleq
 avayaq
 avcellngaq*
+avek
 avelngaq*
 avelqurpak
 avenqegciyaraq
 avik
-aviraun(agiraun)
+aviraun(a¥giraun)
 avirluqutaq
 avisgaq
+aviukaq
 avneq
 avngulek
 avngulgaq
@@ -1167,8 +1190,10 @@ ayugesvik
 ayugiugiq
 ayumian
 ayungnaar(aq*)
+ayuqae
 ayuqeltassiigun
 ayuqestassiigun
+ay’utaq
 ayvailun
 ayuquciicaraq
 ayuquciq
