@@ -1,20 +1,20 @@
-E
 egaaq
 egaarniq
 egacuayak
 egassuayak
+[e]ceq
 eciq
 ecir
 ecirkaq
 Ecuilnguq*
 ecuilnguq*
-egaksuar(aq*)
 egaleq
 egamaarrluk
 egan
 egelrun
 egelruciayuli
 egiaq
+egilra
 egilrallgun
 egkuaq
 egkuq
@@ -38,7 +38,8 @@ egturyarcuun
 egturyircuun
 egturyiurcuun
 egun
-ekaeeke
+ekae
+eke
 ek’aq
 ekiaq
 ekiarneq
@@ -62,7 +63,6 @@ Ekvicuaq
 ekvigtaar(aq*)
 ekvik
 ekviaq
-
 ekviucilluk
 elagaq
 elagayuli
@@ -84,9 +84,9 @@ elavurcaun
 elcailkun
 elcaikutaq
 elcessuun
-elciayulielciaya(g)aq*
+elciayuli
+elciaya(g)aq*
 elciqaq
-elciqaruaq
 Elciq
 Elciyaraq
 [e]leq
@@ -106,9 +106,9 @@ elitnauraq
 elitnaurista
 elitnaurun
 elitnaurvik
-eliveqelivneq
+eliveq
+elivneq
 ella
-‘
 Elivelek
 ellaissuun
 ellait
@@ -125,13 +125,15 @@ ellanguaq
 ell’araq
 ellaraq
 ellarrluk
+[e]llerrar(aq*)
 elliaq
 ellii
 elliin
 elliiq
 elliitaq
 elliinginaq
-elliitagaten
+elliita¥gaten
+ellikaraq
 Ellikarermiut
 ellilervik
 ellimalrut
@@ -171,13 +173,13 @@ elluqutaq
 ellutmuaq
 ellutmuayaaq
 ellvik
+elnguq
 elngurliq
 elpeci
 elpeksuun
 elpet
 elpetek
 elqialek
-elqiaq*
 elqiiq*
 elqipcuaq
 elquaq*
@@ -197,14 +199,15 @@ ema’urluq*
 emacuaraq*
 emacungaq*
 emarrlugaq*
-[e]meq  emeq
-emquq
+[e]meq
+emeq
 emrun
 emuk
 emugcuun
 emugilitaq
 emulek
-[e]nae enae
+[e]nae
+enae
 enairayuliyagaq*
 en’aq
 enciq
@@ -270,7 +273,6 @@ equgtaaq
 equk
 eq’uke
 eq’utar
-eq’uyug
 eqyeraq
 erenret
 erina
@@ -318,8 +320,10 @@ eskaapaaq
 eskaayaq
 eskaniaq
 eskaviaq
-eskiiq eskiir
-eskuulaqeskuuluq
+eskiiq
+eskiir
+eskuulaq
+eskuuluq
 eskuularaq
 eskuularista
 eskuularvik
@@ -329,7 +333,8 @@ espaak
 espickaq
 espickaaq
 espiickaaq
-esseq[e]sseq
+esseq
+[e]sseq
 esslaapaq
 ess’laapaq
 essmataq
@@ -342,7 +347,8 @@ estik’luuq
 estulussaq
 estelussaq
 estuuluq
-essvataqesswataq
+essvataq
+esswataq
 esswetaq
 esvaik
 esvaiq
@@ -363,7 +369,8 @@ et’raq
 evaat
 evcuutaq
 evegtaq*
-evek [e]vek
+evek
+[e]vek
 everte
 everquun
 evga
@@ -382,3 +389,4 @@ eyurcissuun
 eyalirtaq
 eyanqellria
 eyaq
+eyaneq

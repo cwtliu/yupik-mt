@@ -2,7 +2,6 @@ yaag-
 yaaqliqe-
 yaaqsig-
 yaarui-
-yaaveskanir-
 yaassiigenqegg-
 yaate-
 yaatiir-
@@ -20,7 +19,8 @@ yiir-
 yik’ute-
 yir’-
 yitaar-
-yit’e-yiite-
+yit’e-
+yiite-
 yivrir-
 yuar-
 yuarii-
@@ -32,7 +32,7 @@ yugnirqe-
 yugte-
 yug’urte-
 yugyag-
--
+-yuk
 yuksagute-
 yukutarte-
 yuliur-
@@ -45,10 +45,10 @@ yungcarte-
 yungqerr-
 yunriur-
 yuqerte-
-yuq’uqyuq’ur-
+yuq’ur-
 yur-
-yuraqyurar-
-yurar-yura’arte-
+yurar-
+yura’arte-
 yuriate-
 yuringa-
 yurvir-
@@ -57,7 +57,7 @@ yuss’ug-
 yuu-
 yuullrurte-
 yuungcar-
-yuunginaq yuunginar-
+yuunginar-
 yuungnaqe-
 yuungui-
 yuunguite-

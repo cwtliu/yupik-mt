@@ -1,4 +1,3 @@
-S
 saaganeq
 saagaq
 saagaun
@@ -37,8 +36,10 @@ sapun
 saskaq
 saskaaq
 saskiurun
-saskuksaskuq
-sass’aqsassaaq
+saskuk
+saskuq
+sass’aq
+sassaaq
 savun
 sayak
 sayalleq
@@ -53,6 +54,7 @@ Selavi
 selin
 selip’ussaaq
 senkaq
+seq
 setiinkaaq
 siimaq
 siimarar(aq*)
@@ -69,7 +71,8 @@ siyuq
 skaapaq
 skaapaaq
 skauk
-skuulaqskuuluq
+skuulaq
+skuuluq
 skuularaq
 skuuluraq
 skuularista
@@ -81,14 +84,18 @@ S’laavi
 smiiyaq
 snuukuuq
 spaak
-spickaqspiickaaq
+spickaq
+spiickaaq
 staalista
 stakaanaq
-stelussaqstelussar
+stelussaq
+stelussar
 stikluuq
 stik’luuq
+stulussaq
 stuuluq
 suassaaq
+sugaq
 sugaruaq
 sugg’aliq
 sugg’eq
@@ -122,19 +129,20 @@ suupaq
 suuq
 suuri
 suurvik
-T
-taakitaa
+taaki
+taa
 taamaq
 taamlek
 taalek
-
 taanganrirciigacaraq
 taanganrirciigalnguq*
-taangaqtaangar
+taangar
 taangaryaraq
 taangarvik
 taaq
-taaqsipaktaaqcipak
+taaqassaaq
+taaqsipak
+taaqcipak
 taarrin
 taarrissuun
 taassiq
@@ -167,7 +175,6 @@ taiq
 taitai
 taituir(aq*)
 taituk
-takaneq
 takarnarqe
 takarnarqun
 takartar
@@ -183,13 +190,13 @@ takumcunarqe
 takumcutar
 takumcuyug
 takvialnguar(aq*)
+takvik
 takviun
 talaariq
 talayaq
 talicivik
 talin
 talineq
-talirneq
 taliruaq
 tallegcissuun
 tallegneq
@@ -230,8 +237,7 @@ Taluyat
 taluyiurun
 taluutaq
 tamaaten
-tamaceaq
-tamana
+tamaceńaq
 tamalkuq
 tamaqernikiyagaq
 tamarqellriit
@@ -257,6 +263,7 @@ tang
 tan’gaurluq*
 tangeq
 tan’geq
+tangercetaaq
 tangercetaarvik
 tan’gerliq
 tan’gerpak
@@ -265,6 +272,7 @@ tangerrsuutek
 tangevkayak
 tangevkayagaq
 tangiq
+tangluq
 tangnerraq
 tangnerrayak
 tangnircaun
@@ -278,7 +286,8 @@ tangrruarvik
 tan’gun
 tan’gurraq*
 tangvagtelleq
-tangviaqtangviarrluk
+tangviaq
+tangviarrluk
 tangviarrluggaq
 tanqik
 tanqig
@@ -310,12 +319,14 @@ taqaq
 taqcipak
 taqeq
 taqerpak
-taqiktaqig
+taqik
+taqig
 taqikaq
 taqikartuliq
 taqikataq
 taqilek
 taqingssak
+taqmak
 taqneq
 taqneluk
 taqsipak
@@ -359,7 +370,6 @@ tarupiaq
 taruyamaarun
 tarvaq
 tarvak
-tarvar
 taryaqvagcuun
 taryaqvak
 tarsarpak
@@ -379,19 +389,20 @@ tatellgaq
 tatervak
 tatkik
 tauciin
-tagaam
-tag’am
-tagken
-tagak’estauna
+ta¥gaam
+ta¥g’am
+ta¥gken
+ta¥gak’estauna
 taumiqlak
 tauna
 taunginaq
 taunginarmek
 tautek
 tavallut’ava
-tava(ni)(taga(ni))
+tava(ni)(ta¥ga(ni))
 tavaq
 tavatellengraan
+tavci
 tavigtaq
 tavtaaq
 tayarneq
@@ -422,7 +433,6 @@ teggliliurrsuun
 teggliq
 teggmaarrluk
 teggneq
-teggneraq*
 teggsak
 tegg’utaq
 teggvak
@@ -450,7 +460,8 @@ tekciuk
 tekciugaq
 tekciugglugaq
 tekcitak
-tekcika(aq*)tekcilunaq
+tekcika(aq*)
+tekcilunaq
 tekeq
 tekeryuk
 teki
@@ -476,10 +487,11 @@ tem’iq
 temiquyugglugaq
 temirta
 temtemtaaq
-tengak
+tengalraq
 tengalrarcuun
 tengalrautaq
-tengaurcuuntengaurrsuun
+tengaurcuun
+tengaurrsuun
 tengaurta
 tengayuk
 tengempak
@@ -487,7 +499,9 @@ Tengemqapiar
 tengesqaar(aq*)
 tengessuun
 teng’guar(aq)
-tengleryaq tengleryagar(aq*)
+tengleryaq
+tengleryagar(aq*)
+tengluk
 tengmiacuar(aq*)
 tengmialler(aq*)
 tengmiaq
@@ -495,9 +509,11 @@ tengmiaqsar(aq*)
 tengmiarcuun
 Tengmiariuq
 tengmiarpak
-tengssuuterpaktengssuulvaktengssu’rvak
+tengssuuterpak
+tengssuulvak
+tengssu’rvak
 tengtarkaq
-tengmiarrluktengmiarpak
+tengmiarrluk
 tengmirrluk
 Tengmiirviguaq
 Tengmiirvik
@@ -528,14 +544,17 @@ teptuyak
 teq
 teq’aciileq
 teq’alleq
+teq’aq
 teqiyaar(aq*)
-teqirayuliteqelquayaq
+teqirayuli
+teqelquayaq
 teqsuqaq
 teq’uciq
 teq’ulungssaq
 teq’uq
 ter’aq
-teriaqteriayaaq
+teriaq
+teriayaaq
 teriar(aq*)
 terikaniaq
 terikaniar
@@ -546,7 +565,8 @@ terruaya(g)aq*
 terteq
 tertuli
 teru
-teruvailitaq terupailitaq
+teruvailitaq
+terupailitaq
 teryurauluk
 tetengquq
 tetgaq
@@ -558,7 +578,8 @@ tevtararaq*
 tevuq
 tevurkaq
 Tevyaraq
-tevyaraqtevcaraq
+tevyaraq
+tevcaraq
 tevyuli
 tiiguayaaq
 tiik
@@ -566,7 +587,7 @@ tiiggluk
 tiissiq
 tiissitsaaq
 tiicitsaaq
-tiiviiqtiiviir
+tiiviir
 tiiyaq
 tit’assiq
 titiq
@@ -580,7 +601,7 @@ tuarpiaq
 tuaten
 tuatkacagaq
 tuc’araq
-tuc’eaq
+tuc’eńaq
 tuc’inaq
 tugeq
 tugeryaraq
@@ -589,9 +610,8 @@ tugkar(aq*)
 tugkaraq
 tugglugpak
 tugneq
-tugrinaq “
+tugrinaq“
 tugrun
-tuir(aq*)
 tukervik
 tukeryaraq
 tukaayuq
@@ -616,19 +636,23 @@ tuli’ik
 tuli’ilkaaq
 tulilekaaq
 tulikaq
-tulimaq tulimaraq
+tulimaq
+tulimaraq
 tulukarnarar(aq*)
-tulukaruktulukaruq
+tulukaruk
+tulukaruq
 tuluq*
 tuluruaq
 tuluryaq
 tuluryaaq
 tuluvkuyuggaq
-tulvaaqtulvaarraq
+tulvaaq
+tulvaarraq
 tumae
 tumagaq
 tumagliq
-tumak tum’i
+tumak
+tum’i
 tumagneq
 tumaqcaaq
 tumartaq
@@ -652,7 +676,6 @@ tungliq*
 tunglirneq
 tunguleq
 tungulleralria
-tungulria
 tungulriaya(g)aq*
 tungungalnguq*
 tungunqeggliq
@@ -700,27 +723,31 @@ tunutlek
 tunucellek
 tunullek
 tunucillek
+tupautaq
 tupipiarumalria
 tupicilleq
 tupigaq
 tupilluk
 tupiq’uyaq
+tupiq
 tupiutaq
 tupugaq
 tupuk
 tupuuluq
 tuqluk
+tuqluq
 tuqluun
 tuqmik
 tuqsiiq
 Tuqsuk
 tuqsuk
 tuqtuq
+tuqu
 tuqucetaaq
 tuquilria
 tuqumalria
 tuqumalriit
-tuqumkassua (tuqumkayua ?)
+tuqumkassua(tuqumkayua?)
 tuqunaq
 tuqunarliq
 tuquneq
@@ -729,7 +756,8 @@ tuqunquq
 tuqutarayuli
 turquq
 turtuqaq
-turruluqturuluk
+turruluq
+turuluk
 turtuniaq
 turun
 tusailitaq
@@ -743,10 +771,15 @@ tusrun
 tusrulluk
 tuss’aq
 tuss’araq
-tus’untus’utaq
+tus’un
+tus’utaq
 tut’at
+tutek
 tutemqaq
-tutgar(aq*) tutgaraq
+tutgar(aq*)
+tutgaraq
+
+Y
 tutgara’urluq*
 tutga’rrluk
 tutgarrlugaq
@@ -762,7 +795,8 @@ tuunr(aq*)
 tuupicaaq
 tuuq
 tuurkaq
-tuusiiktuuyiik
+tuusiik
+tuuyiik
 tuussaq
 tuutae
 tuutaalquciq
@@ -772,7 +806,6 @@ tuutangayak
 tuutaq
 tuutaruaq
 tuvapak
-tuvaq
 tuvartaq
 tuvcu
 tuvcuguaq
@@ -784,16 +817,15 @@ tuvraq
 tuvuuricaraq
 tuyek
 tuyik
-tuyngaviktuynganeq
+tuyngavik
+tuynganeq
 tuyuq
-U
 tuyurcuun
 Tuyuryaq
 ualirneq
 uamcaaq
 uamqe
 uamqun
-uamulqutaq
 uan
 ua(ni)
 uaqliq*
@@ -825,14 +857,16 @@ ucurnarqe
 ucurnarquciq
 ucurnarqun
 ucurnarqutke
-ga . . . ua . . .
+ga...
+ua...
 gaqliq
-uaqliq ‘
-gan’i uani ‘
+uaqliq‘
+¥gan’i
+uani‘
 gan’i
-Yup’ik ‘nem’i ‘
-gi . . .
-ugaani
+Yup’ik‘
+nem’i‘
+gi...ugaani
 ugaan’
 Ugaassat
 Ugaassiq
@@ -841,11 +875,14 @@ gasek
 gayaran
 gayarituli
 ugken
-gi . . . ui . . .
-gitauq uitauq ‘ging’a
-uinga ‘git’ellruuq
+gi...
+ui...
+gitauq
+uitauq‘
+ging’a
+uinga‘
+git’ellruuq
 uitellruuq
-ga . . .
 uginagumaq
 uginaq
 ugkae
@@ -853,7 +890,8 @@ uglaniiq
 uglarun
 ugluussiq
 ugna
-ugnaraq*ugugnaraq*
+ugnaraq*
+ugugnaraq*
 ugtaq
 ugtalria
 ugtarcurcuun
@@ -903,6 +941,7 @@ uivluk
 uivneq
 uivquq
 uivqurraq*
+uivtaaq
 uivukaq
 uivun
 uivvluaq
@@ -913,7 +952,8 @@ ukanirpak
 ukaniku
 ukaqvaggun
 ukatmun
-ukayiruaqukasiruaq
+ukayiruaq
+ukasiruaq
 ukeggna
 ukicissuun
 Ukiivak
@@ -932,9 +972,11 @@ ukna
 uksuilleq
 uksuivik
 uksiiyaraq
+uksuaq*
 uksuaqu
 uksuarpak
 uksullaq*
+uksuq
 uksuqu
 Uksurnarli
 uksurpak
@@ -945,6 +987,7 @@ ukuaq
 ukurritaq
 ukurmiu
 ukut
+ukveq
 ukverneq
 ukverun
 ukveruciq
@@ -952,18 +995,21 @@ ulae
 ulap’aq
 ulariq
 ulcetaaq
-ulerpakulerpag
+ulerpak
+ulerpag
+ulevlaq
 ulevleruyak
 ulganaq
 uligaaq
 uligiayuli
 uliiq
+ulik
 ulikutaq
 ulikussuk
 ulilek
 uliun
 ullacuk
-ull’eruaq (ul’eruaq ?)
+ull’eruaq(ul’eruaq?)
 ulligtaq
 ulligtaruaq
 ullirneq
@@ -976,6 +1022,7 @@ ull’uyaq
 ulpecuqnaq
 ulqiq
 ulqucinak
+ulruk
 ulrussiik
 ulu
 uluq
@@ -987,7 +1034,8 @@ ulugcuun
 uluggsuun
 ulukaq
 ulunalek
-ulungayaraqulunguyar(aq*)
+ulungayaraq
+ulunguyar(aq*)
 uluqaq
 uluquq
 ulurpak
@@ -996,6 +1044,7 @@ uluryaciriyaraq
 uluryarutaq
 ul’utvak
 ulvelria
+umcigci
 umcigun
 umcigutekaq
 umiqvanek
@@ -1003,6 +1052,7 @@ umkaryaraq
 Umkumiut
 umnaq
 umran
+umek
 umialek
 umi
 umik
@@ -1013,6 +1063,7 @@ umingmaq
 uminguaq
 umsuaq
 umsugaq
+umta
 umyualiurta
 umyuaq
 umyuarcirtur
@@ -1036,6 +1087,7 @@ unegtaq
 uneq
 unermik
 unermiaq
+unermiar
 ungagaq
 ungaggaq
 ungaguaq
@@ -1057,11 +1109,12 @@ ungelkaaq
 ungicetaaq
 ungilak
 ungilagliar(aq*)
-ungilayagaq
+ungilayagaq*
 ungllekaq
 unglu
 unglunguaq
-ungpaar(aq*)ungpek
+ungpaar(aq*)
+ungpek
 ungumraun
 ungungssiar(aq*)
 ungungssiq
@@ -1070,6 +1123,7 @@ ungunqun
 unguqupak
 unguquutaq
 Unguurvik
+unguva
 unguvalria
 unguvan
 unineq
@@ -1077,14 +1131,15 @@ uniqtaraq
 unista
 univkaraq
 univkarrsuun
-univkaq univkar
+univkaq
+univkar
 unkumiutaq
 unrapigaq
 unraq
 un’u
-unuaku
 unuakuar
-unuakutaqunuakutar
+unuakutaq
+unuakutar
 unuamek
 unuaq
 unuaqu
@@ -1093,15 +1148,18 @@ unuggsuun
 unugcuun
 unugpak
 unuir(aq*)
+unuk
 unuku
 upenerkaq
+up’nerkaq
 up’nerkarpak
 up’nerkarrvik
 up’nerkilleq
 up’nerkivik
 uqamailkutaq
 uqamalkutaq
-uqamailtaciquqamaltaciq
+uqamailtaciq
+uqamaltaciq
 uqamailtassiirun
 uqamaltassiirun
 uqamaltassiarcuun
@@ -1111,9 +1169,11 @@ uqetmun
 uqerrsuun
 uqiinaq
 uqilali
-uqivikuqivigaq
+uqivik
+uqivigaq
 uqirissuun
-uqirvikuqiryaraq
+uqirvik
+uqiryaraq
 uqissaqsuun
 uqisvik
 uqiyvik
@@ -1123,7 +1183,6 @@ uqniraq
 uqraq
 uqriilitaq
 uqriutaq
-uqrunuqrutaq
 uqrun
 uqrutaq
 uqrutarkaq
@@ -1133,7 +1192,8 @@ uqsunaq*
 uqsunaaq
 uqsuq
 uqsuqaq
-uqsuqerpakuqsurtaq
+uqsuqerpak
+uqsurtaq
 uqsurpayagaq
 uqtaq
 uqtaqngaq
@@ -1151,7 +1211,8 @@ uqulkuk
 uqumaarrluk
 uqumelnguq*
 uqumcuaq
-uqumleququmluk
+uqumleq
+uqumluk
 uqumyagngalnguq*
 uqumyak
 uqungnak
@@ -1168,8 +1229,8 @@ uqurrsuk
 uqurun
 uqurvik
 uquryaraq
-uquryak uquryag
 uquryak
+uquryag
 uqutmun
 uquucilleq
 uquucivik
@@ -1183,19 +1244,22 @@ uqviaraq
 uqvigaq
 Uqvigartalek
 uqviggluk
-uqvigpikuqvigpiaq
+uqvigpik
+uqvigpiaq
 uqviicar(aq*)
 uqviinraq
 uqvik
 uqvinraq
 uraluq
 uraruq
-urasqaqurasquq
+urasqaq
+urasquq
 urciq
 urelriit
 urenkun
 urluveq
-urluraqurlu
+urluraq
+urlu
 urneq
 urrleq
 Urr’agmiut
@@ -1221,6 +1285,7 @@ uskuq
 uskuraq
 uskurtuliaraq*
 usneq
+uspeq
 usraqpakiiqertellria
 usruq
 uss’ariyak
@@ -1231,17 +1296,18 @@ ussneq
 ussuciaq
 ussugcin
 ussukaascengiir(aq*)
-ussukataq
-ussukcaqussukar
+ussukcaq
+ussukar
 ussukcautelleq
 ussukcausngalleq
 ussukcaucimalleq
 Ussukcautelleq
+ussungiq
 ussungirkaq
 ussungluq
 uss’utali
-ussuuq (usuuq ?
-uyuuq ?)
+ussuuq(usuuq?
+uyuuq?)
 usuuq
 usvi
 utakinaq
@@ -1277,8 +1343,10 @@ uuneq
 uungllekaraq
 uunguciicaraq
 uuqessngitak
-uuqnarliquuqnarniq
-uuqnituquuqniquq
+uuqnarliq
+uuqnarniq
+uuqnituq
+uuqniquq
 uuqniikuuq
 uuquciik
 uurcaq
@@ -1307,9 +1375,11 @@ uyaqucuayaalek
 uyaqukiir(ar)
 uyaquq
 uyaqurrilitaq
-uyaqrrun
+uyaq¥rrun
 uyaraq
-uyarr’uyaquyarr’uyar(aq*)uyarruyuaq
+uyarr’uyaq
+uyarr’uyar(aq*)
+uyarruyuaq
 uyeqnak
 uyiqvik
 uyruq
@@ -1317,12 +1387,8 @@ uyur(aq*)
 uyuqliq*
 uyuuq
 uyvi
-V
-v
 ev
-e
 vegtaq*
-‘
 vegtarcuun
 vek
 verquun
@@ -1332,9 +1398,6 @@ vesraya(g)aq*
 vesraarar(aq*)
 viuq
 vvelak
-W
-w
-g
 kw
 kwaten
 kwall’u
@@ -1343,14 +1406,13 @@ kwangkuta
 waten
 wall’u
 wiinga
-wangkuta.
 wacicetun
 wagg’uq
 wakencuillak
 wak’nirnek
 wall’
 wall’upik
-wang . . .
+wang...
 wangkuk
 wangkuta
 wani
@@ -1363,10 +1425,11 @@ waqaa
 wataimarta?
 watkacagaq
 watmi
-wat’um nalliini
-wiiwiinga
-watpikwatqapik
+wat’umnalliini
+wii
+watpik
+watqapik
 watlirqantar
 watua
-wat’aga
+wat’a¥ga
 watuacetun
