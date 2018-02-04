@@ -1,3 +1,4 @@
+# Author: kechavez
 from __future__ import print_function
 from enchant import Dict
 from enchant.tokenize import get_tokenizer 
@@ -24,7 +25,8 @@ with open(fname, 'r') as f:
   for line in f:
     # Note: might conisder making this a list of corrections.
     pline = line.replace("’", "'") # Remove special character.
-    pline = pline.replace("ﬁ", "f") # Remove special character.
+    pline = pline.replace("ﬁ", "fi") # Remove special character.
+    pline = pline.replace("ﬂ", "fl") # Remove special character.
 
     invalid_words = [iword[0] for iword in en_tokenizer(pline) \
                       if not en_dict.check(iword[0])] 
@@ -33,6 +35,10 @@ with open(fname, 'r') as f:
     if len(invalid_words) != 0:
       word_lines.append((invalid_words, line_num))
       print("Invalids words found in line ", line_num, ":", invalid_words)
+
+      recs = [en_dict.suggest(w)[0] if len(en_dict.suggest(w)) > 0 else "_" \
+                for w in invalid_words]
+      print("\trecommendations: ", recs)
 
     line_num += 1
 
