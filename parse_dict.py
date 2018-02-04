@@ -8,6 +8,7 @@
 # Original dictionary can be found at
 # http://www.uaf.edu/anla/collections/search/resultDetail.xml
 
+from __future__ import print_function
 from bs4 import BeautifulSoup
 import re
 import sys, os
@@ -15,7 +16,7 @@ from utils import writeListToFile
 
 # Open PDF file
 if len(sys.argv) < 2:
-    print "Usage : python parse_postbases.py filename.pdf"
+    print ("Usage : python parse_postbases.py filename.pdf")
 filename = os.path.splitext(sys.argv[1])[0]
 os.system("pdf2txt.py -t xml -c utf-8 %s.pdf > %s.xml" % (filename, filename))
 f = open('%s.xml' % filename, 'r')
