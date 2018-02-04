@@ -88,7 +88,6 @@ def third_person_singular(word):
 	word = word[:-1]
 	if word[-1] == 'e':
 		word = word[:-1]
-		#rule case for +' ASSUMING ONLY APPLIES TO E- ENDINGS ????????????CHNGE NOT ALL SINGLE SYLLABLES END IN E?????????????
 		if isSingleSyllable(word):
 			return(word+"'uq")
 		#return(word+"uq$$$$$$")
@@ -273,15 +272,15 @@ for word in root_examples:
 	print('\n')
 	print(word)
 	print(third_person_singular(word))
-	print(first_person_singular(word))
-	print(third_person_dual(word))
-	print(third_person_plural(word)+'\n')
-	print(first_person_singular(word))
-	print(first_person_dual(word))
-	print(first_person_plural(word)+'\n')
-	print(second_person_singular(word))
-	print(second_person_dual(word))
-	print(second_person_plural(word))
+	#print(first_person_singular(word))
+	#print(third_person_dual(word))
+	#print(third_person_plural(word)+'\n')
+	#print(first_person_singular(word))
+	#print(first_person_dual(word))
+	#print(first_person_plural(word)+'\n')
+	#print(second_person_singular(word))
+	#print(second_person_dual(word))
+	#print(second_person_plural(word))
 	make = False
 	want = False
 	past = True
@@ -296,4 +295,4 @@ for word in root_examples:
 	if negation:
 		word = apply_negation(word)
 	word = deconvert(word)
-	print(second_person_plural(word))
+	print(third_person_singular(word))
