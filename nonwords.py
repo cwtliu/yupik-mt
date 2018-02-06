@@ -6,39 +6,60 @@ import sys
 
 
 """
-This script will read a text file and output where non-english words occur.
+This script makes small corrections to a text file and outputs suggestions for
+misspellings.
 Usage: python nonwords.py <file.txt>
+options: --list_recs, to list recommended fixes.
 """
 
-if (len(sys.argv) != 2):
-  print("Usage: python nonwords.py <file.txt>")
+if not (1 < len(sys.argv) < 4):
+  print("Usage: python nonwords.py [--list_recs] <file.txt>")
   sys.exit()
 
-fname = sys.argv[1]
+list_recs = False
+if len(sys.argv) == 3 and (sys.argv[1] == "--list_recs"):
+  list_recs = True
+  
+fname = sys.argv[2] if len(sys.argv) == 3 else sys.argv[1]
 
-word_lines = [] # List of (word, line) tuples.
+# List of common incorrect spellings and associated corrections to perform
+# auto-correct with.
+auto_corrections = [("’", "'"), ("ﬁ", "fi"), ("ﬂ", "fl")]
+
 en_dict = Dict("en_US")
 en_tokenizer = get_tokenizer("en_US")
-line_num = 0
+line_num = 1
 
-with open(fname, 'r') as f:
-  for line in f:
-    # Note: might conisder making this a list of corrections.
-    pline = line.replace("’", "'") # Remove special character.
-    pline = pline.replace("ﬁ", "fi") # Remove special character.
-    pline = pline.replace("ﬂ", "fl") # Remove special character.
+ilines = open(fname, 'r').readlines()
 
-    invalid_words = [iword[0] for iword in en_tokenizer(pline) \
-                      if not en_dict.check(iword[0])] 
+invalid_words = []
+olines = []
 
-    # Stream output to stdout.
-    if len(invalid_words) != 0:
-      word_lines.append((invalid_words, line_num))
-      print("Invalids words found in line ", line_num, ":", invalid_words)
+for iline in ilines:
+  # Perform auto-correction in place.
+  oline = iline
+  for correction in auto_corrections:
+    oline = oline.replace(*correction)
+  olines.append(oline)
 
-      recs = [en_dict.suggest(w)[0] if len(en_dict.suggest(w)) > 0 else "_" \
-                for w in invalid_words]
+  invalid_words.append((line_num, [iword[0] for iword in en_tokenizer(oline) \
+                    if not en_dict.check(iword[0])]))
+
+  line_num += 1
+
+open(fname + '.corrected', 'w').writelines(olines)
+print('****************NOTE****************')
+print("See autocorrections in file " + fname + ".corrected")
+print('************************************')
+
+for ln, iws in invalid_words:
+  # Stream invalid words to stdout.
+  if len(iws) != 0:
+    print("Invalids words found in line ", ln, ":", iws)
+
+    if (list_recs):
+      recs = [en_dict.suggest(iw)[0] if len(en_dict.suggest(iw)) > 0 else "_" \
+                for iw in iws]
       print("\trecommendations: ", recs)
 
-    line_num += 1
 
