@@ -12,7 +12,7 @@ from __future__ import print_function
 from bs4 import BeautifulSoup
 import re
 import sys, os
-from utils import writeListToFile
+from utils import writeListToFile, replaceSpecialCharacters
 
 # Open PDF file
 if len(sys.argv) < 2:
@@ -66,13 +66,7 @@ for s in words:
         d = re.sub('\n|\r', '', d)
         for w in s.split(","):
             # Replace special characters
-            w = w.replace(u'\u00F7', u'\u0144') # division to n acute
-            w = w.replace(u'\u00B5', u'\u1E3F') # micro to m acute
-            w = w.replace('TMg', u'\u0144g')# ng acute
-            # Ligatures : leave them with ¥ symbol
-            #w = w.replace(u'\u00A5g', u'\u011D') # ¥g to ug ligature (g circonflex)
-            #w = w.replace(u'\u00A5q', u'\u')# ur ligature
-            # urr ligature
+            w = replaceSpecialCharacters(w)
             # Remove digits
             w = ''.join([i for i in w if not i.isdigit()])
             # Remove whitespaces
