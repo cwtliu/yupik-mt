@@ -6,6 +6,8 @@
 # Used with Yup'ik Eskimo Dictionary, 2nd edition. Jacobson, Steven A. 2012
 # Original dictionary can be found at
 # http://www.uaf.edu/anla/collections/search/resultDetail.xml
+#
+# Author: Temigo
 
 from bs4 import BeautifulSoup
 import re

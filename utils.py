@@ -1,5 +1,7 @@
 # *-* encoding: utf-8 *-*
 # Tools and utils
+# Author: Temigo
+
 import os
 
 def writeListToFile(list, filename):
