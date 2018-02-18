@@ -7,6 +7,7 @@ class Postbase(object):
         self.formula = formula
         self.final = not "\\" in formula
         self.debug = debug
+        self.token = []
         self.tokens = self.tokenize(self.formula) # meaningful tokens
 
     def __repr__(self):
@@ -36,37 +37,61 @@ class Postbase(object):
 
         flag = False
         if token == '~':
-            if root[-2] == 'e':
-                root = root[:-2]+root[-1]
-        elif token == "+"
+            if root[-1] == 'e':
+                root = root[:-1]
+        elif token == "+":
             pass
-        elif token == "-"
-            if root[-2] in consonants:
-                root = root[:-2]+root[-1]
-        elif token == "%"
-            if root[-2] == r and root[-3] in vowels and root[-4] in vowels and root[-5] in consonants:
+        elif token == "-":
+            if root[-1] in consonants:
+                root = root[:-1]
+        elif token == "%":
+            if root[-1] == 'r' and root[-2] in vowels and root[-3] in vowels and root[-4] in consonants:
                 flag = True
             if flag:
-                root = root[:-2]+root[-1]
-            elif root[-2] == 'g' or r[-3:] == 'er-' or '*' in root:
-                root = root[:-2]+root[-1]
+                pass
+            elif root[-1] == 'g' or root[-2:] == 'er' or '*' in root:
+                pass
+            elif root[-1] in consonants:
+            	root = root[:-1]
             flag = False
-        elif token == ":ng"
-        elif token == ":r"
-        elif token == ":g"
-        elif token == "n@"
-        elif token == "ng"
-        elif token == "-"
-        elif token == "-"
-        elif token == "-"
-        elif token == "-"
-        elif token == "-"
-        elif token == "-"
-        elif token == "-"
-        elif token == "-"
-        elif token == "-"
-
-
+        elif token == ":ng":
+        	position = self.tokens.index(token)
+        	if position+2 == len(self.tokens):
+        		if self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
+        			root = ''.join(root)+''.join(self.tokens[:position])
+        		else:
+        			root = ''.join(root)+''.join(self.tokens[:position])+'6'
+        	elif position+2 < len(self.tokens):
+        		if self.tokens[position+1] in vowels and self.tokens[position+2] not in vowels and root[-1] in vowels and root[-2] not in vowels:
+        			root = ''.join(root)+''.join(self.tokens[:position])
+        		else:
+        			root = ''.join(root)+''.join(self.tokens[:position])+'6'
+        elif token == ":g":
+        	position = self.tokens.index(token)
+        	if position+2 == len(self.tokens):
+        		if self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
+        			root = ''.join(root)+''.join(self.tokens[:position])
+        		else:
+        			root = ''.join(root)+''.join(self.tokens[:position])+'g'
+        	elif position+2 < len(self.tokens):
+        		if self.tokens[position+1] in vowels and self.tokens[position+2] not in vowels and root[-1] in vowels and root[-2] not in vowels:
+        			root = ''.join(root)+''.join(self.tokens[:position])+''.join(self.tokens[position+1:])
+        		else:
+        			root = ''.join(root)+''.join(self.tokens[:position])+'g'
+        elif token == ":r":
+        	position = self.tokens.index(token)
+        	if position+2 == len(self.tokens):
+        		if self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
+        			root = ''.join(root)+''.join(self.tokens[:position])
+        		else:
+        			root = ''.join(root)+''.join(self.tokens[:position])+'r'
+        	elif position+2 < len(self.tokens):
+        		if self.tokens[position+1] in vowels and self.tokens[position+2] not in vowels and root[-1] in vowels and root[-2] not in vowels:
+        			root = ''.join(root)+''.join(self.tokens[:position])
+        		else:
+        			root = ''.join(root)+''.join(self.tokens[:position])+'r'
+        #elif token == ":r"
+        #elif token == ":g"
         return root
 
     def parse(self, root, subword, remaining_root):
@@ -134,10 +159,13 @@ if __name__== '__main__':
     p2 = Postbase("-nrite\\")
     p3 = Postbase("+'(g/t)ur:6ag")
     w = "nerenrituq"
+    p2.tokens = [':ng','a']
     # Check in dictionary
     #print p1.parse("pissur-", w)
-    print(p2.apply("~", "nere-"))
-    print(p2.apply("-", "pissur-"))
+    print(p2.apply("~", "nere"))
+    print(p2.apply("-", "pissur"))
+    print(p2.apply(":ng", "pissuru"))
+#    print(p2.apply(":g", "pissur"))
 
     # Run docstring tests
     import doctest
