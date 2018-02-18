@@ -110,6 +110,27 @@ class Postbase(object):
         			root = ''.join(root)+''.join(self.tokens[:position])+'r'
         #elif token == ":r"
         #elif token == ":g"
+        elif token == 'g':
+        	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
+        		root = ''.join(root)+'r'
+        elif token == 'k':
+        	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
+        		root = ''.join(root)+'q'
+        elif token == 'gg':
+        	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
+        		root = ''.join(root)+'rr'
+        elif token == 'q':
+        	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
+        		root = ''.join(root)+'k'
+        elif token == 'r':
+        	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
+        		root = ''.join(root)+'g'
+        elif token == 'rr':
+        	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
+        		root = ''.join(root)+'gg'
+        elif token in vowels:
+        	if root[-2:] == 'er' or root[-2:] == 'eg':
+        		root = ''.join(root[:-2])+root[-1]
         elif token == "'":
             if root[-6] == '(' \
                 and root[-5] in consonants \
@@ -130,8 +151,8 @@ class Postbase(object):
                                     or root[-2] in stops):
                 root = root[:-1]
             # FIXME what if there is (6) or :6 in the suffix? Does it count as beginning with 6 ?
-            elif (self.begins_with("6") or self.begins_with("m") or self.begins_with("v"))
-                                    and root[-1] == "t"
+            elif (self.begins_with("6") or self.begins_with("m") or self.begins_with("v")) \
+                                    and root[-1] == "t" \
                                     and (root[-2] in voiced_fricatives \
                                         or root[-2] in voiceless_fricatives \
                                         or root[-2] in voiced_nasals \
