@@ -20,13 +20,13 @@ noun_pbs_defs, verb_pbs_defs  = [], []
 
 for i in range(len(pb_defs)):
   dsplit = pb_defs[i].split(';')
-  nd = ';'.join([d for d in dsplit if d.find('N') != -1]).lstrip()
-  vd = ';'.join([d for d in dsplit if d.find('V') != -1]).lstrip()
-  if len(nd) > 0:
+  nd = ';'.join([d for d in dsplit if d.find('N') != -1]).lstrip().rstrip() + '\n'
+  vd = ';'.join([d for d in dsplit if d.find('V') != -1]).lstrip().rstrip() + '\n'
+  if len(nd) > 1:
     noun_pbs.append(pbs[i])
     noun_pbs_defs.append(nd)
 
-  if len(vd) > 0:
+  if len(vd) > 1:
     verb_pbs.append(pbs[i])
     verb_pbs_defs.append(vd)
 
