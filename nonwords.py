@@ -24,13 +24,14 @@ fname = sys.argv[2] if len(sys.argv) == 3 else sys.argv[1]
 
 # List of common incorrect spellings and associated corrections to perform
 # auto-correct with.
-auto_corrections = [("’", "'"), ("ﬁ", "fi"), ("ﬂ", "fl")]
+auto_corrections = [("’", "'"), ("ﬁ", "fi"), ("ﬂ", "fl"), ('lhey', 'John'), ('lhey', 'They')]
 
 en_dict = Dict("en_US")
 en_tokenizer = get_tokenizer("en_US")
 line_num = 1
 
 ilines = open(fname, 'r').readlines()
+fname = fname[:fname.find('.')] + '.corrected.txt'
 
 invalid_words = []
 olines = []
@@ -47,9 +48,9 @@ for iline in ilines:
 
   line_num += 1
 
-open(fname + '.corrected', 'w').writelines(olines)
+open(fname, 'w').writelines(olines)
 print('****************NOTE****************')
-print("See autocorrections in file " + fname + ".corrected")
+print("See autocorrections in file " + fname)
 print('************************************')
 
 for ln, iws in invalid_words:
