@@ -1,4 +1,6 @@
 # *-* encoding:utf-8 *-*
+# Authors: cwtliu, Temigo
+
 import re
 from constants import *
 
@@ -47,6 +49,13 @@ class Postbase(object):
         token and word are (properly encoded) strings.
         Apply token to word. Modify word in place.
         Assuming root does not have any dash at the end.
+
+        >>> p1 = Postbase("-nrite\\")
+        >>> p1.apply("-", "pissur")
+        pissu
+        >>> p2 = Postbase("~+miu")
+        >>> p2.apply("~", "nere")
+        ner
         """
         if root[-1] == "-":
             raise Exception("Root should not have a dash at the end.")
@@ -184,6 +193,8 @@ class Postbase(object):
                 if conditions[letter]:
                     root += letter
                     break
+        elif token == "\\":
+            pass # not an ending
         else:
             raise Exception("Unknown token: %s" % token)
         return root
