@@ -7,11 +7,22 @@ class Postbase(object):
         self.formula = formula
         self.final = not "\\" in formula
         self.debug = debug
+        self.tokens = [] # meaningful tokens
 
     def __repr__(self):
         return self.formula
 
     def concat(self, word):
+        new_word = word
+        for token in self.tokens:
+            apply(token, new_word)
+        return new_word
+
+    def apply(self, token, word):
+        """
+        token and word are (properly encoded) strings.
+        Apply token to word. Modify word in place.
+        """
         pass
 
     def parse(self, root, subword, remaining_root):
