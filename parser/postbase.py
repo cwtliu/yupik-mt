@@ -50,12 +50,51 @@ class Postbase(object):
         Apply token to word. Modify word in place.
         Assuming root does not have any dash at the end.
 
-        >>> p1 = Postbase("-nrite\\")
+        >>> p1 = Postbase("-nrite")
         >>> p1.apply("-", "pissur")
-        pissu
+        'pissu'
         >>> p2 = Postbase("~+miu")
         >>> p2.apply("~", "nere")
-        ner
+        'ner'
+        >>> p3 = Postbase("%lu")
+        >>> p3.apply("%","imir")
+        'imi'
+        >>> p3.apply("%","pag")
+        'pag'
+        >>> p3.apply("%","iqaar")
+        'iqaar'
+        >>> p4 = Postbase("%(e)nka")
+        >>> p4.apply("%","qimugte")
+        'qimugte'
+        >>> p5 = Postbase(":6a")
+        >>> p5.apply(":6","pitu")
+        'pitu'
+        >>> p5.apply(":6","ner'u")
+        "ner'u"
+        >>> p6 = Postbase(":guq")
+        >>> p6.apply(":g","pai")
+        'paig'
+        >>> p7 = Postbase(":ruluku")
+        >>> p7.apply(":r","paa")
+        'paar'
+        >>> p7.apply(":r","pa")
+        'pa'
+        >>> p8 = Postbase("-qatar-")
+        >>> p8.apply("q","ayag")
+        'ayak'
+        >>> p9 = Postbase("'(g/t)uq")
+        >>> p9.apply("'","ner")
+        'ner'
+        >>> p9.apply("'","qaner")
+        'qaner'
+        >>> p10 = Postbase("@~+ni-")
+        >>> p10.apply("@","kipute")
+        'kiputn'
+        >>> p10.apply("@","apte")
+        'apn'
+        >>> p11 = Postbase("@~+6aite-")
+        >>> p11.apply("@","kipute")
+        'kipus'
         """
         if root[-1] == "-":
             raise Exception("Root should not have a dash at the end.")
@@ -66,13 +105,14 @@ class Postbase(object):
                 root = root[:-1]
         elif token == "+":
             pass
+
         elif token == "-":
             if root[-1] in consonants:
                 root = root[:-1]
         elif token == "%":
-            if root[-1] == 'r' and root[-2] in vowels and root[-3] in vowels and root[-4] in consonants:
-
-                flag = True
+            if len(root) > 3:
+                if root[-1] == 'r' and root[-2] in vowels and root[-3] in vowels and root[-4] in consonants:
+                    flag = True
             if flag:
                 pass
             elif root[-1] == 'g' or root[-2:] == 'er' or '*' in root:
@@ -81,84 +121,97 @@ class Postbase(object):
             	root = root[:-1]
             flag = False
 
-        elif token == ":ng":
-        	position = self.tokens.index(token)
-        	if position+2 == len(self.tokens):
-        		if self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
-        			root = ''.join(root)+''.join(self.tokens[:position])
-        		else:
-        			root = ''.join(root)+''.join(self.tokens[:position])+'6'
-        	elif position+2 < len(self.tokens):
-        		if self.tokens[position+1] in vowels and self.tokens[position+2] not in vowels and root[-1] in vowels and root[-2] not in vowels:
-        			root = ''.join(root)+''.join(self.tokens[:position])
-        		else:
-        			root = ''.join(root)+''.join(self.tokens[:position])+'6'
+        elif token == ":6":
+            position = self.tokens.index(token)
+            #print(self.tokens.index(token))
+            #print(self.tokens)
+            if position+2 == len(self.tokens):
+                #print('yes')
+                if self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
+                    root = root+''.join(self.tokens[:position])
+                else:
+                    root = root+''.join(self.tokens[:position])+'6'
+            elif position+2 < len(self.tokens):
+                if self.tokens[position+1] in vowels and self.tokens[position+2] not in vowels and root[-1] in vowels and root[-2] not in vowels:
+                    root = root+''.join(self.tokens[:position])
+                else:
+                    root = root+''.join(self.tokens[:position])+'6'
         elif token == ":g":
         	position = self.tokens.index(token)
         	if position+2 == len(self.tokens):
         		if self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
-        			root = ''.join(root)+''.join(self.tokens[:position])
+        			root = root+''.join(self.tokens[:position])
         		else:
-        			root = ''.join(root)+''.join(self.tokens[:position])+'g'
+        			root = root+''.join(self.tokens[:position])+'g'
         	elif position+2 < len(self.tokens):
         		if self.tokens[position+1] in vowels and self.tokens[position+2] not in vowels and root[-1] in vowels and root[-2] not in vowels:
-        			root = ''.join(root)+''.join(self.tokens[:position])+''.join(self.tokens[position+1:])
+        			root = root+''.join(self.tokens[:position])+''.join(self.tokens[position+1:])
         		else:
-        			root = ''.join(root)+''.join(self.tokens[:position])+'g'
+        			root = root+''.join(self.tokens[:position])+'g'
         elif token == ":r":
         	position = self.tokens.index(token)
         	if position+2 == len(self.tokens):
         		if self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
-        			root = ''.join(root)+''.join(self.tokens[:position])
+        			root = root+''.join(self.tokens[:position])
         		else:
-        			root = ''.join(root)+''.join(self.tokens[:position])+'r'
+        			root = root+''.join(self.tokens[:position])+'r'
         	elif position+2 < len(self.tokens):
         		if self.tokens[position+1] in vowels and self.tokens[position+2] not in vowels and root[-1] in vowels and root[-2] not in vowels:
-        			root = ''.join(root)+''.join(self.tokens[:position])
+        			root = root+''.join(self.tokens[:position])
         		else:
-        			root = ''.join(root)+''.join(self.tokens[:position])+'r'
+        			root = root+''.join(self.tokens[:position])+'r'
         #elif token == ":r"
         #elif token == ":g"
         elif token == 'g':
         	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
-        		root = ''.join(root)+'r'
+        		root = root[:-1]+'r'
         elif token == 'k':
         	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
-        		root = ''.join(root)+'q'
+        		root = root[:-1]+'q'
         elif token == 'gg':
         	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
-        		root = ''.join(root)+'rr'
+        		root = root[:-1]+'rr'
         elif token == 'q':
         	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
-        		root = ''.join(root)+'k'
+        		root = root[:-1]+'k'
         elif token == 'r':
         	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
-        		root = ''.join(root)+'g'
+        		root = root[:-1]+'g'
         elif token == 'rr':
         	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
-        		root = ''.join(root)+'gg'
+        		root = root[:-1]+'gg'
         elif token in vowels:
         	if root[-2:] == 'er' or root[-2:] == 'eg':
-        		root = ''.join(root[:-2])+root[-1]
+        		root = root[:-2]+root[-1]
         elif token == "'":
-            if root[-6] == '(' \
-                and root[-5] in consonants \
-                and root[-4] == ')' \
-                and root[-3] in vowels \
-                and root[-2] in consonants \
-                and root[-1] == 'e':
-                root = root + "'"
+            if len(root) == 3:
+                if root[-1] == 'e' and root[-2] in consonants and root[-3] in vowels:
+                    root = root + "'"
+            elif len(root) == 4:
+                if root[-1] == 'e' and root[-2] in consonants and root[-3] in vowels and root[-4] in consonants:
+                    root = root + "'"
         elif token == ".":
             pass
         elif token == "@":
-            if root[-2:] == "te":
+            if root[-2:] == "te": # assuming an e deletion has already occurred...
                 root = root[:-1]
-            elif self.begins_with("n") and root[-1] == "t" and (root[-2] in voiced_fricatives \
+                print(self.tokens)
+                flag = True
+                while flag:
+                    for l in self.tokens:
+                        if l.isalpha() and flag:
+                            first_letter = l
+                            flag = False
+                print(first_letter)
+                print(root[-1])
+                print(root[-2])
+            if first_letter == "n" and root[-1] == "t" and (root[-2] in voiced_fricatives \
                                     or root[-2] in voiceless_fricatives \
                                     or root[-2] in voiced_nasals \
                                     or root[-2] in voiceless_nasals \
                                     or root[-2] in stops):
-                root = root[:-1]
+                root = root[:-1]+'n'
+                print('yes')
             # FIXME what if there is (6) or :6 in the suffix? Does it count as beginning with 6 ?
             elif (self.begins_with("6") or self.begins_with("m") or self.begins_with("v")) \
                                     and root[-1] == "t" \
@@ -264,12 +317,12 @@ if __name__== '__main__':
     p2 = Postbase("-nrite\\")
     p3 = Postbase("+'(g/t)ur:6ag")
     w = "nerenrituq"
-    p2.tokens = [':ng','a']
+    p2.tokens = [':6','a']
     # Check in dictionary
     #print p1.parse("pissur-", w)
     print(p2.apply("~", "nere"))
     print(p2.apply("-", "pissur"))
-    print(p2.apply(":ng", "pissuru"))
+    print(p2.apply(":6", "pissuru"))
 #    print(p2.apply(":g", "pissur"))
 
     # Run docstring tests
