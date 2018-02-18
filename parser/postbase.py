@@ -7,15 +7,25 @@ class Postbase(object):
         self.formula = formula
         self.final = not "\\" in formula
         self.debug = debug
-        self.tokens = [] # meaningful tokens
+        self.tokens = self.tokenize(self.formula) # meaningful tokens
 
     def __repr__(self):
         return self.formula
 
+    def tokenize(self, formula):
+        """
+        Tokenize postbase formula.
+
+        >>> p = Postbase("+'(g/t)u:6a")
+        >>> p.tokens
+        ['+', "'", '(g/t)', 'u', ':6', 'a']
+        """
+        return filter(None, re.split(re.compile("(\([\w|/]+\))|(:[\w|\d])|([\w|+|@|'|-|%|~|.|?|—])"), formula))
+
     def concat(self, word):
         new_word = word
         for token in self.tokens:
-            apply(token, new_word)
+            new_word = apply(token, new_word)
         return new_word
 
     def apply(self, token, root):
@@ -58,7 +68,6 @@ class Postbase(object):
 
 
         return root
-
 
     def parse(self, root, subword, remaining_root):
         """
@@ -113,6 +122,7 @@ class Postbase(object):
             raise Exception
         return keep_on, updated_remaining_root
 
+# antislash means something comes after
 postbases = [
     "-llru\\",
     "-lli\\",
@@ -120,11 +130,15 @@ postbases = [
     ]
 
 if __name__== '__main__':
-    # antislash means something comes after
     p1 = Postbase("-llru\\")
     p2 = Postbase("-nrite\\")
+    p3 = Postbase("+'(g/t)ur:6ag")
     w = "nerenrituq"
     # Check in dictionary
     #print p1.parse("pissur-", w)
     print(p2.apply("~", "nere-"))
     print(p2.apply("-", "pissur-"))
+
+    # Run docstring tests
+    import doctest
+    doctest.testmod()
