@@ -29,11 +29,27 @@ class Postbase(object):
             new_word = apply(token, new_word)
         return new_word
 
+    def begins_with(self, token):
+        """
+        Check whether postbase begins with token.
+
+        >>> p = Postbase("+'(g/t)u:6a")
+        >>> p.begins_with("(g/t)")
+        True
+        >>> p.begins_with("n")
+        False
+        """
+        # FIXME what if there is (6) or :6 in the suffix? Does it count as beginning with 6 ?
+        return next(token for token in self.tokens if re.search("[\w|\d]", token)) == token
+
     def apply(self, token, root):
         """
         token and word are (properly encoded) strings.
         Apply token to word. Modify word in place.
+        Assuming root does not have any dash at the end.
         """
+        if root[-1] == "-":
+            raise Exception("Root should not have a dash at the end.")
 
         flag = False
         if token == '~':
@@ -46,6 +62,7 @@ class Postbase(object):
                 root = root[:-1]
         elif token == "%":
             if root[-1] == 'r' and root[-2] in vowels and root[-3] in vowels and root[-4] in consonants:
+
                 flag = True
             if flag:
                 pass
@@ -54,6 +71,7 @@ class Postbase(object):
             elif root[-1] in consonants:
             	root = root[:-1]
             flag = False
+
         elif token == ":ng":
         	position = self.tokens.index(token)
         	if position+2 == len(self.tokens):
@@ -92,6 +110,61 @@ class Postbase(object):
         			root = ''.join(root)+''.join(self.tokens[:position])+'r'
         #elif token == ":r"
         #elif token == ":g"
+        elif token == "'":
+            if root[-6] == '(' \
+                and root[-5] in consonants \
+                and root[-4] == ')' \
+                and root[-3] in vowels \
+                and root[-2] in consonants \
+                and root[-1] == 'e':
+                root = root + "'"
+        elif token == ".":
+            pass
+        elif token == "@":
+            if root[-2:] == "te":
+                root = root[:-1]
+            elif self.begins_with("n") and root[-1] == "t" and (root[-2] in voiced_fricatives \
+                                    or root[-2] in voiceless_fricatives \
+                                    or root[-2] in voiced_nasals \
+                                    or root[-2] in voiceless_nasals \
+                                    or root[-2] in stops):
+                root = root[:-1]
+            # FIXME what if there is (6) or :6 in the suffix? Does it count as beginning with 6 ?
+            elif (self.begins_with("6") or self.begins_with("m") or self.begins_with("v"))
+                                    and root[-1] == "t"
+                                    and (root[-2] in voiced_fricatives \
+                                        or root[-2] in voiceless_fricatives \
+                                        or root[-2] in voiced_nasals \
+                                        or root[-2] in voiceless_nasals \
+                                        or root[-2] in stops):
+                root = root[:-1]
+            elif self.begins_with("(u)"):
+                if root[-1] == "t" and root[-2] in vowels:
+                    root = root[:-1] + "y"
+                elif root[-6:] == "(e)te":
+                    root = root[:-2] + "l"
+            elif self.begins_with("y"):
+                if root[-2] == "t":
+                    root = root[:-2] + "c"
+        elif token == "?": # TODO
+            pass
+        elif re.search(re.compile("\("), token): # All the (g), (g/t), etc
+            letters = [x for x in re.split(re.compile("\(|\)|\/"), token) if len(x) > 0]
+            conditions = {
+                "i": root[-2] == "te",
+                "6": root[-1] in vowels,
+                "r": root[-2] == "te",
+                "s": root[-1] in vowels,
+                "t": root[-1] in consonants,
+                "u": root[-1] in consonants or root[-1] == "e",
+                "g": root[-2] in consonants and root[-1] in consonants
+            }
+            for letter in letters:
+                if conditions[letter]:
+                    root += letter
+                    break
+        else:
+            raise Exception("Unknown token: %s" % token)
         return root
 
     def parse(self, root, subword, remaining_root):
