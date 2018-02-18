@@ -18,12 +18,47 @@ class Postbase(object):
             apply(token, new_word)
         return new_word
 
-    def apply(self, token, word):
+    def apply(self, token, root):
         """
         token and word are (properly encoded) strings.
         Apply token to word. Modify word in place.
         """
-        pass
+
+        flag = False
+        if token == '~':
+            if root[-2] == 'e':
+                root = root[:-2]+root[-1]
+        elif token == "+"
+            pass
+        elif token == "-"
+            if root[-2] in consonants:
+                root = root[:-2]+root[-1]
+        elif token == "%"
+            if root[-2] == r and root[-3] in vowels and root[-4] in vowels and root[-5] in consonants:
+                flag = True
+            if flag:
+                root = root[:-2]+root[-1]
+            elif root[-2] == 'g' or r[-3:] == 'er-' or '*' in root:
+                root = root[:-2]+root[-1]
+            flag = False
+        elif token == ":ng"
+        elif token == ":r"
+        elif token == ":g"
+        elif token == "n@"
+        elif token == "ng"
+        elif token == "-"
+        elif token == "-"
+        elif token == "-"
+        elif token == "-"
+        elif token == "-"
+        elif token == "-"
+        elif token == "-"
+        elif token == "-"
+        elif token == "-"
+
+
+        return root
+
 
     def parse(self, root, subword, remaining_root):
         """
@@ -91,5 +126,5 @@ if __name__== '__main__':
     w = "nerenrituq"
     # Check in dictionary
     #print p1.parse("pissur-", w)
-    print w[4:]
-    print p2.parse("nere-", w[4:], "-")
+    print(p2.apply("~", "nere-"))
+    print(p2.apply("-", "pissur-"))
