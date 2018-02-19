@@ -89,11 +89,14 @@ class Postbase(object):
         'qaner'
         >>> p10 = Postbase("@~+ni-")
         >>> p10.apply("@","kipute")
-        'kiputn'
+        'kiput'
         >>> p10.apply("@","apte")
-        'apn'
+        'ap'
         >>> p11 = Postbase("@~+6aite-")
         >>> p11.apply("@","kipute")
+        'kipus'
+        >>> p12 = Postbase("@~+6aite-")
+        >>> p12.apply("@","kipute")
         'kipus'
         """
         if root[-1] == "-":
@@ -193,27 +196,26 @@ class Postbase(object):
         elif token == ".":
             pass
         elif token == "@":
+        	# THIS IS ALL @ N RULE
             if root[-2:] == "te": # assuming an e deletion has already occurred...
                 root = root[:-1]
-                print(self.tokens)
                 flag = True
-                while flag:
+                while flag:	# Return the first alpha item in tokens list
                     for l in self.tokens:
                         if l.isalpha() and flag:
                             first_letter = l
                             flag = False
-                print(first_letter)
-                print(root[-1])
-                print(root[-2])
-            if first_letter == "n" and root[-1] == "t" and (root[-2] in voiced_fricatives \
+            if first_letter == "n": 
+            	if root[-1] == "t" and (root[-2] in voiced_fricatives \
                                     or root[-2] in voiceless_fricatives \
                                     or root[-2] in voiced_nasals \
                                     or root[-2] in voiceless_nasals \
                                     or root[-2] in stops):
-                root = root[:-1]+'n'
-                print('yes')
+                	root = root[:-1]
+                else:
+                	pass
             # FIXME what if there is (6) or :6 in the suffix? Does it count as beginning with 6 ?
-            elif (self.begins_with("6") or self.begins_with("m") or self.begins_with("v")) \
+            elif (first_letter == "6" or first_letter == "m" or first_letter == "v") \
                                     and root[-1] == "t" \
                                     and (root[-2] in voiced_fricatives \
                                         or root[-2] in voiceless_fricatives \
