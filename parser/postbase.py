@@ -96,8 +96,26 @@ class Postbase(object):
         >>> p11.apply("@","kipute")
         'kipus'
         >>> p12 = Postbase("@~+6aite-")
-        >>> p12.apply("@","kipute")
+        >>> p12.apply("@","maan(e)te")
+        'maan(e)l'
+        >>> p13 = Postbase("@~:(u)ciq")
+        >>> p13.apply("@","kipute")
         'kipus'
+        >>> p14 = Postbase("@~:(u)ciq")
+        >>> p14.apply("@","kit'e")
+        "kis'u"
+        >>> p15 = Postbase("@~:(u)ciq")
+        >>> p15.apply("@","ce8irte")
+        'ce8iru'
+        >>> p16 = Postbase("@~+yug-")
+        >>> p16.apply("@","kipute")
+        'kipus'
+        >>> p17 = Postbase("@~+6aite-")
+        >>> p17.apply("@","kipute")
+        'kipuc'
+        >>> p18 = Postbase("@~+6aite-")
+        >>> p18.apply("@","kit'e")
+        'kic'
         """
         if root[-1] == "-":
             raise Exception("Root should not have a dash at the end.")
@@ -202,9 +220,11 @@ class Postbase(object):
                 flag = True
                 while flag:	# Return the first alpha item in tokens list
                     for l in self.tokens:
-                        if l.isalpha() and flag:
+                        if l.isalnum() and flag:
                             first_letter = l
                             flag = False
+            #print(first_letter)
+            #print(self.tokens)
             if first_letter == "n": 
             	if root[-1] == "t" and (root[-2] in voiced_fricatives \
                                     or root[-2] in voiceless_fricatives \
@@ -214,7 +234,7 @@ class Postbase(object):
                 	root = root[:-1]
                 else:
                 	pass
-            # FIXME what if there is (6) or :6 in the suffix? Does it count as beginning with 6 ?
+            # FIXME what if there is (6) or :6 in the suffix? Does it count as beginning with 6 
             elif (first_letter == "6" or first_letter == "m" or first_letter == "v") \
                                     and root[-1] == "t" \
                                     and (root[-2] in voiced_fricatives \
@@ -222,15 +242,42 @@ class Postbase(object):
                                         or root[-2] in voiced_nasals \
                                         or root[-2] in voiceless_nasals \
                                         or root[-2] in stops):
-                root = root[:-1]
-            elif self.begins_with("(u)"):
+                #print('yes')
+                if root[-2] in stops:
+                	root = root[:-1]
+                elif root[-2] == 'm':
+                	root = root[:-1]+'7'
+                elif root[-2] == 'n':
+                	root = root[:-1]+'8'
+                elif root[-2] == '6':
+                	root = root[:-1]+'9'
+                elif root[-2] == 'v':
+                	root = root[:-1]+'1'
+                elif root[-2] == 'l':
+                	root = root[:-1]+'2'
+                elif root[-2] == 's':
+                	root = root[:-1]+'3'
+                elif root[-2] == 'g':
+                	root = root[:-1]+'4'
+                elif root[-2] == 'r':
+                	root = root[:-1]+'5'
+
+            elif (first_letter == "6" or first_letter == "m" or first_letter == "v") \
+                                    and root[-1] == "t" \
+                                    and '(e)' in root:
+                root = root[:-1]+'l'
+            elif (first_letter == "6" or first_letter == "m" or first_letter == "v") \
+                                    and root[-1] == "t" \
+                                    and root[-2] in vowels:
+                root = root[:-1]+'s' #IT MAY BE EASIER TO HAVE CODE THAT REPRESENTS (E) as a single token
+        elif self.begins_with("(u)"):
                 if root[-1] == "t" and root[-2] in vowels:
                     root = root[:-1] + "y"
                 elif root[-6:] == "(e)te":
                     root = root[:-2] + "l"
-            elif self.begins_with("y"):
-                if root[-2] == "t":
-                    root = root[:-2] + "c"
+        elif first_letter == "y":
+            if root[-2] == "t":
+                root = root[:-2] + "c" #NEEDS A WAY TO REMEMBER NOT TO ADD THE Y of 'yug', BECAUSE OTHERWISE KIPUCU is KIPUCYU
         elif token == "?": # TODO
             pass
         elif re.search(re.compile("\("), token): # All the (g), (g/t), etc
