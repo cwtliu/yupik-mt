@@ -6,12 +6,13 @@ import re
 from constants import *
 
 class Postbase(object):
-    def __init__(self, formula, debug=0):
+    def __init__(self, formula, isEnding=False, debug=0):
         self.formula = formula
         self.final = not "\\" in formula
         self.debug = debug
         self.token = []
         self.tokens = self.tokenize(self.formula) # meaningful tokens
+        self.isEnding = isEnding
 
     def __repr__(self):
         return self.formula
@@ -24,7 +25,7 @@ class Postbase(object):
         >>> p.tokens
         ['+', "'", '(g/t)', 'u', ':6', 'a']
         """
-        return filter(None, re.split(re.compile("(\([\w|/]+\))|(:[\w|\d])|([\w|+|@|'|-|%|~|.|?|—])"), formula))
+        return filter(None, re.split(re.compile("(\([\w|/]+\))|(:nga|[\w|\d])|([\w|+|@|'|-|%|~|.|?|—])"), formula))
 
     def concat(self, word):
         new_word = word
@@ -327,7 +328,7 @@ class Postbase(object):
             if self.debug>=2: print("Default token")
             root = root + token
         else:
-            raise Exception("Unknown token: %s" % token)
+            raise Exception("Unknown token: %s (in postbase %s decomposed as %s)" % (token, self.formula, self.tokens))
         return root
 
     def parse(self, root, subword, remaining_root):
