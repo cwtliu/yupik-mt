@@ -28,7 +28,8 @@ class Postbase(object):
     def concat(self, word):
         new_word = word
         for token in self.tokens:
-            new_word = apply(token, new_word)
+            new_word = self.apply(token, new_word)
+            if self.debug: print(token, new_word)
         return new_word
 
     def begins_with(self, token):
@@ -120,6 +121,15 @@ class Postbase(object):
         if root[-1] == "-":
             raise Exception("Root should not have a dash at the end.")
 
+        # Return the first alpha item in tokens list
+        first_letter=''
+        first_letter_index = -1
+        for l in self.tokens:
+            if l.isalnum():
+                first_letter = l
+                first_letter_index = self.tokens.index(l)
+                break
+
         flag = False
         if token == '~':
             if root[-1] == 'e':
@@ -149,14 +159,14 @@ class Postbase(object):
             if position+2 == len(self.tokens):
                 #print('yes')
                 if self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
-                    root = root+''.join(self.tokens[:position])
+                    root = root #+''.join(self.tokens[:position])
                 else:
-                    root = root+''.join(self.tokens[:position])+'6'
+                    root = root+'6'#+''.join(self.tokens[:position])+'6'
             elif position+2 < len(self.tokens):
                 if self.tokens[position+1] in vowels and self.tokens[position+2] not in vowels and root[-1] in vowels and root[-2] not in vowels:
-                    root = root+''.join(self.tokens[:position])
+                    root = root #+''.join(self.tokens[:position])
                 else:
-                    root = root+''.join(self.tokens[:position])+'6'
+                    root = root+'6'#+''.join(self.tokens[:position])+'6'
         elif token == ":g":
         	position = self.tokens.index(token)
         	if position+2 == len(self.tokens):
@@ -183,49 +193,58 @@ class Postbase(object):
         			root = root+''.join(self.tokens[:position])+'r'
         #elif token == ":r"
         #elif token == ":g"
-        elif token == 'g':
-        	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
-        		root = root[:-1]+'r'
-        elif token == 'k':
-        	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
-        		root = root[:-1]+'q'
-        elif token == 'gg':
-        	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
-        		root = root[:-1]+'rr'
-        elif token == 'q':
-        	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
-        		root = root[:-1]+'k'
-        elif token == 'r':
-        	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
-        		root = root[:-1]+'g'
-        elif token == 'rr':
-        	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
-        		root = root[:-1]+'gg'
-        elif token in vowels:
-        	if root[-2:] == 'er' or root[-2:] == 'eg':
-        		root = root[:-2]+root[-1]
+        elif self.tokens.index(token) == first_letter_index and token in ['g', 'k', 'gg', 'q', 'r', 'rr'] + vowels:
+            if token == 'g':
+            	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
+            		root = root[:-1]+'r'
+                else:
+                    root = root + 'g'
+            elif token == 'k':
+            	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
+            		root = root[:-1]+'q'
+                else:
+                    root = root + 'k'
+            elif token == 'gg':
+            	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
+            		root = root[:-1]+'rr'
+                else:
+                    root = root + 'gg'
+            elif token == 'q':
+            	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
+            		root = root[:-1]+'k'
+                else:
+                    root = root + 'q'
+            elif token == 'r':
+            	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
+            		root = root[:-1]+'g'
+                else:
+                    root = root + 'r'
+            elif token == 'rr':
+            	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
+            		root = root[:-1]+'gg'
+                else:
+                    root = root + 'rr'
+            elif token in vowels:
+            	if root[-2:] == 'er' or root[-2:] == 'eg':
+            		root = root[:-2]+root[-1]
+                else:
+                    root = root + token
         elif token == "'":
             if len(root) == 3:
                 if root[-1] == 'e' and root[-2] in consonants and root[-3] in vowels:
-                    root = root + "'"
+                    root = root[:-1] + "'"
             elif len(root) == 4:
                 if root[-1] == 'e' and root[-2] in consonants and root[-3] in vowels and root[-4] in consonants:
-                    root = root + "'"
+                    root = root[:-1] + "'"
         elif token == ".":
             pass
         elif token == "@":
         	# THIS IS ALL @ N RULE
             if root[-2:] == "te": # assuming an e deletion has already occurred...
                 root = root[:-1]
-                flag = True
-                while flag:	# Return the first alpha item in tokens list
-                    for l in self.tokens:
-                        if l.isalnum() and flag:
-                            first_letter = l
-                            flag = False
             #print(first_letter)
             #print(self.tokens)
-            if first_letter == "n": 
+            if first_letter == "n":
             	if root[-1] == "t" and (root[-2] in voiced_fricatives \
                                     or root[-2] in voiceless_fricatives \
                                     or root[-2] in voiced_nasals \
@@ -234,7 +253,7 @@ class Postbase(object):
                 	root = root[:-1]
                 else:
                 	pass
-            # FIXME what if there is (6) or :6 in the suffix? Does it count as beginning with 6 
+            # FIXME what if there is (6) or :6 in the suffix? Does it count as beginning with 6
             elif (first_letter == "6" or first_letter == "m" or first_letter == "v") \
                                     and root[-1] == "t" \
                                     and (root[-2] in voiced_fricatives \
@@ -275,9 +294,11 @@ class Postbase(object):
                     root = root[:-1] + "y"
                 elif root[-6:] == "(e)te":
                     root = root[:-2] + "l"
-        elif first_letter == "y":
+        elif first_letter == "y" and self.tokens.index(token) == first_letter_index:
             if root[-2] == "t":
                 root = root[:-2] + "c" #NEEDS A WAY TO REMEMBER NOT TO ADD THE Y of 'yug', BECAUSE OTHERWISE KIPUCU is KIPUCYU
+            else:
+                root = root + "y"
         elif token == "?": # TODO
             pass
         elif re.search(re.compile("\("), token): # All the (g), (g/t), etc
@@ -297,6 +318,9 @@ class Postbase(object):
                     break
         elif token == "\\":
             pass # not an ending
+        elif token in vowels or token in consonants:
+            if self.debug: print("Default token")
+            root = root + token
         else:
             raise Exception("Unknown token: %s" % token)
         return root
@@ -358,7 +382,10 @@ class Postbase(object):
 postbases = [
     "-llru\\",
     "-lli\\",
-    "-nrite\\"
+    "-nrite\\",
+    "@~+yug\\",
+    "-qatar\\",
+    "+'(g/t)uq"
     ]
 
 if __name__== '__main__':
@@ -366,14 +393,18 @@ if __name__== '__main__':
     p2 = Postbase("-nrite\\")
     p3 = Postbase("+'(g/t)ur:6ag")
     w = "nerenrituq"
-    p2.tokens = [':6','a']
+    #p2.tokens = [':6','a']
     # Check in dictionary
     #print p1.parse("pissur-", w)
-    print(p2.apply("~", "nere"))
-    print(p2.apply("-", "pissur"))
-    print(p2.apply(":6", "pissuru"))
-#    print(p2.apply(":g", "pissur"))
+    #print(p2.apply("~", "nere"))
+    #print(p2.apply("-", "pissur"))
+    #print(p2.apply(":6", "pissuru"))
+    #print(p2.apply(":g", "pissur"))
+    print(p2.tokens)
+    print(p2.concat("nere"))
+    print(p3.tokens)
+    print(p3.concat("nere"))
 
     # Run docstring tests
-    import doctest
-    doctest.testmod()
+    #import doctest
+    #doctest.testmod()
