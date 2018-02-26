@@ -58,8 +58,10 @@ class DirtyParser(object):
 
         self.postbases = [] # List of postbases in dictionary
         self.dictionary = [] # List of words in dictionary (nouns and verbs)
+        self.endings = [] # List of endings
         self.open_dictionary()
         self.open_postbases()
+        self.open_endings()
 
         #self.postbases = [Postbase(p, debug=self.debug) for p in postbases]
 
@@ -82,19 +84,23 @@ class DirtyParser(object):
             f_postbases = open(self.postbases_folder + filename + ".postbases.txt", "r")
             postbases.extend(f_postbases.readlines())
 
+        # FIXME long dash vs short dash difference
         postbases = [p.replace('–', '-').replace('*', '') for p in postbases]
         self.postbases = [Postbase(re.sub(re.compile("-$"), "\\\\", p.rstrip('\n')), debug=self.debug) for p in postbases]
         if self.debug>=1: print("\nSuccessfully loaded %d postbases." % len(postbases))
+
+    def open_endings(self):
+        endings = []
+        with open(self.dictionary_path + "endings.txt", "r") as f_endings:
+            endings.extend(f_endings.readlines())
+        self.endings = [Postbase(e.rstrip('\n'), isEnding=True, debug=self.debug) for e in endings]
+        if self.debug>=1: print("\nSuccessfully loaded %d endings." % len(self.endings))
 
     def compare(self, w1, w2):
         """
         w1 is the reference word
         Returns length of identical sequence (starting from beginning of word)
         """
-        #if len(w2) < len(w1):
-        #    temp = w1
-        #    w1 = w2
-        #    w2 = temp
         d = 0
         for i in range(min(len(w1), len(w2))):
             if w1[i] != w2[i]:
@@ -115,7 +121,7 @@ class DirtyParser(object):
     def parse(self, word, match):
         good = []
         if self.debug>=2: print "\n+ Root ", match
-        for postbase in self.postbases:
+        for postbase in self.postbases+self.endings:
             if self.debug>=2: print "Postbase ", postbase
             # Assuming one level only
             new_word = postbase.concat(match)
@@ -143,9 +149,13 @@ class DirtyParser(object):
                 # Abandon if the last token is final and we didn't pass above condition
                 if isinstance(tokens[-1], Postbase) and tokens[-1].final:
                     pass
-                else:
+                else: # Last token is not final and above condition is not matched
                     good = self.parse(word, match)
+                    # FIXME also try endings
+                    #if len(good) > 0:
                     matches = matches + [(tokens + [g[0]], g[1]) for g in good]
+                    #else: # No further postbase match => try endings
+
         match_time = time.time()
         if self.debug>=1: print("\nDictionary lookup: %f\nMatching recursion: %f\n" % (dict_time - start_time, match_time - dict_time))
         return final_matches
