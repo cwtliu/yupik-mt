@@ -195,37 +195,37 @@ class Postbase(object):
         			root = root+''.join(self.tokens[:position])+'r'
         #elif token == ":r"
         #elif token == ":g"
-        elif self.tokens.index(token) == first_letter_index and token in ['g', 'k', 'gg', 'q', 'r', 'rr'] + vowels:
+        elif self.tokens.index(token) == first_letter_index and token in ['g', 'k', '4', 'q', 'r', '5'] + vowels:
             if token == 'g':
-            	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
+            	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == '5':
             		root = root[:-1]+'r'
                 else:
                     root = root + 'g'
             elif token == 'k':
-            	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
+            	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == '5':
             		root = root[:-1]+'q'
                 else:
                     root = root + 'k'
-            elif token == 'gg':
-            	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == 'rr':
-            		root = root[:-1]+'rr'
+            elif token == '4':
+            	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == '5':
+            		root = root[:-1]+'5'
                 else:
-                    root = root + 'gg'
+                    root = root + '4'
             elif token == 'q':
-            	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
+            	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == '4':
             		root = root[:-1]+'k'
                 else:
                     root = root + 'q'
             elif token == 'r':
-            	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
+            	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == '4':
             		root = root[:-1]+'g'
                 else:
                     root = root + 'r'
-            elif token == 'rr':
-            	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == 'gg':
-            		root = root[:-1]+'gg'
+            elif token == '5':
+            	if root[-1] == 'g' or root[-1] == 'k' or root[-1] == '4':
+            		root = root[:-1]+'4'
                 else:
-                    root = root + 'rr'
+                    root = root + '5'
             elif token in vowels:
             	if root[-2:] == 'er' or root[-2:] == 'eg':
             		root = root[:-2]+root[-1]
@@ -259,7 +259,7 @@ class Postbase(object):
             elif self.tokens.index(token) == first_letter_index and token in ['l','g','k','6'] and isEnding:
                 if token == 'l':
                     if root[-1] == 't':
-                        root = root[:-1] + 'll'
+                        root = root[:-1] + '2'
                     else:
                         root = root + 'l'
                 else:
