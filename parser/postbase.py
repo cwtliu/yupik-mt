@@ -13,9 +13,22 @@ class Postbase(object):
         self.token = []
         self.tokens = self.tokenize(self.formula) # meaningful tokens
         self.isEnding = isEnding
+        if not self.matched() and self.debug>=2: print("Warning: %s has non-matching parenthesis." % formula)
 
     def __repr__(self):
         return self.formula
+
+    # Check that simple parenthesis are matched in string
+    def matched(self):
+        count = 0
+        for i in self.formula:
+            if i == "(":
+                count += 1
+            elif i == ")":
+                count -= 1
+            if count < 0:
+                return False
+        return count == 0
 
     def tokenize(self, formula):
         """
@@ -25,7 +38,7 @@ class Postbase(object):
         >>> p.tokens
         ['+', "'", '(g/t)', 'u', ':6', 'a']
         """
-        return filter(None, re.split(re.compile("(\([\w|/]+\))|(:nga|[\w|\d])|([\w|+|@|'|-|%|~|.|?|—])"), formula))
+        return filter(None, re.split(re.compile("(\([\w|/]+\))|(:[\w|\d]|:\(6\)|:\(e\)|:\(u\))|([\w|+|@|'|-|%|~|.|?|—])"), formula))
 
     def concat(self, word):
         new_word = word
@@ -153,7 +166,8 @@ class Postbase(object):
             elif root[-1] in consonants:
             	root = root[:-1]
             flag = False
-
+        elif token in [":(6)", ":(e)", ":(u)"]:
+            pass
         elif token == ":6":
             position = self.tokens.index(token)
             #print(self.tokens.index(token))
@@ -256,7 +270,7 @@ class Postbase(object):
                 else:
                 	pass
             # FIXME what if there is (6) or :6 in the suffix? Does it count as beginning with 6
-            elif self.tokens.index(token) == first_letter_index and token in ['l','g','k','6'] and isEnding:
+            elif self.tokens.index(token) == first_letter_index and token in ['l','g','k','6'] and self.isEnding:
                 if token == 'l':
                     if root[-1] == 't':
                         root = root[:-1] + '2'
@@ -268,10 +282,10 @@ class Postbase(object):
                     elif root[-1] == 't':
                         root = root[:-1] + 's'
                     else:
-                        root = root + token 
+                        root = root + token
             elif (first_letter == "6" or first_letter == "m" or first_letter == "v") \
                                     and root[-1] == "t" \
-                                    and not isEnding \
+                                    and not self.isEnding \
                                     and (root[-2] in voiced_fricatives \
                                         or root[-2] in voiceless_fricatives \
                                         or root[-2] in voiced_nasals \
@@ -305,12 +319,12 @@ class Postbase(object):
                                     and root[-1] == "t" \
                                     and root[-2] in vowels:
                 root = root[:-1]+'s' #IT MAY BE EASIER TO HAVE CODE THAT REPRESENTS (E) as a single token
-        elif self.begins_with("(u)") and not isEnding:
+        elif self.begins_with("(u)") and not self.isEnding:
                 if root[-1] == "t" and root[-2] in vowels:
                     root = root[:-1] + "y"
                 elif root[-6:] == "(e)te":
                     root = root[:-2] + "l"
-        elif first_letter == "y" and not isEnding and  self.tokens.index(token) == first_letter_index:
+        elif first_letter == "y" and not self.isEnding and  self.tokens.index(token) == first_letter_index:
             if root[-2] == "t":
                 root = root[:-2] + "c" #NEEDS A WAY TO REMEMBER NOT TO ADD THE Y of 'yug', BECAUSE OTHERWISE KIPUCU is KIPUCYU
             else:
@@ -331,6 +345,8 @@ class Postbase(object):
                 # but is optional with positional bases (p.179)
                 "q": False,
                 "ar": False,
+                "aq": False,
+                "ur": False,
             }
             for letter in letters:
                 if conditions[letter]:
