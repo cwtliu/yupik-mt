@@ -256,8 +256,22 @@ class Postbase(object):
                 else:
                 	pass
             # FIXME what if there is (6) or :6 in the suffix? Does it count as beginning with 6
+            elif self.tokens.index(token) == first_letter_index and token in ['l','g','k','6'] and isEnding:
+                if token == 'l':
+                    if root[-1] == 't':
+                        root = root[:-1] + 'll'
+                    else:
+                        root = root + 'l'
+                else:
+                    if root[-1] == 't' and '(e)' in self.tokens:
+                        root = root[:-2] + 'es' #assuming that the (e) is a single index and removed
+                    elif root[-1] == 't':
+                        root = root[:-1] + 's'
+                    else:
+                        root = root + token 
             elif (first_letter == "6" or first_letter == "m" or first_letter == "v") \
                                     and root[-1] == "t" \
+                                    and not isEnding \
                                     and (root[-2] in voiced_fricatives \
                                         or root[-2] in voiceless_fricatives \
                                         or root[-2] in voiced_nasals \
@@ -291,12 +305,12 @@ class Postbase(object):
                                     and root[-1] == "t" \
                                     and root[-2] in vowels:
                 root = root[:-1]+'s' #IT MAY BE EASIER TO HAVE CODE THAT REPRESENTS (E) as a single token
-        elif self.begins_with("(u)"):
+        elif self.begins_with("(u)") and not isEnding:
                 if root[-1] == "t" and root[-2] in vowels:
                     root = root[:-1] + "y"
                 elif root[-6:] == "(e)te":
                     root = root[:-2] + "l"
-        elif first_letter == "y" and self.tokens.index(token) == first_letter_index:
+        elif first_letter == "y" and not isEnding and  self.tokens.index(token) == first_letter_index:
             if root[-2] == "t":
                 root = root[:-2] + "c" #NEEDS A WAY TO REMEMBER NOT TO ADD THE Y of 'yug', BECAUSE OTHERWISE KIPUCU is KIPUCYU
             else:
