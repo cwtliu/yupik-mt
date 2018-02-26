@@ -1,11 +1,12 @@
-# *-* encoding:utf-8 *-*
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
 # Authors: cwtliu, Temigo
 
 import re
 from constants import *
 
 class Postbase(object):
-    def __init__(self, formula, debug=True):
+    def __init__(self, formula, debug=0):
         self.formula = formula
         self.final = not "\\" in formula
         self.debug = debug
@@ -29,7 +30,7 @@ class Postbase(object):
         new_word = word
         for token in self.tokens:
             new_word = self.apply(token, new_word)
-            if self.debug: print(token, new_word)
+            if self.debug>=2: print(token, new_word)
         return new_word
 
     def begins_with(self, token):
@@ -310,7 +311,11 @@ class Postbase(object):
                 "s": root[-1] in vowels,
                 "t": root[-1] in consonants,
                 "u": root[-1] in consonants or root[-1] == "e",
-                "g": root[-2] in consonants and root[-1] in consonants
+                "g": root[-2] in consonants and root[-1] in consonants,
+                # FIXME (q)must be used with demonstrative adverb bases,
+                # but is optional with positional bases (p.179)
+                "q": False,
+                "ar": False,
             }
             for letter in letters:
                 if conditions[letter]:
@@ -319,7 +324,7 @@ class Postbase(object):
         elif token == "\\":
             pass # not an ending
         elif token in vowels or token in consonants:
-            if self.debug: print("Default token")
+            if self.debug>=2: print("Default token")
             root = root + token
         else:
             raise Exception("Unknown token: %s" % token)
@@ -334,7 +339,7 @@ class Postbase(object):
         - string (updated remain of the root = new dropped_word)
         - boolean (whether the current postbase can match word or not)
         """
-        if self.debug: print "Parsing ", root, " + ", subword
+        if self.debug>=2: print "Parsing ", root, " + ", subword
         keep_on = True
         self.i_formula = 0
         self.i_subword = 0
