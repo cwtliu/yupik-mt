@@ -1,13 +1,15 @@
 # coding: utf-8
 #test
 import re
-root_examples = ['alinge-','ane-','aqui-','assir-','aurre-','ayag-','cali-','ce+irte-','cuka-','elite-','inarte-','iqvar-','kaig-','kuimar-','nere-','qalarte-','qavar-','qia-','tai-','taqe-','tuqu-','yurar-']
+#root_examples = ['alinge-','ane-','aqui-','assir-','aurre-','ayag-','cali-','ce+irte-','cuka-','elite-','inarte-','iqvar-','kaig-','kuimar-','nere-','qalarte-','qavar-','qia-','tai-','taqe-','tuqu-','yurar-']
+root_examples = ['pissur-']
 vowels = ['a','e','i','u']
 high_vowels = ['i','u']
 front_vowels = ['i']
 mid_vowels = ['e']
 low_vowels = ['a']
 back_vowels = ['u']
+example_dict = {'pissur-':'to hunt; to fish','@~+yug-':'to want to V', '-llru-':'to have V-ed','-nrite-':'to not V','u:nga':'1st person singular'}
 #letter entry can contain multiple letters right now, but am hoping to represent it by single character
 #vv = 1
 #ll = 2
@@ -243,8 +245,8 @@ def second_person_plural(word):
 def apply_past(word):
 	word = word[:-1]
 	if word[-1] == 'g' or word[-1] == 'r':
-		return(word[:-1]+"2ru-")
-	return(word+"2ru-")
+		return(word[:-1]+"llru-")
+	return(word+"llru-")
 def apply_negation(word):
 	word = word[:-1]
 	if word[-1] == 'g' or word[-1] == 'r':
@@ -281,18 +283,23 @@ for word in root_examples:
 	#print(second_person_singular(word))
 	#print(second_person_dual(word))
 	#print(second_person_plural(word))
-	make = False
-	want = False
+	make = True
+	want = True
 	past = True
 	negation = True
 	#print(second_person_plural(apply_negation(apply_past(apply_want(apply_make(word))))))
 	#if make:
 	#	word = apply_make(word)
+	print(example_dict['pissur-'])
+	print(example_dict['u:nga'])
 	if want:
 		word = apply_want(word)
+		print(example_dict['@~+yug-'])
 	if past:
 		word = apply_past(word)
+		print(example_dict['-llru-'])
 	if negation:
 		word = apply_negation(word)
+		print(example_dict['-nrite-'])
 	word = deconvert(word)
-	print(third_person_singular(word))
+	print(first_person_singular(word))
