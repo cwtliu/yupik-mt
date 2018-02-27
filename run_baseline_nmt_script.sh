@@ -1,0 +1,18 @@
+python -m nmt.nmt \
+    --attention=scaled_luong \
+    --src=ypk --tgt=en \
+    --vocab_prefix=/tmp/bpe10k_baseline/vocab.10000.BPE  \
+    --train_prefix=/tmp/bpe10k_baseline/train.10000.BPE \
+    --dev_prefix=/tmp/bpe10k_baseline/tst2012.10000.BPE  \
+    --test_prefix=/tmp/bpe10k_baseline/tst2013.10000.BPE \
+    --out_dir=/tmp/bpe10k_baseline_model \
+    --num_train_steps=50000 \
+    --steps_per_stats=100 \
+    --num_layers=2 \
+    --num_units=128 \
+    --dropout=0.2 \
+    --batch_size=128 \
+    --optimizer=adam \
+    --encoder_type=bi \
+    --unit_type=lstm \
+    --metrics=bleu
