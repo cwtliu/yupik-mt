@@ -3,8 +3,8 @@ python -m nmt.nmt \
     --src=ypk --tgt=en \
     --vocab_prefix=/tmp/bpe10k_baseline/vocab.10000.BPE  \
     --train_prefix=/tmp/bpe10k_baseline/train.10000.BPE \
-    --dev_prefix=/tmp/bpe10k_baseline/tst2012.10000.BPE  \
-    --test_prefix=/tmp/bpe10k_baseline/tst2013.10000.BPE \
+    --dev_prefix=/tmp/bpe10k_baseline/dev.10000.BPE  \
+    --test_prefix=/tmp/bpe10k_baseline/test.10000.BPE \
     --out_dir=/tmp/bpe10k_baseline_model \
     --num_train_steps=50000 \
     --steps_per_stats=100 \
