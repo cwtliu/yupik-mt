@@ -148,8 +148,9 @@ class DirtyParser(object):
         final_matches = []
         while len(matches):
             tokens, match = matches.pop()
-            if self.debug>=2: print("++++ Match %s ++++" % match, tokens)
-            if abs(self.compare(match, word)-len(match)) <= 2 and abs(len(word) - self.compare(match, word)) <= 2:
+            if self.debug>=2: 
+                print("++++ Match %s ++++" % match, tokens)
+            if abs(self.compare(match, word)-len(match)) <= 1 and abs(len(word) - self.compare(match, word)) <= 1:
                 final_matches.append((tokens, match))
             else:
                 # Abandon if the last token is final and we didn't pass above condition
@@ -194,6 +195,17 @@ if __name__ == '__main__':
     #print(p.analyze("pissuryug"))
     #print(p.analyze("pissuryunriteqatartuq"))
     # cenirte- / @~+yugnaite- / +’(g/t)u:6a
-    print(p.tokenize("cenircugngaitua"))
+    print(p.tokenize("alingullruuq"))
+    # alinge- / -llru- / +'(g/t)uq
+    #print(p.tokenize("an'uq"))
+    # ane- / +'(g/t)uq
+    #print(p.tokenize("anyunrituq"))
+    # ane- / @~+yug- / -nrite- / +'(g/t)uq
+    #print(p.tokenize("aquillruuk"))
+    # ane- / +'(g/t)uuk
+    #print(p.tokenize("elitnaurvik"))
+    # elitnaurvik maybe?
+    # or maybe elite- naurvik
+    #print(p.tokenize("ce6ircugngaitua"))
     # yugni- / –ke- / @~–kengaq
-    print(p.tokenize("yugnikekengaq"))
+    #print(p.tokenize("yugnikekengaq"))
