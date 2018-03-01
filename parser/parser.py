@@ -86,7 +86,7 @@ class DirtyParser(object):
         #    postbases.extend(f_postbases.readlines())
         with open(self.dictionary_path + "postbases_txt/all_postbases_noun.txt", "r") as f_noun:
             postbases.extend(f_noun.readlines())
-        with open(self.dictionary_path + "postbases_txt/all_postbases_verb.txt", "r") as f_verb:
+        with open(self.dictionary_path + "postbases_txt/all_postbases_verb_man_edit.txt", "r") as f_verb:
             postbases.extend(f_verb.readlines())
         # FIXME long dash vs short dash difference
         postbases = [p.replace('–', '-').replace('*', '').replace('’', '\'') for p in postbases]
