@@ -166,7 +166,7 @@ class Postbase(object):
             elif root[-1] in consonants:
             	root = root[:-1]
             flag = False
-        elif token in [":(6)", ":(e)", ":(u)"]:
+        elif token in [":(6)", ":(e)", ":(u)", "(e)", "(te)"]:
             pass
         elif token == ":6":
             position = self.tokens.index(token)
@@ -357,6 +357,12 @@ class Postbase(object):
         elif token in vowels or token in consonants:
             if self.debug>=2: print("Default token")
             root = root + token
+        elif token == ':':
+        	root = root[1:]
+        	reappend = True
+        elif reappend:
+        	root = ':'+root
+        	reappend = False
         else:
             raise Exception("Unknown token: %s (in postbase %s decomposed as %s)" % (token, self.formula, self.tokens))
         return root
