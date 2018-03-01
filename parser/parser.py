@@ -150,7 +150,7 @@ class DirtyParser(object):
             tokens, match = matches.pop()
             if self.debug>=2: 
                 print("++++ Match %s ++++" % match, tokens)
-            if abs(self.compare(match, word)-len(match)) <= 1 and abs(len(word) - self.compare(match, word)) <= 1:
+            if abs(self.compare(match, word)-len(match)) <= 2 and abs(len(word) - self.compare(match, word)) <= 2:
                 final_matches.append((tokens, match))
             else:
                 # Abandon if the last token is final and we didn't pass above condition
