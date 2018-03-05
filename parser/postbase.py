@@ -14,6 +14,7 @@ class Postbase(object):
         self.tokens = self.tokenize(self.formula) # meaningful tokens
         self.isEnding = isEnding
         if not self.matched() and self.debug>=2: print("Warning: %s has non-matching parenthesis." % formula)
+        self.reappend = False
 
     def __repr__(self):
         return self.formula
@@ -136,6 +137,11 @@ class Postbase(object):
         if root[-1] == "-":
             raise Exception("Root should not have a dash at the end.")
 
+        #if self.reappend:
+        #    self.tokens[self.tokens.index(token)] = ':' + token
+        #    token = ':' + token
+        #    self.reappend = False
+
         # Return the first alpha item in tokens list
         first_letter=''
         first_letter_index = -1
@@ -207,8 +213,6 @@ class Postbase(object):
         			root = root+''.join(self.tokens[:position])
         		else:
         			root = root+''.join(self.tokens[:position])+'r'
-        #elif token == ":r"
-        #elif token == ":g"
         elif self.tokens.index(token) == first_letter_index and token in ['g', 'k', '4', 'q', 'r', '5'] + vowels:
             if token == 'g':
             	if root[-1] == 'q' or root[-1] == 'r' or root[-1] == '5':
@@ -244,7 +248,10 @@ class Postbase(object):
             	if root[-2:] == 'er' or root[-2:] == 'eg':
             		root = root[:-2]+root[-1]
                 else:
-                    root = root + token
+                    if root[-1] == 'e':
+                        root = root[:-1] + token
+                    else:
+                        root = root + token
         elif token == "'":
             if len(root) == 3:
                 if root[-1] == 'e' and root[-2] in consonants and root[-3] in vowels:
@@ -319,14 +326,14 @@ class Postbase(object):
                                     and root[-1] == "t" \
                                     and root[-2] in vowels:
                 root = root[:-1]+'s' #IT MAY BE EASIER TO HAVE CODE THAT REPRESENTS (E) as a single token
-        elif self.begins_with("(u)") and not self.isEnding:
-                if root[-1] == "t" and root[-2] in vowels:
-                    root = root[:-1] + "y"
-                elif root[-6:] == "(e)te":
-                    root = root[:-2] + "l"
-        elif first_letter == "y" and not self.isEnding and  self.tokens.index(token) == first_letter_index:
-            if root[-2] == "t":
-                root = root[:-2] + "c" #NEEDS A WAY TO REMEMBER NOT TO ADD THE Y of 'yug', BECAUSE OTHERWISE KIPUCU is KIPUCYU
+        elif token == "(u)" and self.begins_with("(u)") and not self.isEnding:
+            if root[-1] == "t" and root[-2] in vowels:
+                root = root[:-1] + "y"
+            elif root[-6:] == "(e)te":
+                root = root[:-2] + "l"
+        elif first_letter == "y" and not self.isEnding and self.tokens.index(token) == first_letter_index:
+            if len(root) >= 2 and root[-1] == "t":
+                root = root[:-1] + "c" #NEEDS A WAY TO REMEMBER NOT TO ADD THE Y of 'yug', BECAUSE OTHERWISE KIPUCU is KIPUCYU
             else:
                 root = root + "y"
         elif token == "?": # TODO
@@ -334,13 +341,13 @@ class Postbase(object):
         elif re.search(re.compile("\("), token): # All the (g), (g/t), etc
             letters = [x for x in re.split(re.compile("\(|\)|\/"), token) if len(x) > 0]
             conditions = {
-                "i": root[-2] == "te",
+                "i": root[-2:] == "te",
                 "6": root[-1] in vowels,
-                "r": root[-2] == "te",
+                "r": root[-2:] == "te",
                 "s": root[-1] in vowels,
                 "t": root[-1] in consonants,
                 "u": root[-1] in consonants or root[-1] == "e",
-                "g": root[-2] in consonants and root[-1] in consonants,
+                "g": len(root) >= 2 and root[-2] in consonants and root[-1] in consonants,
                 # FIXME (q)must be used with demonstrative adverb bases,
                 # but is optional with positional bases (p.179)
                 "q": False,
@@ -352,17 +359,19 @@ class Postbase(object):
                 if conditions[letter]:
                     root += letter
                     break
-        elif token == "\\":
+        elif token == "\\" or token == ":":
             pass # not an ending
         elif token in vowels or token in consonants:
-            if self.debug>=2: print("Default token")
-            root = root + token
-        elif token == ':':
-        	root = root[1:]
-        	reappend = True
-        elif reappend:
-        	root = ':'+root
-        	reappend = False
+            if self.debug>=2: print("Default token", token)
+            if token in vowels and root[-1] == 'e':
+                root = root[:-1] + token
+            else:
+                root = root + token
+        #elif token[0] == ':':
+        #    if len(token[1:]):
+        #        self.tokens[self.tokens.index(token)] = token[1:]
+        #        root = self.apply(token[1:], root)
+        #    self.reappend = True
         else:
             raise Exception("Unknown token: %s (in postbase %s decomposed as %s)" % (token, self.formula, self.tokens))
         return root
@@ -442,11 +451,12 @@ if __name__== '__main__':
     #print(p2.apply("-", "pissur"))
     #print(p2.apply(":6", "pissuru"))
     #print(p2.apply(":g", "pissur"))
-    print(p2.tokens)
-    print(p2.concat("nere"))
-    print(p3.tokens)
-    print(p3.concat("nere"))
-
+    #print(p2.tokens)
+    #print(p2.concat("nere"))
+    #print(p3.tokens)
+    #print(p3.concat("nere"))
+    p4 = Postbase("@~+yug\\", debug=2)
+    print(p4.concat("ce8irte"))
     # Run docstring tests
     #import doctest
     #doctest.testmod()
