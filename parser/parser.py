@@ -16,7 +16,7 @@ def convert(word):
     word = word.replace('rr','5')
     word = word.replace('ng','6')
     word = word.replace('μ','7')
-    #word = word.replace('+','8')
+    word = word.replace('ń','8')
     word = word.replace('TMg','9')
     word = word.replace('¥r','j')
     word = word.replace('¥rr','z')
@@ -98,13 +98,13 @@ class DirtyParser(object):
         endings = []
         with open(self.dictionary_path + "endings.txt", "r") as f_endings:
             endings.extend(f_endings.readlines())
-        self.endings = [Postbase(convert(e.rstrip('\n')), isEnding=True, debug=self.debug) for e in endings]
+        self.endings = [Postbase(convert(e.rstrip('\n').replace("\"", "")), isEnding=True, debug=self.debug) for e in endings]
         self.endings = [e for e in self.endings if e.matched()]
         if self.debug>=1: print("Successfully loaded %d endings." % len(self.endings))
 
     def compare(self, w1, w2):
         """
-        w1 is the reference word
+        w1 is the reference word (dictionary)
         Returns length of identical sequence (starting from beginning of word)
         """
         d = 0
@@ -113,34 +113,57 @@ class DirtyParser(object):
                 break
             else:
                 d += 1
-        return d
+        return d, len(w1)-d
 
     def match(self, word):
-        # Check against dictionary
-        matches = {}
+        """
+        Check against dictionary: find potential root matches list
+        """
+        matches_d = {}
+        matches_diff = {}
         for w in self.dictionary:
-            d = self.compare(w, word)
-            matches[w[:d+2]] = d
-        best_match = max(matches.values())
-        return [m for m in matches if matches[m] == best_match]
+            if w[0] == word[0]:
+                d, diff = self.compare(w, word)
+                if w[-2:] == 'te':
+                    diff = max(0, diff - 1)
+                matches_d[w] = d
+                matches_diff[w] = diff
+        # Take the roots with a small enough difference
+        return [m for m in matches_diff if matches_d[m] >= 1 and matches_diff[m] <= 1]
 
     def parse(self, word, match):
+        """
+        Comparing word with potential root match: test all postabses/endings
+        """
         good = []
-        if self.debug>=2: print "\n+ Root ", match
+        if self.debug>=1: print "\n+ Root ", match
         for postbase in self.postbases+self.endings:
+        #for postbase in [Postbase("+'(g/t)u:6a", debug=2)]:
             if self.debug>=2: print "Postbase ", postbase, postbase.tokens
             # Assuming one level only
             new_word = postbase.concat(match)
-            good_match = abs(self.compare(new_word, word)-len(new_word)) <= 2
-            if self.debug>=2: print good_match
+            diff = self.compare(new_word, word)[1]
+            if postbase.formula[-3:] == 'te\\':
+                diff = max(0, diff-1)
+            good_match = diff <= 1
             if good_match:
+                if self.debug>=1: print postbase, new_word
                 good.append((postbase, new_word))
         return good
 
     def analyze(self, word):
+        """
+        Consider 1 word and
+        - find potential matches in dictionary (self.match) and put them in a queue
+        - pop a potential match from the queue
+            - check whether the length is good enough and keep it if it is
+            - check if the last postbase was final or not. Drop the match if it was.
+            - Find new postbases/endings (self.parse) and add them to the queue.
+        """
         if self.debug>=1: print "Looking at ", word
         start_time = time.time()
         matches = self.match(word)
+        print(matches)
         dict_time = time.time()
         matches = [([m], m) for m in matches]
         # Matches is a list of tuples (tokens, match)
@@ -148,9 +171,9 @@ class DirtyParser(object):
         final_matches = []
         while len(matches):
             tokens, match = matches.pop()
-            if self.debug>=2: 
+            if self.debug>=1:
                 print("++++ Match %s ++++" % match, tokens)
-            if abs(self.compare(match, word)-len(match)) <= 2 and abs(len(word) - self.compare(match, word)) <= 2:
+            if self.compare(match, word)[1] <= 1 and abs(len(word) - self.compare(match, word)[0]) <= 1:
                 final_matches.append((tokens, match))
             else:
                 # Abandon if the last token is final and we didn't pass above condition
@@ -168,14 +191,19 @@ class DirtyParser(object):
         return final_matches
 
     def best_score(self, matches, word):
-        d = [m for m in matches if abs(len(m[1]) - len(word)) == 0]
-        d = [m for m in d if self.compare(word, m[1]) == len(word)]
+        """"
+        Final decision: decide which list of root/postbases/endings we should
+        keep based on differences with word
+        """
+        #print([(m, self.compare(word, m[1])) for m in matches])
+        #d = [m for m in matches if abs(len(m[1]) - len(word)) == 0]
+        d = [m for m in matches if self.compare(word, m[1])[0] == len(word)]
 
         if len(d) == 0:
             raise Exception("No good match found for %s with matches %s" % (word, matches))
-        elif len(d) > 1:
-            Exception("Several matches were found for %s: %s" %(word, d))
-        return d[0]
+        #elif len(d) > 1:
+        #    Exception("Several matches were found for %s: %s" %(word, d))
+        return d
 
     def tokenize(self, sentence):
         if self.debug>=1: print("\nTokenizing: %s\n" % sentence)
@@ -189,23 +217,27 @@ class DirtyParser(object):
 
 if __name__ == '__main__':
     test_words = ["pissullrunrituq", "nerenrituq"]
-    p = DirtyParser(debug=2, postbases_files=['VY'])
+    p = DirtyParser(debug=1, postbases_files=['VY'])
     #for w in test_words:
     #    print p.parse(w)
     #print(p.analyze("pissuryug"))
     #print(p.analyze("pissuryunriteqatartuq"))
     # cenirte- / @~+yugnaite- / +’(g/t)u:6a
-    print(p.tokenize("alingullruuq"))
+    #print(p.tokenize("alingullruuq"))
     # alinge- / -llru- / +'(g/t)uq
     #print(p.tokenize("an'uq"))
     # ane- / +'(g/t)uq
     #print(p.tokenize("anyunrituq"))
     # ane- / @~+yug- / -nrite- / +'(g/t)uq
-    #print(p.tokenize("aquillruuk"))
+    #print(p.tokenize("aqui2ruuk"))
     # ane- / +'(g/t)uuk
     #print(p.tokenize("elitnaurvik"))
     # elitnaurvik maybe?
     # or maybe elite- naurvik
-    #print(p.tokenize("ce6ircugngaitua"))
+    print(p.tokenize("ce8ircug6aitua"))
+    # ce8ir / @~+yug- /  @~+ngaite- / +’(g/t)u:6a
     # yugni- / –ke- / @~–kengaq
     #print(p.tokenize("yugnikekengaq"))
+    #print(p.tokenize("kipus6aituq"))
+    #print(p.parse("ce8ircug6aitua", "ce8ircug6aite"))
+    # kipute- / @~+ngaite- / +'(g/t)uq
