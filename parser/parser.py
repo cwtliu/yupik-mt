@@ -149,7 +149,11 @@ class DirtyParser(object):
             if good_match:
                 if self.debug>=1: print postbase, new_word
                 good.append((postbase, new_word))
-        return good
+        if len(good) == 0:
+            max_length = 0
+        else:
+            max_length = max([len(g[1]) for g in good])
+        return [g for g in good if len(g) == max_length]
 
     def analyze(self, word):
         """
@@ -203,7 +207,9 @@ class DirtyParser(object):
             raise Exception("No good match found for %s with matches %s" % (word, matches))
         #elif len(d) > 1:
         #    Exception("Several matches were found for %s: %s" %(word, d))
-        return d
+        root_length = [len(m[0][0]) for m in d]
+        max_length = max(root_length)
+        return [m for m in d if len(m[0][0]) == max_length]
 
     def tokenize(self, sentence):
         if self.debug>=1: print("\nTokenizing: %s\n" % sentence)
@@ -234,8 +240,9 @@ if __name__ == '__main__':
     #print(p.tokenize("elitnaurvik"))
     # elitnaurvik maybe?
     # or maybe elite- naurvik
-    print(p.tokenize("ce8ircug6aitua"))
+    print(p.tokenize("waniwa unuaqu ayagciqlua"))
     # ce8ir / @~+yug- /  @~+ngaite- / +’(g/t)u:6a
+
     # yugni- / –ke- / @~–kengaq
     #print(p.tokenize("yugnikekengaq"))
     #print(p.tokenize("kipus6aituq"))

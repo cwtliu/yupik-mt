@@ -159,7 +159,7 @@ class Postbase(object):
             pass
 
         elif token == "-":
-            if root[-1] in consonants:
+            if root[-1] in ["g", "r"]:
                 root = root[:-1]
         elif token == "%":
             if len(root) > 3:
@@ -169,7 +169,7 @@ class Postbase(object):
                 pass
             elif root[-1] == 'g' or root[-2:] == 'er' or '*' in root:
                 pass
-            elif root[-1] in consonants:
+            elif root[-1] in ["g", "r"]:
             	root = root[:-1]
             flag = False
         elif token in [":(6)", ":(e)", ":(u)", "(e)", "(te)"]:
