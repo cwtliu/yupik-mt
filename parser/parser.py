@@ -68,13 +68,17 @@ class DirtyParser(object):
     def open_dictionary(self):
         nouns = []
         verbs = []
+        nounroots = []
         with open(self.dictionary_path + "all_nouns_manually_edited.txt", "r") as f_nouns:
             nouns.extend(f_nouns.readlines())
         with open(self.dictionary_path + "all_verbs_manually_edited.txt", "r") as f_verbs:
             verbs.extend(f_verbs.readlines())
+        with open(self.dictionary_path + "all_nouns_rootform.txt", "r") as f_nounroots:
+            nounroots.extend(f_nounroots.readlines())
 
         words = [w.rstrip('\n').rstrip('-') for w in verbs]
         words.extend([w.rstrip('\n') for w in nouns])
+        words.extend([w.rstrip('\n').rstrip('-') for w in nounroots])
         self.dictionary = [convert(word) for word in words]
         if self.debug>=1: print("Successfully loaded dictionary with %d nouns and %d verbs (total %d words)." % (len(nouns), len(verbs), len(words)))
 
@@ -240,7 +244,7 @@ if __name__ == '__main__':
     #print(p.tokenize("elitnaurvik"))
     # elitnaurvik maybe?
     # or maybe elite- naurvik
-    print(p.tokenize("waniwa unuaqu ayagciqlua"))
+    # print(p.tokenize("angyacuaraliyukapigellra"))
     # ce8ir / @~+yug- /  @~+ngaite- / +’(g/t)u:6a
 
     # yugni- / –ke- / @~–kengaq
@@ -248,3 +252,8 @@ if __name__ == '__main__':
     #print(p.tokenize("kipus6aituq"))
     #print(p.parse("ce8ircug6aitua", "ce8ircug6aite"))
     # kipute- / @~+ngaite- / +'(g/t)uq
+    print(p.tokenize("atsarturyugyaaqellruunga"))
+    # atsar- +tur\ @~+yug- @~+yaaqe- -llru- +’(g/t)u:6a
+    #ERROR STOPS AT ATSARTUR, but it isn't saved as a match
+
+
