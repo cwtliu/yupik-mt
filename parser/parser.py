@@ -158,7 +158,8 @@ class DirtyParser(object):
             max_length = 0
             return []
         # return the exactmatches first
-        exactmatches = [g for g in good if g[1] == word]        
+
+        exactmatches = [g for g in good if g[1] == word[:len(g[1])]]
         if exactmatches:
             return exactmatches 
         else:
@@ -185,7 +186,6 @@ class DirtyParser(object):
         # Matches is a list of tuples (tokens, match)
         # such that concatenation of tokens = match
         final_matches = []
-        print 'matches', matches
         while len(matches):
             tokens, match = matches.pop()
             if self.debug>=1:
@@ -195,8 +195,10 @@ class DirtyParser(object):
             else:
                 # Abandon if the last token is final and we didn't pass above condition
                 if isinstance(tokens[-1], Postbase) and tokens[-1].final:
+
                     pass
                 else: # Last token is not final and above condition is not matched
+
                     good = self.parse(word, match)
                     # FIXME also try endings
                     #if len(good) > 0:
@@ -222,7 +224,6 @@ class DirtyParser(object):
         #    Exception("Several matches were found for %s: %s" %(word, d))
         root_length = [len(m[0][0]) for m in d]
         max_length = max(root_length)
-        print(d)
         exactmatches = [g for g in d if g[1] == word]
         if exactmatches:
             return exactmatches 
@@ -252,7 +253,7 @@ if __name__ == '__main__':
     # ane- / +'(g/t)uq
     #print(p.tokenize("anyunrituq"))
     # ane- / @~+yug- / -nrite- / +'(g/t)uq
-    print(p.tokenize("aqui2ruuk"))
+    #print(p.tokenize("aqui2ruuk"))
     # ane- / +'(g/t)uuk
     #print(p.tokenize("elitnaurvik"))
     # elitnaurvik maybe?
@@ -266,17 +267,18 @@ if __name__ == '__main__':
     # kipute- / @~+ngaite- / +'(g/t)uq
     #print(p.tokenize("atsarturyugyaaqellruunga"))
     # atsar- +tur\ @~+yug- @~+yaaqe- -llru- +’(g/t)u:6a
-    #print(p.tokenize("tua-i"))
+    #print(p.tokenize("tua=i=llu"))
     #print(p.tokenize("nunani"))
     # good
+    print(p.tokenize('tua=i=llu=gguq'))
+    #print(p.tokenize('tua-i=llu'))
+    #need to print to =llu
 #    STILL BAD
     # still trying to choose the best set so far
     #print(p.tokenize("nallunrilkegci"))
     # fails at being able to find anything like -lkegi
     # If fails, may be an example where it just doesn't have available morphemes?
     # maybe able to process lkegci? then kegci alone?
-    #print(p.tokenize('Tua—i-llu-gguq'))
-    #print(p.tokenize('tua-i=llu'))
-    #need to print to =llu
+
     #print(p.tokenize('nallunritniarci'))
     # returns correct set, but also returns ['na2unrite', @~+niar\, +ci\] as an example, the +ci\ being a postbase
