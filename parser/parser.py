@@ -156,16 +156,10 @@ class DirtyParser(object):
         # better to be more exact for the final ending candidate
         if len(good) == 0:
             max_length = 0
-            return []
-        # return the exactmatches first
-
-        exactmatches = [g for g in good if g[1] == word[:len(g[1])]]
-        if exactmatches:
-            return exactmatches 
         else:
         # returns only the longest and longest-1 good matches
             max_length = max([len(g[1]) for g in good])
-            return [g for g in good if len(g[1]) >= max_length-1]
+        return [g for g in good if len(g[1]) >= max_length-1]
             
 
     def analyze(self, word):
@@ -267,14 +261,14 @@ if __name__ == '__main__':
     # kipute- / @~+ngaite- / +'(g/t)uq
 
     # atsar- +tur\ @~+yug- @~+yaaqe- -llru- +’(g/t)u:6a
-    print(p.tokenize("tua=i=llu nunani"))
+    #print(p.tokenize("tua=i=llu nunani"))
     #print(p.tokenize("nunani"))
     # good
     #print(p.tokenize('tua=i=llu=gguq'))
     #print(p.tokenize('tua-i=llu'))
     #need to print to =llu
 #    STILL BAD
-    #print(p.tokenize("atsarturyugyaaqellruunga"))
+    print(p.tokenize("atsarturyugyaaqellruunga"))
     #print(p.tokenize("yugnikekengaq"))
     # still trying to choose the best set so far
     #print(p.tokenize("nallunrilkegci"))
