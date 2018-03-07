@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 # Author: Temigo
 
+from __future__ import print_function
 import re
 from constants import *
 from postbase import Postbase
@@ -140,10 +141,10 @@ class DirtyParser(object):
         Comparing word with potential root match: test all postabses/endings
         """
         good = []
-        if self.debug>=1: print "\n+ Root ", match
+        if self.debug>=1: print("\n+ Root ", match)
         for postbase in self.postbases+self.endings:
         #for postbase in [Postbase("+'(g/t)u:6a", debug=2)]:
-            if self.debug>=2: print "Postbase ", postbase, postbase.tokens
+            if self.debug>=2: print("Postbase ", postbase, postbase.tokens)
             # Assuming one level only
             new_word = postbase.concat(match)
             diff = self.compare(new_word, word)[1]
@@ -151,7 +152,7 @@ class DirtyParser(object):
                 diff = max(0, diff-1)
             good_match = diff <= 1
             if good_match:
-                if self.debug>=1: print postbase, new_word
+                if self.debug>=1: print(postbase, new_word)
                 good.append((postbase, new_word))
         if len(good) == 0:
             max_length = 0
@@ -168,7 +169,7 @@ class DirtyParser(object):
             - check if the last postbase was final or not. Drop the match if it was.
             - Find new postbases/endings (self.parse) and add them to the queue.
         """
-        if self.debug>=1: print "Looking at ", word
+        if self.debug>=1: print("Looking at ", word)
         start_time = time.time()
         matches = self.match(word)
         print(matches)
