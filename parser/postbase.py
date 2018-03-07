@@ -388,7 +388,7 @@ class Postbase(object):
         - string (updated remain of the root = new dropped_word)
         - boolean (whether the current postbase can match word or not)
         """
-        if self.debug>=2: print "Parsing ", root, " + ", subword
+        if self.debug>=2: print("Parsing ", root, " + ", subword)
         keep_on = True
         self.i_formula = 0
         self.i_subword = 0
