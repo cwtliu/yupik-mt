@@ -261,7 +261,7 @@ if __name__ == '__main__':
     # print(p.tokenize("angyacuaraliyukapigellra"))
     # ce8ir / @~+yug- /  @~+ngaite- / +’(g/t)u:6a
     # yugni- / –ke- / @~–kengaq
-    #print(p.tokenize("yugnikekengaq"))
+
     #print(p.tokenize("kipus6aituq"))
     #print(p.parse("ce8ircug6aitua", "ce8ircug6aite"))
     # kipute- / @~+ngaite- / +'(g/t)uq
@@ -270,10 +270,11 @@ if __name__ == '__main__':
     #print(p.tokenize("tua=i=llu"))
     #print(p.tokenize("nunani"))
     # good
-    print(p.tokenize('tua=i=llu=gguq'))
+    #print(p.tokenize('tua=i=llu=gguq'))
     #print(p.tokenize('tua-i=llu'))
     #need to print to =llu
 #    STILL BAD
+    #print(p.tokenize("yugnikekengaq"))
     # still trying to choose the best set so far
     #print(p.tokenize("nallunrilkegci"))
     # fails at being able to find anything like -lkegi
