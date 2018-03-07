@@ -253,7 +253,7 @@ class DirtyParser(object):
         sentence = sentence.lower()
         sentence = re.split(re.compile("(\s|,|\.|;|\?|!|\[|\]|\(|\)|:|\")"), sentence)
 
-        print(sentence)
+        #print(sentence)
         sentence_matches = []
         for word in sentence:
             if len(word) == 0:
@@ -328,4 +328,13 @@ if __name__ == '__main__':
         text = f.readlines()
     for line in text:
         print(p.tokenize(line.rstrip('\n')))"""
-    print(p.tokenize("tua-i nallunritniarciman'a wangkuta-w' angutni canek pitulini pitgaqutulini-llu, aavcaam taum culua, melquq tamana, niitela'arqa perlliniluni."))
+    #print(p.tokenize("tua-i nallunritniarciman'a wangkuta-w' angutni canek pitulini pitgaqutulini-llu, aavcaam taum culua, melquq tamana, niitela'arqa perlliniluni."))
+    import sys
+    output = ""
+    with open(sys.argv[1], 'r') as f:
+        text = f.readlines()
+    for line in text:
+        s = p.tokenize(line.rstrip('\n'))
+        print(s)
+        #output = output + s + '\n'
+    #print(output)
