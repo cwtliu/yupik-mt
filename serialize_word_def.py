@@ -24,7 +24,7 @@ word_def_dict = {}
 with open(fwords, 'r') as fw, open (fdefs, 'r') as fd:
   for word in fw:
     d = fd.readline()
-    word_def_dict[word] = d.rstrip()
+    word_def_dict[word.strip()] = d.rstrip()
 
 outf = open(out_file, 'wb')
 pickle.dump(word_def_dict, outf)
