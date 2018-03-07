@@ -154,7 +154,7 @@ class Postbase(object):
 
         flag = False
         if token == '=':
-        	pass
+        	root = root+'='
         elif token == '~':
             if root[-1] == 'e':
                 root = root[:-1]
