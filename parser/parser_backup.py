@@ -2,7 +2,6 @@
 # -*- coding:utf-8 -*-
 # Author: Temigo
 
-from __future__ import print_function
 import re
 from constants import *
 from postbase import Postbase
@@ -141,10 +140,10 @@ class DirtyParser(object):
         Comparing word with potential root match: test all postabses/endings
         """
         good = []
-        if self.debug>=1: print("\n+ Root ", match)
+        if self.debug>=1: print "\n+ Root ", match
         for postbase in self.postbases+self.endings:
         #for postbase in [Postbase("+'(g/t)u:6a", debug=2)]:
-            if self.debug>=2: print("Postbase ", postbase, postbase.tokens)
+            if self.debug>=2: print "Postbase ", postbase, postbase.tokens
             # Assuming one level only
             new_word = postbase.concat(match)
             diff = self.compare(new_word, word)[1]
@@ -152,22 +151,13 @@ class DirtyParser(object):
                 diff = max(0, diff-1)
             good_match = diff <= 1
             if good_match:
-                if self.debug>=1: print(postbase, new_word)
+                if self.debug>=1: print postbase, new_word
                 good.append((postbase, new_word))
-        # better to be more exact for the final ending candidate
         if len(good) == 0:
             max_length = 0
-            return []
-        # return the exactmatches first
-
-        exactmatches = [g for g in good if g[1] == word[:len(g[1])]]
-        if exactmatches:
-            return exactmatches 
         else:
-        # returns only the longest and longest-1 good matches
             max_length = max([len(g[1]) for g in good])
-            return [g for g in good if len(g[1]) >= max_length-1]
-            
+        return [g for g in good if len(g[1]) == max_length]
 
     def analyze(self, word):
         """
@@ -178,7 +168,7 @@ class DirtyParser(object):
             - check if the last postbase was final or not. Drop the match if it was.
             - Find new postbases/endings (self.parse) and add them to the queue.
         """
-        if self.debug>=1: print("Looking at ", word)
+        if self.debug>=1: print "Looking at ", word
         start_time = time.time()
         matches = self.match(word)
         print(matches)
@@ -196,10 +186,8 @@ class DirtyParser(object):
             else:
                 # Abandon if the last token is final and we didn't pass above condition
                 if isinstance(tokens[-1], Postbase) and tokens[-1].final:
-
                     pass
                 else: # Last token is not final and above condition is not matched
-
                     good = self.parse(word, match)
                     # FIXME also try endings
                     #if len(good) > 0:
@@ -225,9 +213,6 @@ class DirtyParser(object):
         #    Exception("Several matches were found for %s: %s" %(word, d))
         root_length = [len(m[0][0]) for m in d]
         max_length = max(root_length)
-        exactmatches = [g for g in d if g[1] == word]
-        if exactmatches:
-            return exactmatches 
         return [m for m in d if len(m[0][0]) == max_length]
 
     def tokenize(self, sentence):
@@ -254,33 +239,21 @@ if __name__ == '__main__':
     # ane- / +'(g/t)uq
     #print(p.tokenize("anyunrituq"))
     # ane- / @~+yug- / -nrite- / +'(g/t)uq
-    #print(p.tokenize("aqui2ruuk"))
+    print(p.tokenize("aqui2ruuk"))
     # ane- / +'(g/t)uuk
     #print(p.tokenize("elitnaurvik"))
     # elitnaurvik maybe?
     # or maybe elite- naurvik
     # print(p.tokenize("angyacuaraliyukapigellra"))
     # ce8ir / @~+yug- /  @~+ngaite- / +’(g/t)u:6a
-    # yugni- / –ke- / @~–kengaq
 
+    # yugni- / –ke- / @~–kengaq
+    #print(p.tokenize("yugnikekengaq"))
     #print(p.tokenize("kipus6aituq"))
     #print(p.parse("ce8ircug6aitua", "ce8ircug6aite"))
     # kipute- / @~+ngaite- / +'(g/t)uq
     #print(p.tokenize("atsarturyugyaaqellruunga"))
     # atsar- +tur\ @~+yug- @~+yaaqe- -llru- +’(g/t)u:6a
-    #print(p.tokenize("tua=i=llu"))
-    #print(p.tokenize("nunani"))
-    # good
-    #print(p.tokenize('tua=i=llu=gguq'))
-    #print(p.tokenize('tua-i=llu'))
-    #need to print to =llu
-#    STILL BAD
-    #print(p.tokenize("yugnikekengaq"))
-    # still trying to choose the best set so far
-    #print(p.tokenize("nallunrilkegci"))
-    # fails at being able to find anything like -lkegi
-    # If fails, may be an example where it just doesn't have available morphemes?
-    # maybe able to process lkegci? then kegci alone?
+    #print(p.tokenize("atsarturyugyaaqellruunga"))
+    # atsar- +tur\ @~+yug- @~+yaaqe- -llru- +’(g/t)u:6a
 
-    #print(p.tokenize('nallunritniarci'))
-    # returns correct set, but also returns ['na2unrite', @~+niar\, +ci\] as an example, the +ci\ being a postbase
