@@ -5,7 +5,7 @@
 import re
 from constants import *
 from postbase import Postbase
-import time
+import time, random
 
 # TODO conversions
 def convert(word):
@@ -159,8 +159,10 @@ class DirtyParser(object):
         else:
         # returns only the longest and longest-1 good matches
             max_length = max([len(g[1]) for g in good])
-        return [g for g in good if len(g[1]) >= max_length-1]
-            
+
+        good = [g for g in good if len(g[1]) >= max_length-2]
+        good = [g for g in good if g[1] != match]
+        return good
 
     def analyze(self, word):
         """
@@ -174,7 +176,7 @@ class DirtyParser(object):
         if self.debug>=1: print "Looking at ", word
         start_time = time.time()
         matches = self.match(word)
-        print(matches)
+        #print(matches)
         dict_time = time.time()
         matches = [([m], m) for m in matches]
         # Matches is a list of tuples (tokens, match)
@@ -189,8 +191,7 @@ class DirtyParser(object):
             else:
                 # Abandon if the last token is final and we didn't pass above condition
                 if isinstance(tokens[-1], Postbase) and tokens[-1].final:
-
-                    pass
+                    final_matches.append((tokens, match))
                 else: # Last token is not final and above condition is not matched
 
                     good = self.parse(word, match)
@@ -198,7 +199,9 @@ class DirtyParser(object):
                     #if len(good) > 0:
                     matches = matches + [(tokens + [g[0]], g[1]) for g in good]
                     #else: # No further postbase match => try endings
-
+            if time.time() - start_time > 60:
+                if self.debug >= 1: print("\n [WARNING] Running out of time on %s" % word)
+                break
         match_time = time.time()
         if self.debug>=1: print("\nDictionary lookup: %f\nMatching recursion: %f\n" % (dict_time - start_time, match_time - dict_time))
         return final_matches
@@ -210,36 +213,73 @@ class DirtyParser(object):
         """
         #print([(m, self.compare(word, m[1])) for m in matches])
         #d = [m for m in matches if abs(len(m[1]) - len(word)) == 0]
-        d = [m for m in matches if self.compare(word, m[1])[0] == len(word)]
+        #print(matches)
+        if len(matches) > 0:
+            d = [m for m in matches if m[1] == word]
+            if len(d) > 0:
+                min_tokens_length = min([len(m[0]) for m in d])
+                d = [m for m in d if len(m[0]) == min_tokens_length]
+            else:
+                min_diff = min([abs(self.compare(word, m[1])[1]) for m in matches])
+                d = [m for m in matches if abs(self.compare(word, m[1])[1]) == min_diff]
 
-        if len(d) == 0:
-            raise Exception("No good match found for %s with matches %s" % (word, matches))
+            if len(d) > 0:
+                max_root_length = max([len(m[0][0]) for m in d])
+                d = [m for m in d if len(m[0][0]) == max_root_length]
+        #from collections import OrderedDict
+        #sprint(list(OrderedDict.fromkeys(d)))
+        if len(matches) == 0 or len(d) == 0:
+            return [[word]]
+            #raise Exception("No good match found for %s with matches %s" % (word, matches))
         #elif len(d) > 1:
         #    Exception("Several matches were found for %s: %s" %(word, d))
-        root_length = [len(m[0][0]) for m in d]
-        max_length = max(root_length)
-        exactmatches = [g for g in d if g[1] == word]
-        if exactmatches:
-            return exactmatches 
-        return [m for m in d if len(m[0][0]) == max_length]
+        #root_length = [len(m[0][0]) for m in d]
+        #max_length = max(root_length)
+        #exactmatches = [g for g in d if g[1] == word]
+        #if exactmatches:
+        #    return exactmatches
+        #return [m for m in d if len(m[0][0]) == max_length]
+        d = [[str(x) for x in m[0]] + [m[1]] for m in d]
+        d_final = []
+        for m in d:
+            if m not in d_final:
+                d_final.append(m)
+        if self.debug >= 1: print(d_final)
+        return d_final[random.randint(0, len(d_final)-1)]
 
     def tokenize(self, sentence):
         if self.debug>=1: print("\nTokenizing: %s\n" % sentence)
-        sentence = sentence.split(" ")
+        sentence = sentence.lower()
+        sentence = re.split(re.compile("(\s|,|\.|;|\?|!|\[|\]|\(|\)|:|\")"), sentence)
+
+        print(sentence)
         sentence_matches = []
         for word in sentence:
+            if len(word) == 0:
+                continue
+            elif len(word) == 1:
+                sentence_matches.append(word)
+                continue
             word = convert(word)
+            word = word.rstrip().lstrip()
             matches = self.analyze(word)
-            sentence_matches.append(self.best_score(matches, word))
-        return sentence_matches
+            best_match = self.best_score(matches, word)
+            best_match[-1] = word[len(best_match[-1]):]
+            if len(best_match[-1]) == 0:
+                best_match = best_match[:-1]
+            sentence_matches.extend(best_match)
+            sentence_matches.append("@@@")
+
+        sentence_matches = [deconvert(w) for w in sentence_matches]
+        return " ".join(sentence_matches)
 
 if __name__ == '__main__':
     test_words = ["pissullrunrituq", "nerenrituq"]
-    p = DirtyParser(debug=1, postbases_files=['VY'])
+    p = DirtyParser(debug=0, postbases_files=['VY'])
     #for w in test_words:
     #    print p.parse(w)
     #print(p.analyze("pissuryug"))
-    #print(p.analyze("pissuryunriteqatartuq"))
+    #print(p.tokenize("pissuryunriteqatartuq"))
     # cenirte- / @~+yugnaite- / +’(g/t)u:6a
     #print(p.tokenize("alingullruuq"))
     # alinge- / -llru- / +'(g/t)uq
@@ -252,7 +292,7 @@ if __name__ == '__main__':
     #print(p.tokenize("elitnaurvik"))
     # elitnaurvik maybe?
     # or maybe elite- naurvik
-    # print(p.tokenize("angyacuaraliyukapigellra"))
+    #print(p.tokenize("angyacuaraliyukapigellra"))
     # ce8ir / @~+yug- /  @~+ngaite- / +’(g/t)u:6a
     # yugni- / –ke- / @~–kengaq
 
@@ -268,7 +308,7 @@ if __name__ == '__main__':
     #print(p.tokenize('tua-i=llu'))
     #need to print to =llu
 #    STILL BAD
-    print(p.tokenize("atsarturyugyaaqellruunga"))
+    #print(p.tokenize("atsarturyugyaaqellruunga"))
     #print(p.tokenize("yugnikekengaq"))
     # still trying to choose the best set so far
     #print(p.tokenize("nallunrilkegci"))
@@ -278,3 +318,13 @@ if __name__ == '__main__':
 
     #print(p.tokenize('nallunritniarci'))
     # returns correct set, but also returns ['na2unrite', @~+niar\, +ci\] as an example, the +ci\ being a postbase
+    #print(p.tokenize('Waten ciumek ayagnilartukut!'))
+    #print(p.tokenize('\"Nevumun kapuarrluni\"'))
+    #print(p.tokenize("Aquiluta waten?"))
+    #print(p.tokenize("Tuamtellu pikumteni, ayakuni kapuarrluni."))
+    #print(p.tokenize("Cumilnguaqluteng ingluit."))
+    """with open('../data/yupik_train.small.txt', 'r') as f:
+        text = f.readlines()
+    for line in text:
+        print(p.tokenize(line.rstrip('\n')))"""
+    print(p.tokenize("tua-i nallunritniarciman'a wangkuta-w' angutni canek pitulini pitgaqutulini-llu, aavcaam taum culua, melquq tamana, niitela'arqa perlliniluni."))
