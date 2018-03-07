@@ -55,7 +55,7 @@ for line_idx in range(len(yupik_word_lines)):
   # for word_idx in range(len(yupik_word_lines[line_idx])):
     # match = yupik_parser.parse(yupik_word_lines[line_idx][word_idx])
 #TODO: UNDO DEBUG
-  match = [yp.decrypt(w) +'\n' for w in yupik_word_lines[line_idx]]
+  match = [yp.deconvert(w) +'\n' for w in yupik_word_lines[line_idx]]
   print('YUPIK WORD: ', match)
   
   root = root_dict[match[0]] if match[0] in root_dict else PLACEHOLDER + match[0]
