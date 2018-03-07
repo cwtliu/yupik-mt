@@ -255,7 +255,7 @@ class Postbase(object):
                         root = root[:-1] + token
                     else:
                         root = root + token
-        elif token == "'":
+        elif token == "’":
             if len(root) == 3:
                 if root[-1] == 'e' and root[-2] in consonants and root[-3] in vowels:
                     root = root[:-1] + "'"
@@ -364,6 +364,8 @@ class Postbase(object):
                     break
         elif token == "\\" or token == ":":
             pass # not an ending
+        elif token == "'":
+        	pass
         elif token in vowels or token in consonants:
             if self.debug>=2: print("Default token", token)
             if token in vowels and root[-1] == 'e':
