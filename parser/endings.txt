@@ -1475,7 +1475,7 @@
 "=gga"
 "=ggem"
 "=gguq"
-"=I"
+"=i"
 "=kin"
 "=kiq"
 "=llam"

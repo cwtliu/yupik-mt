@@ -143,6 +143,7 @@ class Postbase(object):
         #    self.reappend = False
 
         # Return the first alpha item in tokens list
+
         first_letter=''
         first_letter_index = -1
         for l in self.tokens:
@@ -152,7 +153,9 @@ class Postbase(object):
                 break
 
         flag = False
-        if token == '~':
+        if token == '=':
+        	pass
+        elif token == '~':
             if root[-1] == 'e':
                 root = root[:-1]
         elif token == "+":
