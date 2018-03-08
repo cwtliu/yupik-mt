@@ -80,6 +80,7 @@ class DirtyParser(object):
         words = [w.rstrip('\n').rstrip('-') for w in verbs]
         words.extend([w.rstrip('\n') for w in nouns])
         words.extend([w.rstrip('\n').rstrip('-') for w in nounroots])
+        words = [w.replace('’', '\'') for w in words]
         self.dictionary = [convert(word) for word in words]
         if self.debug>=1: print("Successfully loaded dictionary with %d nouns and %d verbs (total %d words)." % (len(nouns), len(verbs), len(words)))
 
