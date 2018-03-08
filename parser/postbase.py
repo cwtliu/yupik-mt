@@ -134,6 +134,9 @@ class Postbase(object):
         >>> p18.apply("@","kit'e")
         'kic'
         """
+        if len(root) == 0:
+            return root
+            
         if root[-1] == "-":
             print("Root should not have a dash at the end.")
             return root
