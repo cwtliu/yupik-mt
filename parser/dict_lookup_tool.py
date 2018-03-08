@@ -20,7 +20,7 @@ ALL_PB_PKL_FILE = '../data/postbases_txt/postbases.pkl'
 END_PKL_FILE = '../data/endings/endings.pkl'
 
 MORPHEME_DELIMITER = ' ** ' 
-WORD_DELIMITER = ' || '
+WORD_DELIMITER = ' @@@ '
 PLACEHOLDER = '%%' # if dictionary translation not found, tac this onto begin of word.
 # punc_re = re.compile('[%s]' % re.escape(string.punctuation))
 
@@ -34,28 +34,29 @@ def dict_lookup(sentence):
   for encoded_morphemes in sentence.split(WORD_DELIMITER):
     beg_punc = []
     end_punc = []
-    root = None
+    root = []
     pbs = []
     end = []
 
-    morphemes = [yp.deconvert(em) for em in encoded_morphemes.split()]
+    morphemes = [yp.deconvert(em).replace('–', '-') for em in encoded_morphemes.split()]
     
     # Set aside beginning and ending punctuation.
     # Middle punctuation is found in postbase list.
     b = 0
-    while morphemes[b] in string.punctuation:
+    while b < len(morphemes) and morphemes[b] in string.punctuation:
       beg_punc.append(morphemes[b])
       b += 1
     morphemes = morphemes[b:]
     e = len(morphemes) - 1
-    while morphemes[e] in string.punctuation:
+    while e > 0 and morphemes[e] in string.punctuation:
       end_punc.append(morphemes[e])
       e -= 1
     morphemes = morphemes[:e+1]
 
     # Get root.
-    root = root_dict[morphemes[0]] \
-            if morphemes[0] in root_dict else PLACEHOLDER + morphemes[0]
+    if len(morphemes) > 0:
+      root.append(root_dict[morphemes[0]] \
+            if morphemes[0] in root_dict else PLACEHOLDER + morphemes[0])
 
     # Get postbases and ending.
     if len(morphemes) > 1:
@@ -69,7 +70,7 @@ def dict_lookup(sentence):
         else:
           pbs.append(PLACEHOLDER + morpheme)
 
-    dirty_english_sentence.append(MORPHEME_DELIMITER.join(beg_punc + end + pbs + [root] + end_punc))
+    dirty_english_sentence.append(MORPHEME_DELIMITER.join(beg_punc + end + pbs + root + end_punc))
 
   return WORD_DELIMITER.join(dirty_english_sentence)
 
