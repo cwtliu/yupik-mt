@@ -58,8 +58,8 @@ to get V-ed (usually to one’s detriment)
 to V in a small way
 to be very V
 small N; tiny N; little N
-(Y form)
-(NUN
+to smell or taste like N
+to smell or taste like N
 (K form) to smell or taste like N
 to smell or taste like N
 unpleasing N; ugly old N; bad result of V-ing
@@ -108,7 +108,7 @@ one who Vs; the only one who Vs
 exact area denoted by N with respect to possessor
 to buy something to serve as one’s N
 to be unable to V on account of some inhibiting factor
-to V (of “darned” one
+to V
 something that looks like N
 to strike (it) with a projectile or implement in the N
 small N; little N
@@ -121,16 +121,16 @@ to become good N
 one that is good for N or has a good N
 good N; nice N; new N
 to be good N; to have good N
-(also
 to have N to a decreasing degree
-and
+to have N to a decreasing degree
+the pair or group whereof one member has the other as his N
 the pair or group whereof one member has the other as his N
 one that is being V-ed
 to V something
 to V in the future
-to be in (water
-to be in (water
-to be in (water
+to be in
+to be in 
+to be in
 (emphatic)
 to give N to object to use or possess; to supply object with N
 to prepare something to be N
@@ -143,7 +143,7 @@ to V in a small and unnoticeable way
 very ugly N
 to acquire or claim (it) as one’s N
 to not have V-ed (yet)
-(K
+(K form) to have never V-ed
 (Y form) to have never V-ed
 small N
 to V in a small and not very noticeable way
@@ -167,19 +167,19 @@ small bit of N; poor N
 small bit of N; poor N
 to V quickly; to V in a hurry
 to get a new N
-(Y
-(NS form)
-(NI
-(Y
-(NS form)
-(NI
-(Y
-(NS form)
-(NI
+to formerly, regularly have V-ed
+(NS form) to formerly, regularly have V-ed
+to formerly, regularly have V-ed
+to formerly, regularly have V-ed
+(NS form) to formerly, regularly have V-ed
+to V customarily; to V regularly
+to usually V
+(NS form) to usually V
+to usually V
 one with N or Ns
-(K
+to V suddenly and willfully 
 (Y form) to V suddenly and willfully
-(K
+to V abruptly; to V in a huff 
 (Y form) to V abruptly; to V in a huff
 (meaning uncertain)
 to take along N
@@ -260,14 +260,14 @@ to probably also V; to most probably V or be V
 inhabitant of N; resident of N; tribe-member of or from N
 to be at N; to stay at N
 one whose place is N
-- to speak the language or dialect of the residents of N
+to speak the language or dialect of the residents of N
 to V casually or aimlessly
 to V in a small way
 our N
 to not V enough
-(also
-) instrument or device for V-ing; time of V-ing
-oh
+instrument or device for V-ing; time of V-ing
+instrument or device for V-ing; time of V-ing
+oh, how it causes one to be V!
 in order to V; for the purpose of V-ing
 to V late; to take a long time in V-ing
 to tend not to cause one to V
@@ -336,13 +336,13 @@ to be unpleasant to V; to be an unpleasant N
 to consider object to be unpleasant to V or to be an unpleasant N
 to be unpleasant to V; to be an unpleasant N
 to consider object to be pleasant to V or to be a pleasant N
-(NUN
-(NUN
+to smell or taste like N 
+to smell or taste like N 
 since N; since some time in the N
 to be pleasant to V; to be a pleasant N
 to smell or taste like N
 to endure the difficulty involved with V-ing or with N
-(plural)
+(plural) N and family; N and companion 
 (dual) N and family; N and companion
 to unintentionally hit (it) in the N with a projectile
 to have (it) as its V-er; for it (object) to be more V than it (subject)
@@ -350,17 +350,17 @@ one who Vs thoroughly
 to be good with respect to V-ing; to be exactly N
 to V again
 the one(s) most V
-
+non-productive
 to not V (having changed one’s mind or decided not to)
 to keep oneself from V-ing; to try not to V
 to no longer V; to stop V-ing
 to almost V; to not quite V; to barely keep from V-ing
 to not V
 to be more V
-(HBC form) oh
-(HBC form) oh
-(HBC form) oh
-(HBC form) oh
+(HBC form) oh, how V!; my, how V!
+(HBC form) oh, how V!; my, how V!
+(HBC form) oh, how V!; my, how V!
+(HBC form) oh, how V!; my, how V!
 to V for the first time
 to V for the first time
 to V for the first time
@@ -370,9 +370,9 @@ poor dear one Vs
 to V so well
 to V so well
 to V in a big way
-(also
-(also
-) to V so long; to V so much
+to V so long; to V so much
+to V so long; to V so much
+to V so long; to V so much
 to V intensely; to V excessively
 to V intensely; to V excessively
 to V most; to V mostly
@@ -381,9 +381,9 @@ to V most; to V mostly
 to V most; to V mostly
 little one with a big N
 thing like N
-(NI
-(NI
-(NI
+to not V 
+to not V 
+to not V 
 one at N
 to actually V (after hesitation; or surprising as it may seem)
 to actually V (after hesitation; or surprising as it may seem)
@@ -400,8 +400,8 @@ do not V so much!; stop V-ing!
 (NUN form) most important form of N
 (NUN form) most important form of N
 (NUN form) most important form of N
-
-
+English
+English 
 to V in a minor way
 only N; merely N
 to be ready to V
@@ -416,7 +416,7 @@ to V briefly; to merely V; please V; to V immediately before an associated event
 to first V
 don’t ever V!
 to slowly start to V; to V gradually
-
+No meaning
 to be about to V
 to keep on trying to V despite difficulties; to try one’s best to V
 to V suddenly
@@ -431,7 +431,7 @@ weak
 to V slowly and with difficulty because of disability
 to V one after another
 little bit of N; little thing that is V
-
+non-productive
 one that is V: one that is like N
 to V using repeated actions to accomplish the act; to be V-ed by repeated actions
 area far in the direction of N
@@ -464,7 +464,7 @@ N that has departed from its natural state (often
 many Ns; multitude of Ns
 large N (non-productive meaning); poor old N; lousy old N (somewhat productive meaning)
 poor dear N
-
+non-productive
 to be very V
 to be very V
 to speak the language of N
@@ -535,9 +535,9 @@ to V purposely by several actions
 to keep on V-ing; to continue to V; to V though no one else does; to be a little V (with
 to keep on V-ing; to continue to V; to V though no one else does; to be a little V (with
 to finally V after desiring to do so but being prevented by circumstances
-(K
-(Y form)
-(HBC
+(K form) to always V 
+(Y form) to always V 
+(HBC form) to always V 
 to become N; to expose the N of (it)
 empty container that held N
 empty container that held N
@@ -572,8 +572,8 @@ device to prevent V-ing
 thing similar to N; thing that acts as if it were V; small N
 during the period of time when possessor is V-ing
 to V without recompense; to V soon
-(or
-?) for there to be lots of time before V-ing; to not V be going to V for a while
+for there to be lots of time before V-ing; to not V be going to V for a while 
+for there to be lots of time before V-ing; to not V be going to V for a while
 to be such as to cause one to V
 (meaning difficult to determine)
 to finally V
@@ -615,8 +615,8 @@ to be able to V (Y
 to no longer want to V; to suddenly cease wanting to V
 to not care to V
 to yearn to V; to desire to V
-
-
+that one
+that one
 used for emphasis or contrast in narrative or conversation
 again
 because
