@@ -136,7 +136,7 @@ class Postbase(object):
         """
         if len(root) == 0:
             return root
-            
+
         if root[-1] == "-":
             print("Root should not have a dash at the end.")
             return root
@@ -175,7 +175,7 @@ class Postbase(object):
                     flag = True
             if flag:
                 pass
-            elif root[-1] == 'g' or root[-2:] == 'er' or '*' in root:
+            elif root[-1] == 'g' or (len(root) >= 2 and root[-2:] == 'er') or '*' in root:
                 pass
             elif root[-1] in ["g", "r"]:
                 root = root[:-1]
@@ -188,19 +188,19 @@ class Postbase(object):
             #print(self.tokens)
             if position+2 == len(self.tokens):
                 #print('yes')
-                if self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
+                if len(root) >= 2 and self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
                     root = root #+''.join(self.tokens[:position])
                 else:
                     root = root+'6'#+''.join(self.tokens[:position])+'6'
             elif position+2 < len(self.tokens):
-                if self.tokens[position+1] in vowels and self.tokens[position+2] not in vowels and root[-1] in vowels and root[-2] not in vowels:
+                if len(root) >= 2 and self.tokens[position+1] in vowels and self.tokens[position+2] not in vowels and root[-1] in vowels and root[-2] not in vowels:
                     root = root #+''.join(self.tokens[:position])
                 else:
                     root = root+'6'#+''.join(self.tokens[:position])+'6'
         elif token == ":g":
             position = self.tokens.index(token)
             if position+2 == len(self.tokens):
-                if self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
+                if len(root) >= 2 and self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
                     root = root+''.join(self.tokens[:position])
                 else:
                     root = root+''.join(self.tokens[:position])+'g'
@@ -212,12 +212,12 @@ class Postbase(object):
         elif token == ":r":
             position = self.tokens.index(token)
             if position+2 == len(self.tokens):
-                if self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
+                if len(root) >= 2 and self.tokens[position+1] in vowels and root[-1] in vowels and root[-2] not in vowels:
                     root = root+''.join(self.tokens[:position])
                 else:
                     root = root+''.join(self.tokens[:position])+'r'
             elif position+2 < len(self.tokens):
-                if self.tokens[position+1] in vowels and self.tokens[position+2] not in vowels and root[-1] in vowels and root[-2] not in vowels:
+                if len(root) >= 2 and self.tokens[position+1] in vowels and self.tokens[position+2] not in vowels and root[-1] in vowels and root[-2] not in vowels:
                     root = root+''.join(self.tokens[:position])
                 else:
                     root = root+''.join(self.tokens[:position])+'r'
@@ -253,7 +253,7 @@ class Postbase(object):
                 else:
                     root = root + '5'
             elif token in vowels:
-                if root[-2:] == 'er' or root[-2:] == 'eg':
+                if len(root) >= 2 and (root[-2:] == 'er' or root[-2:] == 'eg'):
                     root = root[:-2]+root[-1]
                 else:
                     if root[-1] == 'e':
@@ -271,12 +271,12 @@ class Postbase(object):
             pass
         elif token == "@":
             # THIS IS ALL @ N RULE
-            if root[-2:] == "te": # assuming an e deletion has already occurred...
+            if len(root) >= 2 and root[-2:] == "te": # assuming an e deletion has already occurred...
                 root = root[:-1]
             #print(first_letter)
             #print(self.tokens)
             if first_letter == "n":
-                if root[-1] == "t" and (root[-2] in voiced_fricatives \
+                if len(root) >= 2 and root[-1] == "t" and (root[-2] in voiced_fricatives \
                                     or root[-2] in voiceless_fricatives \
                                     or root[-2] in voiced_nasals \
                                     or root[-2] in voiceless_nasals \
@@ -299,6 +299,7 @@ class Postbase(object):
                     else:
                         root = root + token
             elif (first_letter == "6" or first_letter == "m" or first_letter == "v") \
+                                    and len(root) >= 2 \
                                     and root[-1] == "t" \
                                     and not self.isEnding \
                                     and (root[-2] in voiced_fricatives \
@@ -331,13 +332,14 @@ class Postbase(object):
                                     and '(e)' in root:
                 root = root[:-1]+'l'
             elif (first_letter == "6" or first_letter == "m" or first_letter == "v") \
+                                    and len(root) >= 2 \
                                     and root[-1] == "t" \
                                     and root[-2] in vowels:
                 root = root[:-1]+'s' #IT MAY BE EASIER TO HAVE CODE THAT REPRESENTS (E) as a single token
         elif token == "(u)" and self.begins_with("(u)") and not self.isEnding:
-            if root[-1] == "t" and root[-2] in vowels:
+            if len(root) >= 2 and root[-1] == "t" and root[-2] in vowels:
                 root = root[:-1] + "y"
-            elif root[-6:] == "(e)te":
+            elif len(root) >= 6 and root[-6:] == "(e)te":
                 root = root[:-2] + "l"
         elif first_letter == "y" and not self.isEnding and self.tokens.index(token) == first_letter_index:
             if len(root) >= 2 and root[-1] == "t":
@@ -349,9 +351,9 @@ class Postbase(object):
         elif re.search(re.compile("\("), token): # All the (g), (g/t), etc
             letters = [x for x in re.split(re.compile("\(|\)|\/"), token) if len(x) > 0]
             conditions = {
-                "i": root[-2:] == "te",
+                "i": len(root) >= 2 and root[-2:] == "te",
                 "6": root[-1] in vowels,
-                "r": root[-2:] == "te",
+                "r": len(root) >= 2 and root[-2:] == "te",
                 "s": root[-1] in vowels,
                 "t": root[-1] in consonants,
                 "u": root[-1] in consonants or root[-1] == "e",
