@@ -55,22 +55,47 @@ def dict_lookup(sentence):
 
     # Get root.
     if len(morphemes) > 0:
-      root.append(root_dict[morphemes[0]] \
-            if morphemes[0] in root_dict else PLACEHOLDER + morphemes[0])
+      if morphemes[0] in root_dict:
+        root.append(root_dict[morphemes[0]])
+      elif morphemes[0].strip('-') in root_dict:
+        # TODO: Undo hardcoding of stripping '-' from roots found in the parsed file.
+        root.append(root_dict[morphemes[0].strip('-')])
+      else: 
+        root.append(PLACEHOLDER + morphemes[0])
 
     # Get postbases and ending.
     if len(morphemes) > 1:
       for morpheme in morphemes[1:]:
         if morpheme in string.punctuation:
-          pbs.append(morpheme)
+          root.append(morpheme)
+          # pbs.append(morpheme)
         elif morpheme in pb_dict:
-          pbs.append(pb_dict[morpheme])
+          # pbs.append(pb_dict[morpheme])
+          root.append(pb_dict[morpheme])
+        elif '=' + morpheme in pb_dict:
+          # TODO: Undo hardcode of adding '=' at beginning.
+          root.append(pb_dict['=' +  morpheme])
+          # pbs.append(pb_dict['=' +  morpheme])
+        elif '=' + morpheme[1:] in pb_dict:
+          # TODO: Undo hardcode of replacing '=' with ''
+          # pbs.append(pb_dict['=' + morpheme[1:]])
+          root.append(pb_dict['=' + morpheme[1:]])
         elif morpheme in end_dict:
-          end.append(end_dict[morpheme])
+          # end.append(end_dict[morpheme])
+          root.append(end_dict[morpheme])
+        elif morpheme == '@~-ke-':
+          # TODO: Undo hardcoding definitino for this special case.
+          root.append('the one or ones that the possessor is V-ing')
         else:
-          pbs.append(PLACEHOLDER + morpheme)
+          if morpheme == morphemes[-1]:
+            root.append(PLACEHOLDER + morpheme)
+            # end.append(PLACEHOLDER + morpheme)
+          else: 
+            root.append(PLACEHOLDER + morpheme)
+            # pbs.append(PLACEHOLDER + morpheme)
 
-    dirty_english_sentence.append(MORPHEME_DELIMITER.join(beg_punc + end + pbs + root + end_punc))
+    # dirty_english_sentence.append(MORPHEME_DELIMITER.join(beg_punc + end + pbs + root + end_punc))
+    dirty_english_sentence.append(MORPHEME_DELIMITER.join(beg_punc + root + end_punc))
 
   return WORD_DELIMITER.join(dirty_english_sentence)
 
@@ -87,7 +112,7 @@ def retrieve_dicts():
 
 if __name__ == '__main__':
   if len(sys.argv) != 2:
-    print('Specify both postbase names and dictionary files')
+    print('Specify file for dictionary lookup processing.')
     sys.exit()
 
   yupik_txt = sys.argv[1]
