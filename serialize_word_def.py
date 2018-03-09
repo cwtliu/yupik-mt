@@ -11,20 +11,23 @@ User must ensure files are aligned prior to calling this script.
 Usage: python serialize_word_def.py <words.txt> <definitions.txt> <out_file>
 """
 
-if (len(sys.argv) != 4):
-  print("Usage: python serialize_word_def.py <words.txt> <definitions.txt> <out_file>")
+if (len(sys.argv) % 2 != 0 and len(sys.argv) < 4):
+  print("Usage: python serialize_word_def.py [pairs of <words.txt> <definitions.txt>] <out_file>")
   sys.exit()
 
-fwords = sys.argv[1]
-fdefs = sys.argv[2]
-out_file = sys.argv[3]
-
+out_file = sys.argv[-1]
 word_def_dict = {}
 
-with open(fwords, 'r') as fw, open (fdefs, 'r') as fd:
-  for word in fw:
-    d = fd.readline()
-    word_def_dict[word.strip().replace('–', '-')] = d.rstrip()
+for i in range(1, len(sys.argv)-1, 2):
+  fwords = sys.argv[i]
+  fdefs = sys.argv[i+1]
+  with open(fwords, 'r') as fw, open (fdefs, 'r') as fd:
+    for word in fw:
+      d = fd.readline()
+      word_def_dict[word.strip() \
+                      .replace('–', '-') \
+                      .replace('*', '') \
+                      .replace('’', '\'')] = d.rstrip()
 
 outf = open(out_file, 'wb')
 pickle.dump(word_def_dict, outf)
