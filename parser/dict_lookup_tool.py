@@ -19,8 +19,9 @@ ALL_PB_PKL_FILE = '../data/postbases_txt/postbases.pkl'
 # VERB_PB_PKL_FILE = None
 END_PKL_FILE = '../data/endings/endings.pkl'
 
-MORPHEME_DELIMITER = ' ** ' 
-WORD_DELIMITER = ' @@@ '
+MORPHEME_DELIMITER = ' ' # ' ** ' 
+WORD_DELIMITER = ' '# ' @@@ '
+SPLIT_WORD_DELIMITER = ' @@@ '
 PLACEHOLDER = '%%' # if dictionary translation not found, tac this onto begin of word.
 # punc_re = re.compile('[%s]' % re.escape(string.punctuation))
 
@@ -29,9 +30,21 @@ root_dict, pb_dict = None, None
 # noun_pb_dict, verb_pb_dict  = None, None
 end_dict = None
 
-def dict_lookup(sentence):
+def add_delim(word, delim_type):
+  if delim_type == 'word':
+    return '<w> ' + word + ' </w>'
+  elif delim_type == 'en':
+    return '<e> ' + word + ' </e>'
+  elif delim_type == 'ypk':
+    return '<y> ' + word + ' </y>'
+  elif delim_type == 'sentence':
+    return '<s> ' + word + ' </s>'
+  else:
+    return word
+
+def dict_lookup(sentence, add_delims=False):
   dirty_english_sentence = []
-  for encoded_morphemes in sentence.split(WORD_DELIMITER):
+  for encoded_morphemes in sentence.split(SPLIT_WORD_DELIMITER):
     beg_punc = []
     end_punc = []
     root = []
@@ -53,6 +66,7 @@ def dict_lookup(sentence):
       e -= 1
     morphemes = morphemes[:e+1]
 
+
     # Get root.
     if len(morphemes) > 0:
       if morphemes[0] in root_dict:
@@ -60,39 +74,86 @@ def dict_lookup(sentence):
       elif morphemes[0].strip('-') in root_dict:
         # TODO: Undo hardcoding of stripping '-' from roots found in the parsed file.
         root.append(root_dict[morphemes[0].strip('-')])
+      # elif morphemes[0] in pb_dict:
+      #   # TODO: postbase at begin
+      #   root.append(pb_dict[morphemes[0]])
+      elif morphemes[0] == 'maurluq*':
+        # TODO: hardcoded definitions, again.
+        root.append('grandmother')
       else: 
         root.append(PLACEHOLDER + morphemes[0])
 
     # Get postbases and ending.
     if len(morphemes) > 1:
       for morpheme in morphemes[1:]:
-        if morpheme in string.punctuation:
-          root.append(morpheme)
-          # pbs.append(morpheme)
-        elif morpheme in pb_dict:
-          # pbs.append(pb_dict[morpheme])
-          root.append(pb_dict[morpheme])
-        elif '=' + morpheme in pb_dict:
+        # TODO: Hardcoded backwardslash replacement.
+        morph = morpheme.replace('\\','-').strip().rstrip()
+        if morph in string.punctuation:
+          root.append(morph)
+          # pbs.append(morph)
+        elif morph in pb_dict:
+          # pbs.append(pb_dict[morph])
+          root.append(pb_dict[morph])
+        elif '=' + morph in pb_dict:
           # TODO: Undo hardcode of adding '=' at beginning.
-          root.append(pb_dict['=' +  morpheme])
-          # pbs.append(pb_dict['=' +  morpheme])
-        elif '=' + morpheme[1:] in pb_dict:
+          root.append(pb_dict['=' +  morph])
+          # pbs.append(pb_dict['=' +  morph])
+        elif '=' + morph[1:] in pb_dict:
           # TODO: Undo hardcode of replacing '=' with ''
-          # pbs.append(pb_dict['=' + morpheme[1:]])
-          root.append(pb_dict['=' + morpheme[1:]])
-        elif morpheme in end_dict:
-          # end.append(end_dict[morpheme])
-          root.append(end_dict[morpheme])
-        elif morpheme == '@~-ke-':
+          # pbs.append(pb_dict['=' + morph[1:]])
+          root.append(pb_dict['=' + morph[1:]])
+        elif morph in end_dict:
+          # end.append(end_dict[morph])
+          root.append(end_dict[morph])
+        elif morph == '@~-ke-':
           # TODO: Undo hardcoding definitino for this special case.
           root.append('the one or ones that the possessor is V-ing')
+        elif morph == 'maurluq*':
+          # TODO: hardcoded definitions, again.
+          root.append('grandmother')
+        elif morph == 'nek':
+          # TODO: hardcoded definitions, again.
+          root.append('many N')
+        elif morph == 'nun':
+          # TODO: hardcoded definitions, again.
+          root.append('toward N')
+        elif morph == 'mek':
+          # TODO: hardcoded definitions, again.
+          root.append('one N')
+        elif morph == 'riit':
+          # TODO: hardcoded definitions, again.
+          root.append('the many N')
+        elif morph == 'i-llu' or morph == 'un-llu' or morph == 'em-llu' or morph == 'nek-llu' or morph == 'ni-llu':
+          # TODO: hardcoded definitions, again.
+          root.append(pb_dict['=llu'])
+        elif morph == 'n-llu':
+          # TODO: hardcoded definitions, again.
+          root.append(pb_dict['=llu'])
+        elif morph == 't-llu':
+          # TODO: hardcoded definitions, again.
+          root.append(pb_dict['=llu'])
+        elif morph == 'eng-llu':
+          # TODO: hardcoded definitions, again.
+          root.append(pb_dict['=llu'])
+        elif morph == 'k-llu':
+          # TODO: hardcoded definitions, again.
+          root.append(pb_dict['=llu'])
+        elif morph == 'u-llu':
+          # TODO: hardcoded definitions, again.
+          root.append(pb_dict['=llu'])
+        # elif '-llu' in morph:
+        #   # TODO: hardcoded definitions, again.
+        #   root.append(pb_dict['=llu'])
+        elif morph == 'mun':
+          # TODO: hardcoded definitions, again.
+          root.append('toward N')
         else:
-          if morpheme == morphemes[-1]:
-            root.append(PLACEHOLDER + morpheme)
-            # end.append(PLACEHOLDER + morpheme)
+          if morph == morphemes[-1]:
+            root.append(PLACEHOLDER + morph)
+            # end.append(PLACEHOLDER + morph)
           else: 
-            root.append(PLACEHOLDER + morpheme)
-            # pbs.append(PLACEHOLDER + morpheme)
+            root.append(PLACEHOLDER + morph)
+            # pbs.append(PLACEHOLDER + morph)
 
     # dirty_english_sentence.append(MORPHEME_DELIMITER.join(beg_punc + end + pbs + root + end_punc))
     dirty_english_sentence.append(MORPHEME_DELIMITER.join(beg_punc + root + end_punc))
@@ -130,7 +191,7 @@ if __name__ == '__main__':
   dirty_english_lines = []
   for line in yupik_lines:
     print('ENCODED YUPIK MORPHEMES:', line)
-    dirty_english = dict_lookup(line)
+    dirty_english = dict_lookup(line, add_delims=False)
     print('TRANSLATION: ', dirty_english, '\n\n')
     # dirty_english_lines.append(WORD_DELIMITER.join(dirty_english))
     dirty_english_lines.append(dirty_english+'\n')
