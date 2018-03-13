@@ -10,6 +10,7 @@ This script takes a yupik text, and does a rough translation using
 dictionary look ups. This loosely takes into account the ordering
 author: kechavez '''
 
+
 # ALL_ROOT_PKL_FILE = 'data/all_verbs_dict.pkl'
 ALL_ROOT_PKL_FILE = '../data/bases.pkl'
 ALL_PB_PKL_FILE = '../data/postbases_txt/postbases.pkl'
@@ -42,7 +43,11 @@ def add_delim(word, delim_type):
   else:
     return word
 
-def dict_lookup(sentence, add_delims=False):
+def pair_word_def(word, d):
+  return add_delim(word, 'ypk') + ' ' + add_delim(d, 'en')
+         # add_delim(d, 'en') if d is not None else add(PLACEHOLDER, 'en')
+
+def dict_lookup(sentence, add_delims=False, pairing=False):
   dirty_english_sentence = []
   for encoded_morphemes in sentence.split(SPLIT_WORD_DELIMITER):
     beg_punc = []
@@ -68,92 +73,83 @@ def dict_lookup(sentence, add_delims=False):
 
 
     # Get root.
+    definition_found = True
     if len(morphemes) > 0:
       if morphemes[0] in root_dict:
         root.append(root_dict[morphemes[0]])
       elif morphemes[0].strip('-') in root_dict:
         # TODO: Undo hardcoding of stripping '-' from roots found in the parsed file.
         root.append(root_dict[morphemes[0].strip('-')])
-      # elif morphemes[0] in pb_dict:
-      #   # TODO: postbase at begin
-      #   root.append(pb_dict[morphemes[0]])
       elif morphemes[0] == 'maurluq*':
         # TODO: hardcoded definitions, again.
         root.append('grandmother')
-      else: 
+      elif not pairing:
         root.append(PLACEHOLDER + morphemes[0])
+      else:
+        root.append(PLACEHOLDER)
+
+    # word-definition pairing.
+    if pairing and len(morphemes) > 0:
+      root[0] = pair_word_def(morphemes[0], root[0])
 
     # Get postbases and ending.
+    definition_found = True
     if len(morphemes) > 1:
       for morpheme in morphemes[1:]:
         # TODO: Hardcoded backwardslash replacement.
         morph = morpheme.replace('\\','-').strip().rstrip()
-        if morph in string.punctuation:
-          root.append(morph)
-          # pbs.append(morph)
-        elif morph in pb_dict:
-          # pbs.append(pb_dict[morph])
-          root.append(pb_dict[morph])
-        elif '=' + morph in pb_dict:
-          # TODO: Undo hardcode of adding '=' at beginning.
-          root.append(pb_dict['=' +  morph])
-          # pbs.append(pb_dict['=' +  morph])
-        elif '=' + morph[1:] in pb_dict:
-          # TODO: Undo hardcode of replacing '=' with ''
-          # pbs.append(pb_dict['=' + morph[1:]])
-          root.append(pb_dict['=' + morph[1:]])
-        elif morph in end_dict:
-          # end.append(end_dict[morph])
-          root.append(end_dict[morph])
-        elif morph == '@~-ke-':
-          # TODO: Undo hardcoding definitino for this special case.
-          root.append('the one or ones that the possessor is V-ing')
-        elif morph == 'maurluq*':
-          # TODO: hardcoded definitions, again.
-          root.append('grandmother')
-        elif morph == 'nek':
-          # TODO: hardcoded definitions, again.
-          root.append('many N')
-        elif morph == 'nun':
-          # TODO: hardcoded definitions, again.
-          root.append('toward N')
-        elif morph == 'mek':
-          # TODO: hardcoded definitions, again.
-          root.append('one N')
-        elif morph == 'riit':
-          # TODO: hardcoded definitions, again.
-          root.append('the many N')
-        elif morph == 'i-llu' or morph == 'un-llu' or morph == 'em-llu' or morph == 'nek-llu' or morph == 'ni-llu':
-          # TODO: hardcoded definitions, again.
-          root.append(pb_dict['=llu'])
-        elif morph == 'n-llu':
-          # TODO: hardcoded definitions, again.
-          root.append(pb_dict['=llu'])
-        elif morph == 't-llu':
-          # TODO: hardcoded definitions, again.
-          root.append(pb_dict['=llu'])
-        elif morph == 'eng-llu':
-          # TODO: hardcoded definitions, again.
-          root.append(pb_dict['=llu'])
-        elif morph == 'k-llu':
-          # TODO: hardcoded definitions, again.
-          root.append(pb_dict['=llu'])
-        elif morph == 'u-llu':
-          # TODO: hardcoded definitions, again.
-          root.append(pb_dict['=llu'])
-        # elif '-llu' in morph:
-        #   # TODO: hardcoded definitions, again.
-        #   root.append(pb_dict['=llu'])
-        elif morph == 'mun':
-          # TODO: hardcoded definitions, again.
-          root.append('toward N')
-        else:
-          if morph == morphemes[-1]:
+        skip = morph == SPLIT_WORD_DELIMITER.rstrip().strip()
+        if not skip:
+          if morph in string.punctuation:
+            root.append(morph)
+            # pbs.append(morph)
+          elif morph in pb_dict:
+            # pbs.append(pb_dict[morph])
+            root.append(pb_dict[morph])
+          elif '=' + morph in pb_dict:
+            # TODO: Undo hardcode of adding '=' at beginning.
+            root.append(pb_dict['=' +  morph])
+            # pbs.append(pb_dict['=' +  morph])
+          elif '=' + morph[1:] in pb_dict:
+            # TODO: Undo hardcode of replacing '=' with ''
+            # pbs.append(pb_dict['=' + morph[1:]])
+            root.append(pb_dict['=' + morph[1:]])
+          elif morph in end_dict:
+            # end.append(end_dict[morph])
+            root.append(end_dict[morph])
+          elif morph == '@~-ke-':
+            # TODO: Undo hardcoding definitino for this special case.
+            root.append('the one or ones that the possessor is V-ing')
+          elif morph == 'maurluq*':
+            # TODO: hardcoded definitions, again.
+            root.append('grandmother')
+          elif morph == 'nek':
+            # TODO: hardcoded definitions, again.
+            root.append('many N')
+          elif morph == 'nun':
+            # TODO: hardcoded definitions, again.
+            root.append('toward N')
+          elif morph == 'mek':
+            # TODO: hardcoded definitions, again.
+            root.append('one N')
+          elif morph == 'riit':
+            # TODO: hardcoded definitions, again.
+            root.append('the many N')
+          elif '-llu' in morph and len(morph) <= len('xxx-llu'):
+            # TODO: hardcoded definitions, again.
+            root.append(pb_dict['=llu'])
+          elif morph == 'mun':
+            # TODO: hardcoded definitions, again.
+            root.append('toward N')
+          elif not pairing:
             root.append(PLACEHOLDER + morph)
-            # end.append(PLACEHOLDER + morph)
-          else: 
-            root.append(PLACEHOLDER + morph)
-            # pbs.append(PLACEHOLDER + morph)
+          else:
+            root.append(PLACEHOLDER)
+
+          # word-definition pairing.
+          if pairing:
+              root[-1] = pair_word_def(morph, root[-1])
+
 
     # dirty_english_sentence.append(MORPHEME_DELIMITER.join(beg_punc + end + pbs + root + end_punc))
     dirty_english_sentence.append(MORPHEME_DELIMITER.join(beg_punc + root + end_punc))
@@ -189,12 +185,13 @@ if __name__ == '__main__':
 
   # Process yupik lines.
   dirty_english_lines = []
-  for line in yupik_lines:
+  for line in yupik_lines[:-1]:
     print('ENCODED YUPIK MORPHEMES:', line)
-    dirty_english = dict_lookup(line, add_delims=False)
+    dirty_english = dict_lookup(line, add_delims=False, pairing=True)
     print('TRANSLATION: ', dirty_english, '\n\n')
     # dirty_english_lines.append(WORD_DELIMITER.join(dirty_english))
     dirty_english_lines.append(dirty_english+'\n')
+  dirty_english_lines.append(dict_lookup(yupik_lines[-1], add_delims=False, pairing=True))
 
   print('output in ', dirty_english_txt)
   open(dirty_english_txt, 'w').writelines(dirty_english_lines)
