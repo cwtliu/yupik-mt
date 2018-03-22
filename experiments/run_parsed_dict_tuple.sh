@@ -1,0 +1,21 @@
+python -m nmt.nmt \
+  --src=ypk --tgt=en \
+  --vocab_prefix=/home/ubuntu/parsed_dict_tuple_tokenized/vocab \
+  --train_prefix=/home/ubuntu/parsed_dict_tuple_tokenized/train_parsed \
+  --dev_prefix=/home/ubuntu/parsed_dict_tuple_tokenized/dev_parsed \
+  --test_prefix=/home/ubuntu/parsed_dict_tuple_tokenized/test_parsed \
+  --out_dir=/home/ubuntu/parsed_dict_tuple_token_model_b8i8 \
+  --num_train_steps=80000 \
+  --steps_per_stats=100 \
+  --num_layers=2 \
+  --num_units=128 \
+  --dropout=0.2 \
+  --metrics=bleu \
+  --attention=scaled_luong \
+  --attention_architecture=standard \
+  --encoder_type=bi \
+  --unit_type=lstm \
+  --learning_rate=.5 \
+  --decay_scheme=luong234 \
+  --batch_size=8 \
+  --infer_batch_size=8

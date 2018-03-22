@@ -51,11 +51,21 @@ def pair_word_def(word, d):
 def tokenize(s):
   return ' '.join(word_tokenize(s))
 
-def dict_lookup(sentence, add_delims=False, pairing=False):
+'''
+pairing types: 'word', 'sentence'
+'''
+def dict_lookup(sentence, add_delims=False, pairing_type=None):
   dirty_english_sentence = []
+  morphs = []
+
   for encoded_morphemes in sentence.split(SPLIT_WORD_DELIMITER):
-    beg_punc = []
-    end_punc = []
+    morphemes = [yp.deconvert(em).replace('–', '-') for em in encoded_morphemes.split()]
+    if len(morphemes) > 0:
+      morphemes = [m for m in morphemes if m not in string.punctuation]
+    morphs.append(WORD_DELIMITER.join(morphemes))
+ 
+
+  for encoded_morphemes in sentence.split(SPLIT_WORD_DELIMITER):
     root = []
     pbs = []
     end = []
@@ -64,17 +74,9 @@ def dict_lookup(sentence, add_delims=False, pairing=False):
     
     # Set aside beginning and ending punctuation.
     # Middle punctuation is found in postbase list.
-    b = 0
-    while b < len(morphemes) and morphemes[b] in string.punctuation:
-      beg_punc.append(morphemes[b])
-      b += 1
-    morphemes = morphemes[b:]
-    e = len(morphemes) - 1
-    while e > 0 and morphemes[e] in string.punctuation:
-      end_punc.append(morphemes[e])
-      e -= 1
-    morphemes = morphemes[:e+1]
-
+    # Remove punctuation. 
+    if len(morphemes) > 0:
+      morphemes = [m for m in morphemes if m not in string.punctuation]
 
     # Get root.
     definition_found = True
@@ -87,14 +89,16 @@ def dict_lookup(sentence, add_delims=False, pairing=False):
       elif morphemes[0] == 'maurluq*':
         # TODO: hardcoded definitions, again.
         root.append('grandmother')
-      elif not pairing:
+      elif not pairing_type:
         root.append(PLACEHOLDER + morphemes[0])
-      else:
+      elif pairing_type != 'sentence':
         root.append(PLACEHOLDER)
 
     # word-definition pairing.
-    if pairing and len(morphemes) > 0:
+    if pairing_type == 'word' and len(morphemes) > 0:
       root[0] = pair_word_def(morphemes[0], tokenize(root[0]))
+    if pairing_type == 'sentence' and len(morphemes) > 0 and len(root) > 0:
+      root[0] = WORD_DELIMITER.join([r for r in word_tokenize(root[0]) if r not in string.punctuation])
 
     # Get postbases and ending.
     definition_found = True
@@ -145,20 +149,24 @@ def dict_lookup(sentence, add_delims=False, pairing=False):
           elif morph == 'mun':
             # TODO: hardcoded definitions, again.
             root.append('toward N')
-          elif not pairing:
+          elif not pairing_type:
             root.append(PLACEHOLDER + morph)
-          else:
+          elif pairing_type == 'word':
             root.append(PLACEHOLDER)
 
           # word-definition pairing.
-          if pairing:
-              root[-1] = pair_word_def(morph, tokenize(root[-1]))
-
+          if pairing_type == 'word':
+            root[-1] = pair_word_def(morph, tokenize(root[-1]))
+          elif pairing_type == 'sentence' and len(root) > 0:
+            root[-1] = WORD_DELIMITER.join([r for r in word_tokenize(root[-1]) if r not in string.punctuation])
 
     # dirty_english_sentence.append(MORPHEME_DELIMITER.join(beg_punc + end + pbs + root + end_punc))
-    dirty_english_sentence.append(MORPHEME_DELIMITER.join(beg_punc + root + end_punc))
+    dirty_english_sentence.append(MORPHEME_DELIMITER.join(root))
 
-  return WORD_DELIMITER.join(dirty_english_sentence)
+  if pairing_type != 'sentence':
+    return WORD_DELIMITER.join(dirty_english_sentence)
+
+  return WORD_DELIMITER.join(morphs) + '<ye> ' + WORD_DELIMITER.join(dirty_english_sentence)
 
 def retrieve_dicts():
   global root_dict, pb_dict, end_dict
@@ -192,11 +200,11 @@ if __name__ == '__main__':
   dirty_english_lines = []
   for line in yupik_lines[:-1]:
     print('ENCODED YUPIK MORPHEMES:', line)
-    dirty_english = dict_lookup(line, add_delims=False, pairing=True)
+    dirty_english = dict_lookup(line, add_delims=False, pairing_type='sentence')
     print('TRANSLATION: ', dirty_english, '\n\n')
     # dirty_english_lines.append(WORD_DELIMITER.join(dirty_english))
     dirty_english_lines.append(dirty_english+'\n')
-  dirty_english_lines.append(dict_lookup(yupik_lines[-1], add_delims=False, pairing=True))
+  dirty_english_lines.append(dict_lookup(yupik_lines[-1], add_delims=False, pairing_type='sentence'))
 
   print('output in ', dirty_english_txt)
   open(dirty_english_txt, 'w').writelines(dirty_english_lines)
