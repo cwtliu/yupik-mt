@@ -1,0 +1,19 @@
+python -m nmt.nmt \
+  --src=ypk --tgt=en \
+  --vocab_prefix=/home/yuarcuun/ypk-unparsed_eng-unparsed/vocab \
+  --train_prefix=/home/yuarcuun/ypk-unparsed_eng-unparsed/train \
+  --dev_prefix=/home/yuarcuun/ypk-unparsed_eng-unparsed/dev \
+  --test_prefix=/home/yuarcuun/ypk-unparsed_eng-unparsed/test \
+  --out_dir=/home/yuarcuun/unparsed_output \
+  --num_train_steps=75000 \
+  --steps_per_stats=100 \
+  --num_layers=2 \
+  --num_units=128 \
+  --dropout=0.2 \
+  --metrics=bleu \
+  --attention=scaled_luong \
+  --attention_architecture=standard \
+  --encoder_type=bi \
+  --unit_type=lstm \
+  --learning_rate=1.0 \
+  --decay_scheme=luong234

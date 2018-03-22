@@ -1,0 +1,14 @@
+python -m nmt.nmt \
+    --src=ypk --tgt=en \
+    --vocab_prefix=/home/yuarcuun/data/bpe20k_corrected/vocab_20000.BPE  \
+    --train_prefix=/home/yuarcuun/data/bpe20k_corrected/train_20000.BPE.small \
+    --dev_prefix=/home/yuarcuun/data/bpe20k_corrected/train_20000.BPE.small  \
+    --test_prefix=/home/yuarcuun/data/bpe20k_corrected/train_20000.BPE.small \
+    --out_dir=/home/yuarcuun/output/bpe20k_corrected_lr0.001_nodecay \
+    --num_train_steps=100000 \
+    --steps_per_stats=100 \
+    --num_layers=2 \
+    --num_units=128 \
+    --dropout=0.2 \
+    --metrics=bleu \
+		--learning_rate=0.001

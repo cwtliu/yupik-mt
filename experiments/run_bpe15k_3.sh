@@ -1,0 +1,19 @@
+python -m nmt.nmt \
+  --src=ypk --tgt=en \
+  --vocab_prefix=/home/yuarcuun/ypk-BPE15k_eng-nltk/vocab \
+  --train_prefix=/home/yuarcuun/ypk-BPE15k_eng-nltk/train_15k \
+  --dev_prefix=/home/yuarcuun/ypk-BPE15k_eng-nltk/dev_15k \
+  --test_prefix=/home/yuarcuun/ypk-BPE15k_eng-nltk/test_15k \
+  --out_dir=/home/yuarcuun/ypk-BPE15k_eng-nltk_output_3 \
+  --num_train_steps=80000 \
+  --steps_per_stats=100 \
+  --num_layers=2 \
+  --num_units=128 \
+  --dropout=0.2 \
+  --metrics=bleu \
+  --attention=scaled_luong \
+  --attention_architecture=standard \
+  --encoder_type=bi \
+  --unit_type=lstm \
+  --learning_rate=0.5 \
+  --decay_scheme=luong234
