@@ -1,6 +1,6 @@
 # Yup'ik machine translation
 
-CS224n and CS230 final projects
+Toolkits: Parser, Dictionary Lookup, Yup'ik machine translation scripts
 
 ## Parsing tools
 ```
