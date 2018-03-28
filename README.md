@@ -1,6 +1,6 @@
 # Yup'ik machine translation
 
-Toolkits: Parser, Dictionary Lookup, Yup'ik machine translation scripts
+Parser, Dictionary Lookup, Yup'ik machine translation scripts
 
 ## Parsing tools
 ```
