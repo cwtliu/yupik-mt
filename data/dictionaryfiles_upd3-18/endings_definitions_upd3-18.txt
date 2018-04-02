@@ -1,0 +1,1488 @@
+she is; he is; it is
+they are
+those two are
+I am
+we are
+Us two are
+you are
+you all are
+you two are
+she he it V her him it
+they V her him it
+those two V her him it
+I V her him it
+we V her him it
+we two V her him it
+you V her him it
+you all V her him it
+you two V her him it
+she he it V them
+they V  them
+those two V them
+I V them
+we V them
+Us two V them
+you V them
+you all V them
+you two V them
+she he it V those two
+they V  those two
+those two V those two
+I V those two
+we V those two
+Us two V those two
+you V those two
+you all V those two
+you two V those two
+she he it V me
+they V  me
+those two V me
+you V me
+you all V me
+you two V me
+she he it V us all
+they V  us all
+those two V us all
+you V us all
+you all V us all
+you two V us all
+she he it V us two
+they V  us two
+those two V us two
+you V us two
+you all V us two
+you two V us two
+she he it V you
+they V  you
+those two V you
+I V you
+we V you
+Us two V you
+she he it V you all
+they V  you all
+those two V you all
+I V you all
+we V you all
+Us two V you all
+she he it V you two
+they V  you two
+those two V you two
+I V you two
+we V you two
+Us two V you two
+are they ? 
+are those two ? 
+am I ? 
+are we ? 
+are us two ? 
+are you ? 
+are you all ? 
+are you two ? 
+does she he it V he she it ?
+do they V he she it ?
+do those two V he she it ?
+do you V he she it ?
+do you all V he she it ?
+do you two V he she it ?
+does she he it V them ?
+do they V them ?
+do those two V them ?
+do you V them ?
+do you all V them ?
+do you two V them ?
+does she he it V those two ?
+do they V those two ?
+do those two V those two ?
+do you V those two ?
+do you all V those two ?
+do you two V those two ?
+does she he it V me ?
+do they V me ?
+do those two V me ?
+do you V me ?
+do you all V me ?
+do you two V me ?
+does she he it V us all ?
+do they V us all ?
+do those two V us all ?
+do you V us all ?
+do you all V us all ?
+do you two V us all ?
+does she he it V us two ?
+do they V us two ?
+do those two V us two ?
+do you V us two ?
+do you all V us two ?
+do you two V us two ?
+does she he it V you  ?
+do they V you  ?
+do those two V you  ?
+do you V you all ?
+do you all V you all ?
+do you two V you all ?
+does she he it V you two ?
+do they V you two ?
+do those two V you two ?
+they should will can
+those two should will can
+I should will can
+we should will can
+us two should will can
+you should will can
+you all should will can
+you two should will can
+she he it should will can V her him it
+they should will can V her him it
+those two should will can V her him it
+I should will can V her him it
+we should will can V her him it
+us two should will can V her him it
+you should will can V her him it
+you all should will can V her him it
+you two should will can V her him it
+she he it should will can V them
+they should will can V them
+those two should will can V them
+I should will can V them
+we should will can V them
+us two should will can V them
+you should will can V them
+you all should will can V them
+you two should will can V them
+she he it should will can V those two
+they should will can V those two
+those two should will can V those two
+I should will can V those two
+we should will can V those two
+us two should will can V those two
+you should will can V those two
+you all should will can V those two
+you two should will can V those two
+she he it should will can V me
+they should will can V me
+those two should will can V me
+you should will can V me
+you all should will can V me
+you two should will can V me
+she he it should will can V us all
+they should will can V us all
+those two should will can V us all
+you should will can V us all
+you all should will can V us all
+you two should will can V us all
+she he it should will can V us two
+they should will can V us two
+those two should will can V us two
+you should will can V us two
+you all should will can V us two
+you two should will can V us two
+she he it should will can V you
+they should will can V you
+those two should will can V you
+you should will can V you
+you all should will can V you
+you two should will can V you
+she he it should will can V you all
+they should will can V you all
+those two should will can V you all
+you should will can V you all
+you all should will can V you all
+you two should will can V you all
+she he it should will can V you two
+they should will can V you two
+those two should will can V you two
+you should will can V you two
+you all should will can V you two
+you two should will can V you two
+she he it by V-ing
+they by V-ing
+those two by V-ing
+I by V-ing
+we by V-ing
+us two by V-ing
+you by V-ing
+you all by V-ing
+you two by V-ing
+she he it by V-ing her him it
+they by V-ing her him it
+those two by V-ing her him it
+I by V-ing her him it
+we by V-ing her him it
+us two by V-ing her him it
+you by V-ing her him it
+you all by V-ing her him it
+you two by V-ing her him it
+she he it by V-ing them
+they by V-ing them
+those two by V-ing them
+I by V-ing them
+we by V-ing them
+us two by V-ing them
+you by V-ing them
+you all by V-ing them
+you two by V-ing them
+she he it by V-ing those two
+they by V-ing those two
+those two by V-ing those two
+I by V-ing those two
+we by V-ing those two
+us two by V-ing those two
+you by V-ing those two
+you all by V-ing those two
+you two by V-ing those two
+she he it by V-ing me
+they by V-ing me
+those two by V-ing me
+you by V-ing me
+you all by V-ing me
+you two by V-ing me
+she he it by V-ing us all
+they by V-ing us all
+those two by V-ing us all
+you by V-ing us all
+you all by V-ing us all
+you two by V-ing us all
+she he it by V-ing us two
+they by V-ing us two
+those two by V-ing us two
+you by V-ing us two
+you all by V-ing us two
+you two by V-ing us two
+she he it by V-ing you
+they by V-ing you
+those two by V-ing you
+I by V-ing you
+we by V-ing you
+us two by V-ing you
+she he it by V-ing you all
+they by V-ing you all
+those two by V-ing you all
+I by V-ing you all
+we by V-ing you all
+us two by V-ing you all
+she he it by V-ing you two
+they by V-ing you two
+those two by V-ing you two
+I by V-ing you two
+we by V-ing you two
+us two by V-ing you two
+they who are V-ing
+those two who are V-ing
+I who am V-ing
+we who are V-ing
+us two who are V-ing
+you who is V-ing
+you all who are V-ing
+you two who are V-ing
+she he it who is V-ing her him it
+they who are V-ing her him it
+those two who are V-ing her him it
+I who am V-ing her him it
+we who are V-ing her him it
+us two who are V-ing her him it
+you who is V-ing her him it
+you all who are V-ing her him it
+you two who are V-ing her him it
+she he it who is V-ing them
+they who are V-ing them
+those two who are V-ing them
+I who am V-ing them
+we who are V-ing them
+us two who are V-ing them
+you who is V-ing them
+you all who are V-ing them
+you two who are V-ing them
+she he it who is V-ing those two
+they who are V-ing those two
+those two who are V-ing those two
+I who am V-ing those two
+we who are V-ing those two
+us two who are V-ing those two
+you who is V-ing those two
+you all who are V-ing those two
+you two who are V-ing those two
+she he it who is V-ing me
+they who are V-ing me
+those two who are V-ing me
+you who is V-ing me
+you all who are V-ing me
+you two who are V-ing me
+she he it who is V-ing us all
+they who are V-ing us all
+those two who are V-ing us all
+you who is V-ing us all
+you all who are V-ing us all
+you two who are V-ing us all
+she he it who is V-ing us two
+they who are V-ing us two
+those two who are V-ing us two
+you who is V-ing us two
+you all who are V-ing us two
+you two who are V-ing us two
+she he it who is V-ing you
+they who are V-ing you
+those two who are V-ing you
+I who am V-ing you
+we who are V-ing you
+us two who are V-ing you
+she he it who is V-ing you all
+they who are V-ing you all
+those two who are V-ing you all
+I who am V-ing you all
+we who are V-ing you all
+us two who are V-ing you all
+she he it who is V-ing you two
+they who are V-ing you two
+those two who are V-ing you two
+I who am V-ing you two
+we who are V-ing you two
+us two who are V-ing you two
+before he she it V
+before they V
+before those two V
+before i V
+before we V
+before us two V
+before you V
+before you all V
+before you two V
+before he she it V
+before they V
+before those two V
+before he she it V him her it
+before they V him her it
+before those two V him her it
+before i V him her it
+before we V him her it
+before us two V him her it
+before you V him her it
+before you all V him her it
+before you two V him her it
+before he she it V him her it
+before they V him her it
+before those two V him her it
+before he she it V them
+before they V them
+before those two V them
+before i V them
+before we V them
+before us two V them
+before you V them
+before you all V them
+before you two V them
+before he she it V them
+before they V them
+before those two V them
+before he she it V those two
+before they V those two
+before those two V those two
+before i V those two
+before we V those two
+before us two V those two
+before you V those two
+before you all V those two
+before you two V those two
+before he she it V those two
+before they V those two
+before those two V those two
+before he she it V me
+before they V me
+before those two V me
+before you V me
+before you all V me
+before you two V me
+before he she it V me
+before they V me
+before those two V me
+before he she it V us all
+before they V us all
+before those two V us all
+before you V us all
+before you all V us all
+before you two V us all
+before he she it V us all
+before they V us all
+before those two V us all
+before he she it V us two
+before they V us two
+before those two V us two
+before you V us two
+before you all V us two
+before you two V us two
+before he she it V us two
+before they V us two
+before those two V us two
+before he she it V you
+before they V you
+before those two V you
+before i V you
+before we V you
+before us two V you
+before he she it V you
+before they V you
+before those two V you
+before he she it V you all
+before they V you all
+before those two V you all
+before i V you all
+before we V you all
+before us two V you all
+before he she it V you all
+before they V you all
+before those two V you all
+before he she it V you two
+before they V you two
+before those two V you two
+before i V you two
+before we V you two
+before us two V you two
+before he she it V you two
+before they V you two
+before those two V you two
+before he she it V it
+before they V it
+before those two V it
+before i V it
+before we V it
+before us two V it
+before you V it
+before you all V it
+before you two V it
+before he she it V them
+before they V them
+before those two V them
+before i V them
+before we V them
+before us two V them
+before you V them
+before you all V them
+before you two V them
+before he she it V the two
+before they V the two
+before those two V the two
+before i V the two
+before we V the two
+before us two V the two
+before you V the two
+before you all V the two
+before you two V the two
+because he she it V
+because they V
+because those two V
+because i V
+because we V
+because us two V
+because you V
+because you all V
+because you two V
+because he she it V
+because they V
+because those two V
+because he she it V him her it
+because they V him her it
+because those two V him her it
+because i V him her it
+because we V him her it
+because us two V him her it
+because you V him her it
+because you all V him her it
+because you two V him her it
+because he she it V him her it
+because they V him her it
+because those two V him her it
+because he she it V them
+because they V them
+because those two V them
+because i V them
+because we V them
+because us two V them
+because you V them
+because you all V them
+because you two V them
+because he she it V them
+because they V them
+because those two V them
+because he she it V those two
+because they V those two
+because those two V those two
+because i V those two
+because we V those two
+because us two V those two
+because you V those two
+because you all V those two
+because you two V those two
+because he she it V those two
+because they V those two
+because those two V those two
+because he she it V me
+because they V me
+because those two V me
+because you V me
+because you all V me
+because you two V me
+because he she it V me
+because they V me
+because those two V me
+because he she it V us all
+because they V us all
+because those two V us all
+because you V us all
+because you all V us all
+because you two V us all
+because he she it V us all
+because they V us all
+because those two V us all
+because he she it V us two
+because they V us two
+because those two V us two
+because you V us two
+because you all V us two
+because you two V us two
+because he she it V us two
+because they V us two
+because those two V us two
+because he she it V you
+because they V you
+because those two V you
+because i V you
+because we V you
+because us two V you
+because he she it V you
+because they V you
+because those two V you
+because he she it V you all
+because they V you all
+because those two V you all
+because i V you all
+because we V you all
+because us two V you all
+because he she it V you all
+because they V you all
+because those two V you all
+because he she it V you two
+because they V you two
+because those two V you two
+because i V you two
+because we V you two
+because us two V you two
+because he she it V you two
+because they V you two
+because those two V you two
+because he she it V it
+because they V it
+because those two V it
+because i V it
+because we V it
+because us two V it
+because you V it
+because you all V it
+because you two V it
+because he she it V them
+because they V them
+because those two V them
+because i V them
+because we V them
+because us two V them
+because you V them
+because you all V them
+because you two V them
+because he she it V the two
+because they V the two
+because those two V the two
+because i V the two
+because we V the two
+because us two V the two
+because you V the two
+because you all V the two
+because you two V the two
+whenever he she it V
+whenever they V
+whenever those two V
+whenever i V
+whenever we V
+whenever us two V
+whenever you V
+whenever you all V
+whenever you two V
+whenever he she it V
+whenever they V
+whenever those two V
+whenever he she it V him her it
+whenever they V him her it
+whenever those two V him her it
+whenever i V him her it
+whenever we V him her it
+whenever us two V him her it
+whenever you V him her it
+whenever you all V him her it
+whenever you two V him her it
+whenever he she it V him her it
+whenever they V him her it
+whenever those two V him her it
+whenever he she it V them
+whenever they V them
+whenever those two V them
+whenever i V them
+whenever we V them
+whenever us two V them
+whenever you V them
+whenever you all V them
+whenever you two V them
+whenever he she it V them
+whenever they V them
+whenever those two V them
+whenever he she it V those two
+whenever they V those two
+whenever those two V those two
+whenever i V those two
+whenever we V those two
+whenever us two V those two
+whenever you V those two
+whenever you all V those two
+whenever you two V those two
+whenever he she it V those two
+whenever they V those two
+whenever those two V those two
+whenever he she it V me
+whenever they V me
+whenever those two V me
+whenever you V me
+whenever you all V me
+whenever you two V me
+whenever he she it V me
+whenever they V me
+whenever those two V me
+whenever he she it V us all
+whenever they V us all
+whenever those two V us all
+whenever you V us all
+whenever you all V us all
+whenever you two V us all
+whenever he she it V us all
+whenever they V us all
+whenever those two V us all
+whenever he she it V us two
+whenever they V us two
+whenever those two V us two
+whenever you V us two
+whenever you all V us two
+whenever you two V us two
+whenever he she it V us two
+whenever they V us two
+whenever those two V us two
+whenever he she it V you
+whenever they V you
+whenever those two V you
+whenever i V you
+whenever we V you
+whenever us two V you
+whenever he she it V you
+whenever they V you
+whenever those two V you
+whenever he she it V you all
+whenever they V you all
+whenever those two V you all
+whenever i V you all
+whenever we V you all
+whenever us two V you all
+whenever he she it V you all
+whenever they V you all
+whenever those two V you all
+whenever he she it V you two
+whenever they V you two
+whenever those two V you two
+whenever i V you two
+whenever we V you two
+whenever us two V you two
+whenever he she it V you two
+whenever they V you two
+whenever those two V you two
+whenever he she it V it
+whenever they V it
+whenever those two V it
+whenever i V it
+whenever we V it
+whenever us two V it
+whenever you V it
+whenever you all V it
+whenever you two V it
+whenever he she it V them
+whenever they V them
+whenever those two V them
+whenever i V them
+whenever we V them
+whenever us two V them
+whenever you V them
+whenever you all V them
+whenever you two V them
+whenever he she it V the two
+whenever they V the two
+whenever those two V the two
+whenever i V the two
+whenever we V the two
+whenever us two V the two
+whenever you V the two
+whenever you all V the two
+whenever you two V the two
+although he she it V
+although they V
+although those two V
+although i V
+although we V
+although us two V
+although you V
+although you all V
+although you two V
+although he she it V
+although they V
+although those two V
+although he she it V him her it
+although they V him her it
+although those two V him her it
+although i V him her it
+although we V him her it
+although us two V him her it
+although you V him her it
+although you all V him her it
+although you two V him her it
+although he she it V him her it
+although they V him her it
+although those two V him her it
+although he she it V them
+although they V them
+although those two V them
+although i V them
+although we V them
+although us two V them
+although you V them
+although you all V them
+although you two V them
+although he she it V them
+although they V them
+although those two V them
+although he she it V those two
+although they V those two
+although those two V those two
+although i V those two
+although we V those two
+although us two V those two
+although you V those two
+although you all V those two
+although you two V those two
+although he she it V those two
+although they V those two
+although those two V those two
+although he she it V me
+although they V me
+although those two V me
+although you V me
+although you all V me
+although you two V me
+although he she it V me
+although they V me
+although those two V me
+although he she it V us all
+although they V us all
+although those two V us all
+although you V us all
+although you all V us all
+although you two V us all
+although he she it V us all
+although they V us all
+although those two V us all
+although he she it V us two
+although they V us two
+although those two V us two
+although you V us two
+although you all V us two
+although you two V us two
+although he she it V us two
+although they V us two
+although those two V us two
+although he she it V you
+although they V you
+although those two V you
+although i V you
+although we V you
+although us two V you
+although he she it V you
+although they V you
+although those two V you
+although he she it V you all
+although they V you all
+although those two V you all
+although i V you all
+although we V you all
+although us two V you all
+although he she it V you all
+although they V you all
+although those two V you all
+although he she it V you two
+although they V you two
+although those two V you two
+although i V you two
+although we V you two
+although us two V you two
+although he she it V you two
+although they V you two
+although those two V you two
+although he she it V it
+although they V it
+although those two V it
+although i V it
+although we V it
+although us two V it
+although you V it
+although you all V it
+although you two V it
+although he she it V them
+although they V them
+although those two V them
+although i V them
+although we V them
+although us two V them
+although you V them
+although you all V them
+although you two V them
+although he she it V the two
+although they V the two
+although those two V the two
+although i V the two
+although we V the two
+although us two V the two
+although you V the two
+although you all V the two
+although you two V the two
+if, when he she it V
+if, when they V
+if, when those two V
+if, when i V
+if, when we V
+if, when us two V
+if, when you V
+if, when you all V
+if, when you two V
+if, when he she it V
+if, when they V
+if, when those two V
+if, when he she it V him her it
+if, when they V him her it
+if, when those two V him her it
+if, when i V him her it
+if, when we V him her it
+if, when us two V him her it
+if, when you V him her it
+if, when you all V him her it
+if, when you two V him her it
+if, when he she it V him her it
+if, when they V him her it
+if, when those two V him her it
+if, when he she it V them
+if, when they V them
+if, when those two V them
+if, when i V them
+if, when we V them
+if, when us two V them
+if, when you V them
+if, when you all V them
+if, when you two V them
+if, when he she it V them
+if, when they V them
+if, when those two V them
+if, when he she it V those two
+if, when they V those two
+if, when those two V those two
+if, when i V those two
+if, when we V those two
+if, when us two V those two
+if, when you V those two
+if, when you all V those two
+if, when you two V those two
+if, when he she it V those two
+if, when they V those two
+if, when those two V those two
+if, when he she it V me
+if, when they V me
+if, when those two V me
+if, when you V me
+if, when you all V me
+if, when you two V me
+if, when he she it V me
+if, when they V me
+if, when those two V me
+if, when he she it V us all
+if, when they V us all
+if, when those two V us all
+if, when you V us all
+if, when you all V us all
+if, when you two V us all
+if, when he she it V us all
+if, when they V us all
+if, when those two V us all
+if, when he she it V us two
+if, when they V us two
+if, when those two V us two
+if, when you V us two
+if, when you all V us two
+if, when you two V us two
+if, when he she it V us two
+if, when they V us two
+if, when those two V us two
+if, when he she it V you
+if, when they V you
+if, when those two V you
+if, when i V you
+if, when we V you
+if, when us two V you
+if, when he she it V you
+if, when they V you
+if, when those two V you
+if, when he she it V you all
+if, when they V you all
+if, when those two V you all
+if, when i V you all
+if, when we V you all
+if, when us two V you all
+if, when he she it V you all
+if, when they V you all
+if, when those two V you all
+if, when he she it V you two
+if, when they V you two
+if, when those two V you two
+if, when i V you two
+if, when we V you two
+if, when us two V you two
+if, when he she it V you two
+if, when they V you two
+if, when those two V you two
+if, when he she it V it
+if, when they V it
+if, when those two V it
+if, when i V it
+if, when we V it
+if, when us two V it
+if, when you V it
+if, when you all V it
+if, when you two V it
+if, when he she it V them
+if, when they V them
+if, when those two V them
+if, when i V them
+if, when we V them
+if, when us two V them
+if, when you V them
+if, when you all V them
+if, when you two V them
+if, when he she it V the two
+if, when they V the two
+if, when those two V the two
+if, when i V the two
+if, when we V the two
+if, when us two V the two
+if, when you V the two
+if, when you all V the two
+if, when you two V the two
+when he she it V-ed
+when they V-ed
+when those two V-ed
+when i V-ed
+when we V-ed
+when us two V-ed
+when you V-ed
+when you all V-ed
+when you two V-ed
+when he she it V-ed
+when they V-ed
+when those two V-ed
+when he she it V-ed him her it
+when they V-ed him her it
+when those two V-ed him her it
+when i V-ed him her it
+when we V-ed him her it
+when us two V-ed him her it
+when you V-ed him her it
+when you all V-ed him her it
+when you two V-ed him her it
+when he she it V-ed him her it
+when they V-ed him her it
+when those two V-ed him her it
+when he she it V-ed them
+when they V-ed them
+when those two V-ed them
+when i V-ed them
+when we V-ed them
+when us two V-ed them
+when you V-ed them
+when you all V-ed them
+when you two V-ed them
+when he she it V-ed them
+when they V-ed them
+when those two V-ed them
+when he she it V-ed those two
+when they V-ed those two
+when those two V-ed those two
+when i V-ed those two
+when we V-ed those two
+when us two V-ed those two
+when you V-ed those two
+when you all V-ed those two
+when you two V-ed those two
+when he she it V-ed those two
+when they V-ed those two
+when those two V-ed those two
+when he she it V-ed me
+when they V-ed me
+when those two V-ed me
+when you V-ed me
+when you all V-ed me
+when you two V-ed me
+when he she it V-ed me
+when they V-ed me
+when those two V-ed me
+when he she it V-ed us all
+when they V-ed us all
+when those two V-ed us all
+when you V-ed us all
+when you all V-ed us all
+when you two V-ed us all
+when he she it V-ed us all
+when they V-ed us all
+when those two V-ed us all
+when he she it V-ed us two
+when they V-ed us two
+when those two V-ed us two
+when you V-ed us two
+when you all V-ed us two
+when you two V-ed us two
+when he she it V-ed us two
+when they V-ed us two
+when those two V-ed us two
+when he she it V-ed you
+when they V-ed you
+when those two V-ed you
+when i V-ed you
+when we V-ed you
+when us two V-ed you
+when he she it V-ed you
+when they V-ed you
+when those two V-ed you
+when he she it V-ed you all
+when they V-ed you all
+when those two V-ed you all
+when i V-ed you all
+when we V-ed you all
+when us two V-ed you all
+when he she it V-ed you all
+when they V-ed you all
+when those two V-ed you all
+when he she it V-ed you two
+when they V-ed you two
+when those two V-ed you two
+when i V-ed you two
+when we V-ed you two
+when us two V-ed you two
+when he she it V-ed you two
+when they V-ed you two
+when those two V-ed you two
+when he she it V-ed it
+when they V-ed it
+when those two V-ed it
+when i V-ed it
+when we V-ed it
+when us two V-ed it
+when you V-ed it
+when you all V-ed it
+when you two V-ed it
+when he she it V-ed them
+when they V-ed them
+when those two V-ed them
+when i V-ed them
+when we V-ed them
+when us two V-ed them
+when you V-ed them
+when you all V-ed them
+when you two V-ed them
+when he she it V-ed the two
+when they V-ed the two
+when those two V-ed the two
+when i V-ed the two
+when we V-ed the two
+when us two V-ed the two
+when you V-ed the two
+when you all V-ed the two
+when you two V-ed the two
+while he she it V
+while they V
+while those two V
+while i V
+while we V
+while us two V
+while you V
+while you all V
+while you two V
+while he she it V
+while they V
+while those two V
+while he she it V him her it
+while they V him her it
+while those two V him her it
+while i V him her it
+while we V him her it
+while us two V him her it
+while you V him her it
+while you all V him her it
+while you two V him her it
+while he she it V him her it
+while they V him her it
+while those two V him her it
+while he she it V them
+while they V them
+while those two V them
+while i V them
+while we V them
+while us two V them
+while you V them
+while you all V them
+while you two V them
+while he she it V them
+while they V them
+while those two V them
+while he she it V those two
+while they V those two
+while those two V those two
+while i V those two
+while we V those two
+while us two V those two
+while you V those two
+while you all V those two
+while you two V those two
+while he she it V those two
+while they V those two
+while those two V those two
+while he she it V me
+while they V me
+while those two V me
+while you V me
+while you all V me
+while you two V me
+while he she it V me
+while they V me
+while those two V me
+while he she it V us all
+while they V us all
+while those two V us all
+while you V us all
+while you all V us all
+while you two V us all
+while he she it V us all
+while they V us all
+while those two V us all
+while he she it V us two
+while they V us two
+while those two V us two
+while you V us two
+while you all V us two
+while you two V us two
+while he she it V us two
+while they V us two
+while those two V us two
+while he she it V you
+while they V you
+while those two V you
+while i V you
+while we V you
+while us two V you
+while he she it V you
+while they V you
+while those two V you
+while he she it V you all
+while they V you all
+while those two V you all
+while i V you all
+while we V you all
+while us two V you all
+while he she it V you all
+while they V you all
+while those two V you all
+while he she it V you two
+while they V you two
+while those two V you two
+while i V you two
+while we V you two
+while us two V you two
+while he she it V you two
+while they V you two
+while those two V you two
+while he she it V it
+while they V it
+while those two V it
+while i V it
+while we V it
+while us two V it
+while you V it
+while you all V it
+while you two V it
+while he she it V them
+while they V them
+while those two V them
+while i V them
+while we V them
+while us two V them
+while you V them
+while you all V them
+while you two V them
+while he she it V the two
+while they V the two
+while those two V the two
+while i V the two
+while we V the two
+while us two V the two
+while you V the two
+while you all V the two
+while you two V the two
+one
+3 or more
+two
+her his its one N
+their one N
+their one N
+her his its 3 or more N
+their 3 or more N
+their 3 or more N
+her his its two  N
+their two  N
+their two  N
+my one N
+our one N
+our one N
+my 3 or more N
+our 3 or more N
+our 3 or more N
+my two  N
+our two  N
+our two  N
+your  one N
+you alls one N
+you alls one N
+your  3 or more N
+you alls 3 or more N
+you alls 3 or more N
+your  one N
+you alls one N
+you alls one N
+your  3 or more N
+you alls 3 or more N
+you alls 3 or more N
+your  two  N
+you alls two  N
+you alls two  N
+its one N
+its one N
+its one N
+their  3 or more N
+their  3 or more N
+their  3 or more N
+their  two  N
+their  two  N
+their  two  N
+while one at from N
+while 3 or more at from N
+while two at from N
+while her his its one at from N
+while their one at from N
+while their one at from N
+while her his its 3 or more at from N
+while their 3 or more at from N
+while their 3 or more at from N
+while her his its two  at from N
+while their two  at from N
+while their two  at from N
+while my one at from N
+while our one at from N
+while our one at from N
+while my 3 or more at from N
+while our 3 or more at from N
+while our 3 or more at from N
+while my two  at from N
+while our two  at from N
+while our two  at from N
+while your  one at from N
+while you alls one at from N
+while you alls one at from N
+while your  3 or more at from N
+while you alls 3 or more at from N
+while you alls 3 or more at from N
+while your  one at from N
+while you alls one at from N
+while you alls one at from N
+while your  3 or more at from N
+while you alls 3 or more at from N
+while you alls 3 or more at from N
+while your  two  at from N
+while you alls two  at from N
+while you alls two  at from N
+while its one at from N
+while its one at from N
+while its one at from N
+while their  3 or more at from N
+while their  3 or more at from N
+while their  3 or more at from N
+while their  two  at from N
+while their  two  at from N
+while their  two  at from N
+with one N
+with 3 or more N
+with two N
+with her his its one N
+with their one N
+with their one N
+with her his its 3 or more N
+with their 3 or more N
+with their 3 or more N
+with her his its two  N
+with their two  N
+with their two  N
+with my one N
+with our one N
+with our one N
+with my 3 or more N
+with our 3 or more N
+with our 3 or more N
+with my two  N
+with our two  N
+with our two  N
+with your  one N
+with you alls one N
+with you alls one N
+with your  3 or more N
+with you alls 3 or more N
+with you alls 3 or more N
+with your  one N
+with you alls one N
+with you alls one N
+with your  3 or more N
+with you alls 3 or more N
+with you alls 3 or more N
+with your  two  N
+with you alls two  N
+with you alls two  N
+with its one N
+with its one N
+with its one N
+with their  3 or more N
+with their  3 or more N
+with their  3 or more N
+with their  two  N
+with their  two  N
+with their  two  N
+similar to  one N
+similar to  3 or more N
+similar to  two N
+similar to  her his its one N
+similar to  their one N
+similar to  their one N
+similar to  her his its 3 or more N
+similar to  their 3 or more N
+similar to  their 3 or more N
+similar to  her his its two  N
+similar to  their two  N
+similar to  their two  N
+similar to  my one N
+similar to  our one N
+similar to  our one N
+similar to  my 3 or more N
+similar to  our 3 or more N
+similar to  our 3 or more N
+similar to  my two  N
+similar to  our two  N
+similar to  our two  N
+similar to  your  one N
+similar to  you alls one N
+similar to  you alls one N
+similar to  your  3 or more N
+similar to  you alls 3 or more N
+similar to  you alls 3 or more N
+similar to  your  one N
+similar to  you alls one N
+similar to  you alls one N
+similar to  your  3 or more N
+similar to  you alls 3 or more N
+similar to  you alls 3 or more N
+similar to  your  two  N
+similar to  you alls two  N
+similar to  you alls two  N
+similar to  its one N
+similar to  its one N
+similar to  its one N
+similar to  their  3 or more N
+similar to  their  3 or more N
+similar to  their  3 or more N
+similar to  their  two  N
+similar to  their  two  N
+similar to  their  two  N
+the  3 or more
+the  two 
+her his its one
+their one
+their one
+her his its 3 or more
+their 3 or more
+their 3 or more
+her his its two 
+their two 
+their two 
+my one
+our one
+our one
+my 3 or more
+our 3 or more
+our 3 or more
+my two 
+our two 
+our two 
+your  one
+you alls one
+you alls one
+your  3 or more
+you alls 3 or more
+you alls 3 or more
+your  two 
+you alls two 
+you alls two 
+its one
+its one
+its one
+their  3 or more
+their  3 or more
+their  3 or more
+their  two 
+their  two 
+their  two 
+our one
+our one
+our one
+our one
+you alls one
+you alls one
+you alls one
+you alls one
+its one
+its one
+its one
+its one
+used for emphasis or contrast in narrative or conversation
+again
+because
+indeed
+one said; it is said
+over there
+I wish
+I wonder
+alas; I wish it were not so
+oh!; gee whiz!
+and; also
+on the other hand; how about?; but
+intensifier
+yes or no?
+I wish; I hope
+because

@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-# Author: Temigo
+# Author: Temigo, cwtliu
 
 from __future__ import print_function
 import re
@@ -311,7 +311,7 @@ if __name__ == '__main__':
     #need to print to =llu
 #    STILL BAD
     #print(p.tokenize("atsarturyugyaaqellruunga"))
-    #print(p.tokenize("yugnikekengaq"))
+    #print(p.tokenize("kaigtuq"))
     # still trying to choose the best set so far
     #print(p.tokenize("nallunrilkegci"))
     # fails at being able to find anything like -lkegi
