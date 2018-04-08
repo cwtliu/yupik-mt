@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-# Author: Temigo
+# Author: Temigo, cwtliu
 
 from __future__ import print_function
 import re
