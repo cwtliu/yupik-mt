@@ -1,0 +1,33 @@
+# coding: utf-8
+def convert(word):
+	word = word.replace('vv','1')
+	word = word.replace('ll','2')
+	word = word.replace('ss','3')
+	word = word.replace('gg','4')
+	word = word.replace('rr','5')
+	word = word.replace('ng','6')
+	word = word.replace('μ','7')
+	word = word.replace('+','8')
+	word = word.replace('TMg','9')
+	word = word.replace('¥r','j')
+	word = word.replace('¥rr','z')
+	word = word.replace('¥g','x')
+	word = word.replace('¥k','h')
+	word = word.replace('¥q','d')
+	return word
+def deconvert(word):
+	word = word.replace('1','vv')
+	word = word.replace('2','ll')
+	word = word.replace('3','ss')
+	word = word.replace('4','gg')
+	word = word.replace('5','rr')
+	word = word.replace('6','ng')
+	word = word.replace('7','m2')
+	word = word.replace('8','n2')
+	word = word.replace('9','ng2')
+	word = word.replace('j','¥r')
+	word = word.replace('z','¥rr')
+	word = word.replace('x','¥g')
+	word = word.replace('h','¥k')
+	word = word.replace('d','¥q')
+	return word

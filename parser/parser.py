@@ -277,13 +277,13 @@ class DirtyParser(object):
 
 if __name__ == '__main__':
     test_words = ["pissullrunrituq", "nerenrituq"]
-    p = DirtyParser(debug=0, postbases_files=['VY'])
+    p = DirtyParser(debug=1, postbases_files=['VY'])
     #for w in test_words:
     #    print p.parse(w)
     #print(p.analyze("pissuryug"))
     #print(p.tokenize("pissuryunriteqatartuq"))
     # cenirte- / @~+yugnaite- / +’(g/t)u:6a
-    #print(p.tokenize("alingullruuq"))
+    print(p.tokenize("pissuryullruuq"))
     # alinge- / -llru- / +'(g/t)uq
     #print(p.tokenize("an'uq"))
     # ane- / +'(g/t)uq
@@ -330,12 +330,12 @@ if __name__ == '__main__':
     for line in text:
         print(p.tokenize(line.rstrip('\n')))"""
     #print(p.tokenize("tua-i nallunritniarciman'a wangkuta-w' angutni canek pitulini pitgaqutulini-llu, aavcaam taum culua, melquq tamana, niitela'arqa perlliniluni."))
-    import sys
-    output = ""
-    with open(sys.argv[1], 'r') as f:
-        text = f.readlines()
-    for line in text:
-        s = p.tokenize(line.rstrip('\n'))
-        print(s)
+    # import sys
+    # output = ""
+    # with open(sys.argv[1], 'r') as f:
+    #     text = f.readlines()
+    # for line in text:
+    #     s = p.tokenize(line.rstrip('\n'))
+    #     print(s)
         #output = output + s + '\n'
     #print(output)
