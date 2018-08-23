@@ -69,7 +69,7 @@ def contingent(root): #apply +'(g)aqa-
 	else:
 		return(root+'aqa-')
 
-def conditional(root):
+def conditional(root): #apply @~-ku-
 	specialte = False
 	if root[-1] == '-': #remove dash
 		root = root[:-1]
@@ -91,15 +91,14 @@ def conditional(root):
 	else:
 		return(root + 'ku-')
 
-# def concessive(root): #see page 292
-# 	specialte = False
-# 	if root[-1] == '-': #remove dash
-# 		root = root[:-1]
-# 	if root[-2] == 't' and root[-1] == 'e' and specialte:
-# 		root = root[:-2]+'le'
-# 	elif root[-1] == 'r' or root[-1] == 'g':
-# 		root = root[:-1]
-# 	#### SEE PAGE 292 FOR SPECIAL CASES OF HATTED E IF IT IS CONTINUED
+def concessive(root): #apply @-ngr(ar)-
+	specialte = False
+	if root[-1] == '-': #remove dash
+		root = root[:-1]
+	if root[-2] == 't' and root[-1] == 'e' and specialte:
+		return(root[:-2]+'lengrar-')
+	elif root[-1] == 'r' or root[-1] == 'g':
+		return(root[:-1]+'ngrar-')
 
 def first_contemporative(root):
 	if root[-1] == '-': #remove dash
@@ -122,6 +121,12 @@ def apply_ending(root):
 	if int33: #if ending is intransitive 3rd person 3 (plural)
 		pass
 	if int11: #if ending is intransitive 1st person 1 (singular)
+		if concessive_flag:
+			root = root[:-3] # remove the ar- case page 292
+			if root[-2] in consonants:# or if letter before ng root[-2] is stressed_vowel:
+				return(root + 'erma') #don't geminate
+			else:
+				return(root + "'erma")
 		return(root+'ma')
 	if int12: #if ending is intransitive 1st person 2 (dual)
 		if root[-1] == 'g' or root[-1] == 'r':
@@ -134,17 +139,17 @@ def apply_ending(root):
 		else:
 			return(root+'megnuk')
 	if int21: #if ending is intransitive 2nd person 1 (singular)
-		pass
+		pass #concessive is interesting?
 	if int22: #if ending is intransitive 2nd person 2 (dual)
-		pass
+		pass #concessive is interesting?
 	if int23: #if ending is intransitive 2nd person 3 (plural)
-		pass
+		pass #concessive is interesting?
 	if int41: #if ending is intransitive 4th person 1 (singular)
-		pass
+		pass #concessive is interesting?
 	if int42: #if ending is intransitive 4th person 2 (dual)
-		pass
+		pass #concessive is interesting?
 	if int43: #if ending is intransitive 4th person 3 (plural)
-		pass
+		pass #concessive is interesting?
 
 def apply_connective_mood(word):
 	if precessive_flag:

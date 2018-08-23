@@ -6,6 +6,9 @@ front_vowels = ['i']
 mid_vowels = ['e']
 low_vowels = ['a']
 back_vowels = ['u']
+voiced_converter = {'v':'1','l':'2','s':'3','g':'4','r':'5','n':'8','m':'7','6':'9'}
+voiceless_converter = {'1':'v','2':'l','3':'s','4':'g','5':'r','8':'n','7':'m','9':'6'}
+
 #letter entry can contain multiple letters right now, but am hoping to represent it by single character
 #vv = 1
 #ll = 2
@@ -25,8 +28,10 @@ consonants = ['p','t','c','k','q','v','l','s','y','g','w','r','m','n','1','2','3
 stops = ['p','t','c','k','q']
 voiced_fricatives = ['v','l','s','y','g','r']
 voiceless_fricatives = ['1','2','3','4','5']
+fricatives = ['v','l','s','y','g','r','1','2','3','4','5']
 voiced_nasals = ['m','n','6']
 voiceless_nasals = ['7','8','9']
+nasals = ['m','n','6','7','8','9']
 labials = ['p','v','1','m','7']
 apicals = ['t','l','2','n','8','c','s','y','3']
 front_velars = ['k','g','4','6','9']
