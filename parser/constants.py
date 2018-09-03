@@ -6,6 +6,7 @@ front_vowels = ['i']
 mid_vowels = ['e']
 low_vowels = ['a']
 back_vowels = ['u']
+prime_vowels = ['a','i','u']
 voiced_converter = {'v':'1','l':'2','s':'3','g':'4','r':'5','n':'8','m':'7','6':'9'}
 voiceless_converter = {'1':'v','2':'l','3':'s','4':'g','5':'r','8':'n','7':'m','9':'6'}
 
